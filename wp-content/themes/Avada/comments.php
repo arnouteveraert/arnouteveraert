@@ -34,7 +34,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="no-comments"><?php echo __('Comments are closed.', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('', 'Avada'); ?></p>
 
 	<?php endif; ?>
 
