@@ -48,6 +48,8 @@ $navstartstop = (isset($slides['properties']['navstartstop']) && $slides['proper
 $navbuttons = (isset($slides['properties']['navbuttons']) && $slides['properties']['navbuttons'] != 'false') ? 'true' : 'false';
 $hoverprevnext = (isset($slides['properties']['hoverprevnext']) && $slides['properties']['hoverprevnext'] != 'false') ? 'true' : 'false';
 $hoverbottomnav = (isset($slides['properties']['hoverbottomnav']) && $slides['properties']['hoverbottomnav'] != 'false') ? 'true' : 'false';
+$bartimer = (isset($slides['properties']['bartimer']) && $slides['properties']['bartimer'] != 'false') ? 'true' : 'false';
+$circletimer = (isset($slides['properties']['circletimer']) && $slides['properties']['circletimer'] != 'false') ? 'true' : 'false';
 $thumb_nav = !empty($slides['properties']['thumb_nav']) ? $slides['properties']['thumb_nav'] : 'hover';
 $thumb_width = !empty($slides['properties']['thumb_width']) ? $slides['properties']['thumb_width'] : '100';
 $thumb_height = !empty($slides['properties']['thumb_height']) ? $slides['properties']['thumb_height'] : '60';
@@ -73,6 +75,10 @@ $cbanimstart = !empty($slides['properties']['cbanimstart']) ? stripslashes($slid
 $cbanimstop = !empty($slides['properties']['cbanimstop']) ? stripslashes($slides['properties']['cbanimstop']) : 'function() {}';
 $cbprev = !empty($slides['properties']['cbprev']) ? stripslashes($slides['properties']['cbprev']) : 'function() {}';
 $cbnext = !empty($slides['properties']['cbnext']) ? stripslashes($slides['properties']['cbnext']) : 'function() {}';
+
+// Demo page
+//$skin = !empty($_GET['skin']) ? $_GET['skin'] : $skin;
+//$thumb_nav = !empty($_GET['nav']) ? $_GET['nav'] : $thumb_nav;
 
 if(is_array($slides)) {
 
@@ -124,6 +130,8 @@ if(is_array($slides)) {
                                 navButtons : '.$navbuttons.',
                                 hoverPrevNext : '.$hoverprevnext.',
                                 hoverBottomNav : '.$hoverbottomnav.',
+                                showBarTimer : '.$bartimer.',
+                                showCircleTimer : '.$circletimer.',
                                 thumbnailNavigation : \''.$thumb_nav.'\',
                                 tnWidth : '.$thumb_width.',
                                 tnHeight : '.$thumb_height.',

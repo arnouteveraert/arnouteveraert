@@ -26,42 +26,43 @@ class Tweets_Widget extends WP_Widget {
 		$access_token = $instance['access_token'];
 		$access_token_secret = $instance['access_token_secret'];
 		$twitter_id = $instance['twitter_id'];
-		$count = $instance['count'];
+		$count = (int) $instance['count'];
 
 		echo $before_widget;
-
+		
 		if($title) {
 			echo $before_title.$title.$after_title;
 		}
-		
+
 		if($twitter_id && $consumer_key && $consumer_secret && $access_token && $access_token_secret && $count) { 
-		require_once 'twitteroauth/twitteroauth.php';
 		$transName = 'list_tweets_'.$args['widget_id'];
 		$cacheTime = 10;
 		if(false === ($twitterData = get_transient($transName))) {
 		     // require the twitter auth class
-		     require_once 'twitteroauth/twitteroauth.php';
+		     @require_once 'twitteroauth/twitteroauth.php';
 		     $twitterConnection = new TwitterOAuth(
 							$consumer_key,	// Consumer Key
 							$consumer_secret,   	// Consumer secret
 							$access_token,       // Access token
 							$access_token_secret    	// Access token secret
 							);
-		     $twitterData = $twitterConnection->get(
+		    $twitterData = $twitterConnection->get(
 							  'statuses/user_timeline',
 							  array(
 							    'screen_name'     => $twitter_id,
 							    'count'           => $count,
-							    'exclude_replies' => false
+							    'exclude_replies' => false,
+							    'include_rts' => true
 							  )
 							);
 		     if($twitterConnection->http_code != 200)
 		     {
 		          $twitterData = get_transient($transName);
 		     }
+
 		     // Save our new transient.
 		     set_transient($transName, $twitterData, 60 * $cacheTime);
-		}
+		};
 		$twitter = get_transient($transName);
 		if($twitter && is_array($twitter)) {
 			//var_dump($twitter);

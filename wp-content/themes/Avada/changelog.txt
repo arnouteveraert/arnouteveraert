@@ -1,3 +1,202 @@
+Version 3.1.1
+
+- fixed speed issue with ajax popular post view widget
+- improved content box styling 
+- improved side nav child/parent stying issue
+- google+sharing icon now shares instead of bookmarking
+- improved searching pages and posts
+- removed default logo dimensions from theme options
+- fixed menu text showing twice on mobile devices
+- updated language files with new strings
+- removed warning message on instal in rare cases
+- Revolution Slider is no longer automatically activated into the theme. It needs to be activated upon install and you will get a big notice about it on wp-admin page. You will not lose any sliders OR slider page settings and revolution slider is and always will be included with the theme. Upon upgrading to v3.1.1 the integrated Revolution Slider plugin will be disabled, and you will see a notification message in the WP admin telling you that the theme requires the installation of the Revolution Slider. Choose to install it, and then activate it. All the other slider plugins (Layer Slider, Elastic Slider, Themefusion Slider, Flexslider) are still integrated. ONLY Revolution Slider is not integrated.
+
+
+Version 3.1
+
+- NEW FEATURE: full design integration for WooCommerce, see our shop demo!
+- NEW FEATURE: two custom woo short codes added (Woo Products & Woo Featured)
+- NEW FEATURE: new WooCommerce tab in theme options
+- NEW FEATURE: RTL support 
+- NEW FEATURE: sticky header added, turned on/off via theme options
+- NEW FEATURE: improved blog short code with all layouts included
+- NEW FEATURE: new meta options to customize colors/images for main content area per page
+- NEW FEATURE: new meta options to customize colors/images for header area per page
+- NEW FEATURE: boxed or wide mode per page
+- NEW FEATURE: new portfolio grid layout
+- NEW FEATURE: new full width single portfolio page
+- NEW FEATURE: use sidebars on single portfolio page
+- NEW FEATURE: use 100% width on single portfolio pages
+- NEW FEATURE: new portfolio meta options (enable/disable items)
+- NEW FEATURE: new theme option to control portfolio excerpt (full/excerpt)
+- NEW FEATURE: added option for popular posts to be sorted by comments or views 
+- NEW FEATURE: added ability to use different layout for blog category/archive pages
+- NEW FEATURE: added ability to use different layout for portfolio category/archive pages
+- NEW FEATURE: now supports 5 levels of menu drop down
+- NEW FEATURE: added light box capability to slider, flexslider attachment slider, image and client carousels
+- NEW FEATURE: tagline box shadow updated with CSS3 and works in all sizes and on mobile
+- NEW FEATURE: button color parameter added to tagline box short code
+- NEW FEATURE: added several more theme options to disable various features
+- NEW FEATURE: footer social icons can be light or dark, selected via theme options
+- NEW FEATURE: blog grid/timeline box backgrounds now have their own color option
+- NEW FEATURE: global theme option to show/hide icons, titles, categories on image rollovers
+- NEW FEATURE: new theme option to control speed of slider short code
+- NEW FEATURE: ability to choose "nothing" in different header sections
+- NEW FEATURE: ability to choose left, right or center logo alignment in header
+- NEW FEATURE: new option to enable/disable featured image on single portfolio pages
+- NEW FEATURE: new theme options to control google map popup graphic, show/hide, click/auto
+- NEW FEATURE: new option to upload an image in the footer section, 100% and repeat options
+- NEW FEATURE: added ability for users to enter custom excerpt for blog posts
+- NEW FEATURE: ability to exclude categories from recent news short code
+- NEW FEATURE: theme options are now translatable with WPML plugin
+- NEW FEATURE: added Avada styling for Gravity Forms
+- NEW FEATURE: added Avada styling for Contact Form 7
+- NEW FEATURE: added Avada styling for qTranslate widgets
+- NEW FEATURE: tabs are now able to be bookmarked, ex: tab 2 can open on page load
+- NEW FEATURE: improved Ubermenu integration, works well with v2.0
+- NEW FEATURE: new 100% option for page title image
+- NEW FEATURE: using new hover effect script for tooltip popups, much smoother
+- NEW FEATURE: new XML file with new layouts, updated docs
+- new layer and revolution slider plugin updates
+- new font awesome 3.2.1 icon set
+- tested and approved WP 3.6
+- meta options on blog tab will now work for both archive and single post pages
+- new size fields for custom retina social icon
+- added light drop shadow to drop down menu
+- fixed logo margin options so they work on all headers
+- improved title short code so longer titles can be used
+- removed 10 slider limit for theme-fusion slider
+- improved recent news thumbnail images on mobile (new size added, see docs for info)
+- improved short codes being stripped from excerpts (content short codes are displayed, ex: drop caps)
+- improved custom menu/pages widget when used in the footer
+- bullet points now change with primary color
+- improved tabs on light skin by removing the image and allowing theme options to work
+- fixed minor IE8 & IE9 styling issues
+- improved styling when meta options are disabled
+- fixed 5 slide limit on flexslider attachment slider
+- improved short code parameters for consistency
+- fixed layer slider scaling feature
+- retina logos now load instantly
+- fixed google map issue using W3TC
+- wordpress image captions are now responsive
+- fixed body line-height so it works for post content
+- improved portfolio filters; only filters that have post on the active page will show
+- pricing tables now stretch full width of container, even if one column is used
+- fixed Pinterest bug of not pinning the post image
+- improved default values for light/dark skins
+- fixed border issue on image/client carousels
+- author nickname will now show if one is entered
+- fixed custom featured image size when using % or auto
+- improved testimonial triangle shape color and postion
+- fixed issue with recent work grid layout and image rollovers turned off
+- removed white background that shows behind featured image spot
+- fixed top secondary menu styling bug
+- fullscreen video button show sin light box now
+- improved social links widget styling
+- improved recent work cat_slug Lightbox issue
+- side nav featured image will now work with the disable featured image option
+- adjust full width short code padding bottom to be 20px instead of 20
+- pto plugin adjustment for child theme
+- fixed SEO issue with rich snippet tool
+- improved firefox styling for circles
+- fixed unique situation of page title text not displaying correct info
+- removed limit on layer slider numbering via page options
+- removed limitations for user accounts so options are visible
+- fixed unique case of widgets showing twice in sidebar
+- fixed child theme issue with js file
+- fixed faq template bug
+- added empty .mo file to tfflexslider language directory to fix windows server issue
+- improved google map popup text styling issue
+
+
+
+-----------------------------------------------------------------------------------------
+
+
+Version 3.0.1
+
+- fixed dark skin css and setting issue
+- fixed minor iphone styling bug in landscape mode
+- fixed google font error
+
+
+-----------------------------------------------------------------------------------------
+
+
+Version 3.0
+
+- NEW FEATURE: new complete dark skin
+- NEW FEATURE: 100+ new theme options (options reset recommended)
+- NEW FEATURE: over 50 new short codes & several new options for current ones
+- NEW FEATURE: new shortcode styling tab in theme options
+- NEW FEATURE: new short code drop down design in visual editor
+- NEW FEATURE: 4 new blog layouts (large & medium alternate, grid, timeline)
+- NEW FEATURE: choose pagination or infinite scrolling for all blog layouts
+- NEW FEATURE: enable/disable individual meta options
+- NEW FEATURE: new mobile menu design
+- NEW FEATURE: users can now mix and match header elements with designs (headers will reset)
+- NEW FEATURE: banner ad capability with header 4
+- NEW FEATURE: styling tab has 40 new options for color
+- NEW FEATURE: new line-height options added to typography tab
+- NEW FEATURE: option for inserting background image in header
+- NEW FEATURE: option for inserting background image in main content area
+- NEW FEATURE: light and dark social icon options
+- NEW FEATURE: change opacity of image rollovers
+- NEW FEATURE: enable/disable sliders from theme options
+- NEW FEATURE: new sidebar tab in theme options, change bkgd color, width and padding
+- NEW FEATURE: major google map enhancement; 4 map styles, multiple markers, several display/function options
+- NEW FEATURE: Pinterest added to sharing box & sharing box is now short code
+- NEW FEATURE: new font awesome 3.1 icons, 302 total icons
+- NEW FEATURE: several optimizations added
+- NEW FEATURE: added new google fonts, script also made for importing
+- NEW FEATURE: added drop down menu to top navigation
+- NEW FEATURE: new page options to show one, both or no rollover icons
+- NEW FEATURE: set custom link for the "link" rollover icon per post
+- NEW FEATURE: new page option to show or hide page title text per page
+- NEW FEATURE: ability to show or hide related posts for each blog/portfolio post
+- NEW FEATURE: includes new layer Slider 4.5.5
+- NEW FEATURE: includes new Rev Slider 2.3.9.1
+- NEW FEATURE: added retina fields for page title bar on individual pages
+- NEW FEATURE: added retina fields for custom social icon
+- NEW FEATURE: several added options and adjustments
+- NEW FEATURE: added compatibility for Event Espresso Plugin
+- NEW FEATURE: added compatibility for Sermon Manage Plugin
+- NEW FEATURE: added compatibility for Learndash Plugin
+- NEW FEATURE: added compatibility for DAP Membership plugin
+- NEW FEATURE: added compatibility for CC Gallery plugin
+- NEW FEATURE: added compatibility for Code styling Localization Plugin
+- NEW FEATURE: now using Caroufredsel plugin for carousels
+- NEW FEATURE: added ability to enable/disbale filters per portfolio page
+- worked directly with WPML devs to make Avada perfectly compatible with WPML
+- added default map height of 270px for mobile to counteract scrolling issue
+- fixed video issues of playing and stopping due to other vidoes/sliders
+- fixed tab issue of small gap on right side
+- changed yellow skin name to orange
+- moved portfolio custom fields out of theme options for multi-lingual capability
+- disabled hover effect for social icons on mobile
+- fixed half width portfolio issue when using "auto" for width
+- adjust layer slider thumbnail issue
+- fixed IE10 issue with zoom icon
+- lifted 10 slide limit for Themefusion slider and fixed slider bug
+- fixed side nav issue of pages not staying together in a set in specific instances
+- portfolio excerpt value now also controls portfolio category pages
+- removed any notices/errors when wp-debug mode is on
+- added h1 title to author admin page
+- added missing translation strings
+- fixed recaptcha language issue
+- added "default" sidebar option to page options box which will follow theme option
+- removed scroll bars on boxed mode at specific sizes
+- single category pages will now only filter through that category and not all
+- added message for when search results show up empty
+- fixed all includes for child theme
+= blog archive page background option follows theme option setting
+- fixed archive counter widget
+- minor styling adjustments
+
+
+-----------------------------------------------------------------------------------------
+
+
 Version 2.1.3
 
 - fixed sidebar issue of widgets being moved or deleted upon sidebar removal

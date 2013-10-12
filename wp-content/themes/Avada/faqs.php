@@ -12,6 +12,14 @@ get_header(); ?>
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
+	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
+		if($data['default_sidebar_pos'] == 'Left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+		} elseif($data['default_sidebar_pos'] == 'Right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+		}
 	}
 	?>
 	<div id="content" class="faqs" style="<?php echo $content_css; ?>">
@@ -55,7 +63,7 @@ get_header(); ?>
 			?>
 			<div class="faq-item <?php echo $item_classes; ?>">
 				<h5 class="toggle"><a href="#"><span class="arrow"></span><span class="toggle-title"><?php the_title(); ?></span></a></h5>
-				<div class="toggle-content">
+				<div class="toggle-content post-content">
 					<?php the_content(); ?>
 				</div>
 			</div>

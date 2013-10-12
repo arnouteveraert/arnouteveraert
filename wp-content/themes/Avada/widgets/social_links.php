@@ -28,7 +28,7 @@ class Social_Links_Widget extends WP_Widget {
 			echo $before_title.$title.$after_title;
 		}
 		?>
-		<ul class="social-networks">
+		<ul class="social-networks clearfix">
 			<?php if($instance['rss_link']): ?>
 			<li class="rss">
 				<a class="rss" href="<?php echo $instance['rss_link']; ?>">RSS</a>

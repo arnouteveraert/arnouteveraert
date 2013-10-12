@@ -40,7 +40,7 @@
 			<img style="display:none" src="<?php echo ADMIN_DIR; ?>assets/images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
 
 			<button id="of_save" type="button" class="button-primary">
-				<?php echo __('Save All Changes');?>
+				<?php echo __('Save All Changes', 'optionsframework');?>
 			</button>
 			
 		</div><!--.info_bar--> 	
@@ -64,8 +64,8 @@
 		<div class="save_bar"> 
 		
 			<img style="display:none" src="<?php echo ADMIN_DIR; ?>assets/images/loading-bottom.gif" class="ajax-loading-img ajax-loading-img-bottom" alt="Working..." />
-			<button id ="of_save" type="button" class="button-primary"><?php echo __('Save All Changes');?></button>			
-			<button id ="of_reset" type="button" class="button submit-button reset-button" ><?php echo __('Options Reset');?></button>
+			<button id ="of_save" type="button" class="button-primary"><?php echo __('Save All Changes', 'optionsframework');?></button>			
+			<button id ="of_reset" type="button" class="button submit-button reset-button" ><?php echo __('Options Reset', 'optionsframework');?></button>
 			<img style="display:none" src="<?php echo ADMIN_DIR; ?>assets/images/loading-bottom.gif" class="ajax-reset-loading-img ajax-loading-img-bottom" alt="Working..." />
 			
 		</div><!--.save_bar--> 

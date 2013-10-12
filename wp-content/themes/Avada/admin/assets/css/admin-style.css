@@ -173,6 +173,9 @@ border-radius: 2px;
 #of_container #of-nav li.upgradeoptions a {background: url(../images/upgrade_icon.png) no-repeat;}
 #of_container #of-nav li.elasticslider a {background: url(../images/elasticslider_icon.png) no-repeat;}
 #of_container #of-nav li.socialsharinglinks a {background: url(../images/social_links_icon.png) no-repeat;}
+#of_container #of-nav li.sidebaroptions a {background: url(../images/sidebar.png) no-repeat;}
+#of_container #of-nav li.shortcodesstylingoptions a {background: url(../images/shortcode_styling.png) no-repeat;}
+#of_container #of-nav li.woocommerce a {background: url(../images/woo_theme_options_icon.png) no-repeat;}
 
 #of_container #content {
 	float: left;

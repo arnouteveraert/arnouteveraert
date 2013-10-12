@@ -1,7 +1,9 @@
 <?php
+global $data;
 $args = array(
 	'post_type' => 'themefusion_elastic',
 	'posts_per_page' => -1,
+	'suppress_filters' => 0
 );
 $args['tax_query'][] = array(
 	'taxonomy' => 'themefusion_es_groups',

@@ -7,9 +7,7 @@
 	$table_name = $wpdb->prefix . "layerslider";
 
 	// Get sliders
-	$sliders = $wpdb->get_results( "SELECT * FROM $table_name
-										WHERE flag_hidden = '0' AND flag_deleted = '0'
-										ORDER BY id ASC LIMIT 200" );
+	$sliders = lsSliders(200, false, true);
 
 	// Custom capability
 	$custom_capability = get_option('layerslider_custom_capability', 'manage_options');
@@ -41,18 +39,18 @@
 			<tbody>
 				<?php if(!empty($sliders)) : ?>
 				<?php foreach($sliders as $key => $item) : ?>
-				<?php $name = empty($item->name) ? 'Unnamed' : $item->name; ?>
+				<?php $name = empty($item['name']) ? 'Unnamed' : $item['name']; ?>
 				<tr>
-					<td><?php echo $item->id ?></td>
-					<td><a href="?page=layerslider&action=edit&id=<?php echo $item->id ?>"><?php echo $name ?></a></td>
-					<td>[layerslider id="<?php echo $item->id ?>"]</td>
+					<td><?php echo $item['id'] ?></td>
+					<td><a href="?page=layerslider&action=edit&id=<?php echo $item['id'] ?>"><?php echo $name ?></a></td>
+					<td>[layerslider id="<?php echo $item['id'] ?>"]</td>
 					<td>
-						<a href="?page=layerslider&action=edit&id=<?php echo $item->id ?>"><?php _e('Edit', 'LayerSlider') ?></a> |
-						<a href="?page=layerslider&action=duplicate&id=<?php echo $item->id ?>"><?php _e('Duplicate', 'LayerSlider') ?></a> |
-						<a href="?page=layerslider&action=remove&id=<?php echo $item->id ?>" class="remove"><?php _e('Remove', 'LayerSlider') ?></a>
+						<a href="?page=layerslider&action=edit&id=<?php echo $item['id'] ?>"><?php _e('Edit', 'LayerSlider') ?></a> |
+						<a href="?page=layerslider&action=duplicate&id=<?php echo $item['id'] ?>"><?php _e('Duplicate', 'LayerSlider') ?></a> |
+						<a href="?page=layerslider&action=remove&id=<?php echo $item['id'] ?>" class="remove"><?php _e('Remove', 'LayerSlider') ?></a>
 					</td>
-					<td><?php echo date('M. d. Y.', $item->date_c) ?></td>
-					<td><?php echo date('M. d. Y.', $item->date_m) ?></td>
+					<td><?php echo date('M. d. Y.', $item['date_c']) ?></td>
+					<td><?php echo date('M. d. Y.', $item['date_m']) ?></td>
 				</tr>
 				<?php endforeach; ?>
 				<?php endif; ?>
@@ -75,7 +73,7 @@
 					<td><?php _e('Purchase code', 'LayerSlider') ?></td>
 					<td class="desc">
 						<input type="texT" name="purchase_code" value="<?php echo $code ?>" placeholder="bc8e2b24-3f8c-4b21-8b4b-90d57a38e3c7"><br>
-						<?php _e('To receive auto-updates, you need to enter your item purchase code. You can find it on your CodeCanyon downloads page, just click on the "Licence Certificate" button of the corresponding item. This will download a text file which contains your purchase code.', 'LayerSlider') ?>
+						<?php _e('To receive auto-updates, you need to enter your item purchase code. You can find it on your CodeCanyon downloads page, just click on the Download button and choose the "Licence Certificate" option. This will download a text file that contains your purchase code.', 'LayerSlider') ?>
 					</td>
 				</tr>
 			</tbody>
@@ -99,7 +97,7 @@
 	</form>
 	<?php endif; ?>
 
-	<form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" class="ls-box ls-settings">
+	<form action="<?php echo $_SERVER['REQUEST_URI'] ?>" method="post" class="ls-box ls-settings" id="ls-permission-form">
 		<input type="hidden" name="posted_ls_global" value="1">
 		<h3 class="header"><?php _e('Permissions', 'LayerSlider') ?></h3>
 		<table>
@@ -137,7 +135,7 @@
 
 		// Get sliders data
 		foreach($sliders as $item) {
-			$export[] = json_decode($item->data, true);
+			$export[] = json_decode($item['data'], true);
 		}
 	?>
 	<div class="ls-box ls-import-box">

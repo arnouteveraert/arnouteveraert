@@ -122,7 +122,7 @@ class WooSlider {
 	    // The "plugin_locale" filter is also used in load_plugin_textdomain()
 	    $locale = apply_filters( 'plugin_locale', get_locale(), $domain );
 	 
-	    load_plugin_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
+	    //load_plugin_textdomain( $domain, WP_LANG_DIR . '/' . $domain . '/' . $domain . '-' . $locale . '.mo' );
 	    load_plugin_textdomain( $domain, FALSE, dirname( plugin_basename( $this->file ) ) . '/lang/' );
 	} // End load_plugin_textdomain()
 

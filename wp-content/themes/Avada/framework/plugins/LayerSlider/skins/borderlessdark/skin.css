@@ -2,9 +2,12 @@
 
 
 
-.ls-borderlessdark.ls-container-fullscreen {
-	background-color: black !important;
-	width: 100% !important;
+.ls-borderlessdark .ls-ct-half {
+	background: #444;
+}
+
+.ls-borderlessdark .ls-ct-center {
+	background: white;
 }
 
 .ls-borderlessdark .ls-playvideo {
@@ -188,7 +191,6 @@
 
 .ls-borderlessdark .ls-shadow {
 	display: block;
-	height: 32px;
 }
 
 

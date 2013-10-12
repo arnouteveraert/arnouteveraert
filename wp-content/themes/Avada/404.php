@@ -3,11 +3,11 @@
 		<div id="post-<?php the_ID(); ?>" class="post">
 			<div class="post-content">
 				<div class="title">
-					<h2><?php echo __('Oops, This Page Could Not Be Found!', 'Avada'); ?></a></h2>
+					<h2><?php echo __('Oops, This Page Could Not Be Found!', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div>
 				</div>
 				<div class="error_page">
 					<div class="one_third">
-						<h3><img src="<?php bloginfo('template_directory'); ?>/images/404_image.png" alt="404" /></h3>
+						<div class="error-image"></div>
 					</div>
 					<div class="one_third useful_links">
 						<h3><?php echo __('Here are some useful links:', 'Avada'); ?></h3>

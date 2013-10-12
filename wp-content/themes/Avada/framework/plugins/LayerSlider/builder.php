@@ -22,6 +22,16 @@
 	// Parse data
 	$data = json_decode($data, true);
 
+	// Get screen options
+	$lsScreenOptions = get_option('lsScreenOptions', '0');
+	$lsScreenOptions = ($lsScreenOptions == 0) ? array() : $lsScreenOptions;
+	$lsScreenOptions = is_array($lsScreenOptions) ? $lsScreenOptions : unserialize($lsScreenOptions);
+
+	// Defaults
+	if(!isset($lsScreenOptions['showTooltips'])) {
+		$lsScreenOptions['showTooltips'] = 'true';
+	}
+
 	// Debug
 	//print_r($data);
 
@@ -61,6 +71,19 @@
 	}
 ?>
 
+<div id="ls-screen-options" class="metabox-prefs hidden">
+	<div id="screen-options-wrap" class="hidden">
+		<form id="ls-screen-options-form" action="<?php echo $_SERVER['REQUEST_URI']?>" method="post">
+			<h5>Show on screen</h5>
+			<label>
+				<input type="checkbox" name="showTooltips"<?php echo $lsScreenOptions['showTooltips'] == 'true' ? ' checked="checked"' : ''?>> Tooltips
+			</label>
+		</form>
+	</div>
+	<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+		<a href="#screen-options-wrap" id="show-settings-link" class="show-settings">Screen Options</a>
+	</div>
+</div>
 
 <div id="ls-tr-sample-3d">
 	<div class="ls-transition-item">
@@ -472,6 +495,18 @@
 							<option value="bottomright"><?php _e('Bottom right', 'LayerSlider') ?></option>
 						</select>
 					</td>
+				</tr>
+				<tr>
+					<td class="right"><?php _e('RotateX', 'LayerSlider') ?></td>
+					<td><input type="text" name="rotateX" value="0" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the X axis. You can use negatuve values."></td>
+					<td class="right"><?php _e('RotateY', 'LayerSlider') ?></td>
+					<td><input type="text" name="rotateY" value="0" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the Y axis. You can use negatuve values."></td>
+				</tr>
+				<tr>
+					<td class="right"><?php _e('RotateZ', 'LayerSlider') ?></td>
+					<td><input type="text" name="rotate" value="0" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the Z axis. You can use negatuve values."></td>
+					<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+					<td><input type="text" name="scale" value="1.0" data-help="The initial scale of the individual tiles which will be animated to the default (1.0) value."></td>
 				</tr>
 			</tbody>
 			<thead>
@@ -1015,6 +1050,18 @@
 										</select>
 									</td>
 								</tr>
+								<tr>
+									<td class="right"><?php _e('RotateX', 'LayerSlider') ?></td>
+									<td><input type="text" name="rotateX" value="<?php echo !empty($tr['transition']['rotateX']) ? $tr['transition']['rotateX'] : '0' ?>" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the X axis. You can use negatuve values."></td>
+									<td class="right"><?php _e('RotateY', 'LayerSlider') ?></td>
+									<td><input type="text" name="rotateY" value="<?php echo !empty($tr['transition']['rotateY']) ? $tr['transition']['rotateY'] : '0' ?>" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the Y axis. You can use negatuve values."></td>
+								</tr>
+								<tr>
+									<td class="right"><?php _e('RotateZ', 'LayerSlider') ?></td>
+									<td><input type="text" name="rotate" value="<?php echo !empty($tr['transition']['rotate']) ? $tr['transition']['rotate'] : '0' ?>" data-help="The initial rotation of the individual tiles which will be animated to the default (0deg) value around the Z axis. You can use negatuve values."></td>
+									<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+									<td><input type="text" name="scale" value="<?php echo !empty($tr['transition']['scale']) ? $tr['transition']['scale'] : '1.0' ?>" data-help="The initial scale of the individual tiles which will be animated to the default (1.0) value."></td>
+								</tr>
 							</tbody>
 							<thead>
 								<tr>
@@ -1057,6 +1104,8 @@
 </div>
 <script type="text/javascript">
 	var lsTrImgPath = '<?php echo $GLOBALS['lsPluginPath'] ?>img/';
+	// Screen options
+	var lsScreenOptions = <?php echo json_encode($lsScreenOptions) ?>;
 </script>
 
 <!-- Help menu WP Pointer -->

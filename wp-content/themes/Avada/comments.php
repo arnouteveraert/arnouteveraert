@@ -15,7 +15,7 @@
 <?php if ( have_comments() ) : ?>
 
 	<div class="comments-container">
-		<div class="title"><h2><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2></div>
+		<div class="title"><h2><?php comments_number(__('No Comments', 'Avada'), __('One Comment', 'Avada'), '% '.__('Comments', 'Avada'));?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 		
 		<ol class="commentlist">
 			<?php wp_list_comments('callback=avada_comment'); ?>
@@ -34,7 +34,7 @@
 
 	 <?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<p class="no-comments"><?php echo __('', 'Avada'); ?></p>
+		<p class="no-comments"><?php echo __('Comments are closed.', 'Avada'); ?></p>
 
 	<?php endif; ?>
 
@@ -44,7 +44,7 @@
 
 <div id="respond" class="section">
 	<div>
-	<div class="title"><h2><?php comment_form_title(__('Leave A Comment', 'Avada'), __('Leave A Comment', 'Avada')); ?></h2></div>
+	<div class="title"><h2><?php comment_form_title(__('Leave A Comment', 'Avada'), __('Leave A Comment', 'Avada')); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 	<div>
 
 	<div><p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p></div>
@@ -57,7 +57,7 @@
 
 		<?php if ( is_user_logged_in() ) : ?>
 
-		<p><?php echo __('Logged in as', 'Avada'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php echo __('Log out of this account'); ?>"><?php echo __('Log out &raquo;', 'Avada'); ?></a></p>
+		<p><?php echo __('Logged in as', 'Avada'); ?> <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php echo __('Log out of this account', 'Avada'); ?>"><?php echo __('Log out &raquo;', 'Avada'); ?></a></p>
 
 		<div id="comment-textarea">
 			

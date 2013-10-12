@@ -30,6 +30,8 @@ class PyreThemeFrameworkMetaboxes {
 		$this->add_meta_box('portfolio_options', 'Portfolio Options', 'avada_portfolio');
 
 		$this->add_meta_box('es_options', 'Elastic Slide Options', 'themefusion_elastic');
+
+		$this->add_meta_box('woocommerce_options', 'Product Options', 'product');
 	}
 	
 	public function add_meta_box($id, $label, $post_type)
@@ -78,6 +80,12 @@ class PyreThemeFrameworkMetaboxes {
 	{	
 		include 'views/metaboxes/style.php';
 		include 'views/metaboxes/es_options.php';
+	}
+
+	public function woocommerce_options()
+	{	
+		include 'views/metaboxes/style.php';
+		include 'views/metaboxes/woocommerce_options.php';
 	}
 
 	public function text($id, $label, $desc = '')

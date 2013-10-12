@@ -11,7 +11,32 @@
 		$uploadClass = 'ls-upload';
 	}
 
+	// Get screen options
+	$lsScreenOptions = get_option('lsScreenOptions', '0');
+	$lsScreenOptions = ($lsScreenOptions == 0) ? array() : $lsScreenOptions;
+	$lsScreenOptions = is_array($lsScreenOptions) ? $lsScreenOptions : unserialize($lsScreenOptions);
+
+	// Defaults
+	if(!isset($lsScreenOptions['showTooltips'])) {
+		$lsScreenOptions['showTooltips'] = 'true';
+	}
+
 ?>
+
+<div id="ls-screen-options" class="metabox-prefs hidden">
+	<div id="screen-options-wrap" class="hidden">
+		<form id="ls-screen-options-form" action="<?php echo $_SERVER['REQUEST_URI']?>" method="post">
+			<h5>Show on screen</h5>
+			<label>
+				<input type="checkbox" name="showTooltips"<?php echo $lsScreenOptions['showTooltips'] == 'true' ? ' checked="checked"' : ''?>> Tooltips
+			</label>
+		</form>
+	</div>
+	<div id="screen-options-link-wrap" class="hide-if-no-js screen-meta-toggle">
+		<a href="#screen-options-wrap" id="show-settings-link" class="show-settings">Screen Options</a>
+	</div>
+</div>
+
 <div id="ls-sample">
 	<div class="ls-box ls-layer-box">
 		<input type="hidden" name="layerkey" value="0">
@@ -56,7 +81,7 @@
 					<td class="right">Use 3D/2D</td>
 					<td>
 						<input type="checkbox" name="new_transitions" checked="checked" data-help="<?php _e('You can choose between the old and the new 3D/2D slide transitions introduced in version 4.0.0.', 'LayerSlider') ?>">
-						<span>Old transision</span>
+						<span>Old transition</span>
 					</td>
 					<td class="right">
 						<span class="new"><?php _e('Transitions', 'LayerSlider') ?></span>
@@ -227,6 +252,8 @@
 						<div class="ls-sublayer-wrapper">
 							<span class="ls-sublayer-number">1</span>
 							<span class="ls-highlight"><input type="checkbox" class="noreplace"></span>
+							<span class="ls-icon-eye"></span>
+							<span class="ls-icon-lock"></span>
 							<input type="text" name="subtitle" class="ls-sublayer-title" value="Layer #1">
 							<div class="clear"></div>
 							<div class="ls-sublayer-nav">
@@ -321,7 +348,7 @@
 									<table>
 										<tbody>
 											<tr>
-												<td><?php _e('Transition in', 'LayerSlider') ?></td>
+												<td rowspan="2"><?php _e('Transition in', 'LayerSlider') ?></td>
 												<td class="right"><?php _e('Type', 'LayerSlider') ?></td>
 												<td>
 													<select name="slidedirection" class="sublayerprop" data-help="<?php _e('The type of the transition.', 'LayerSlider') ?>">
@@ -334,7 +361,7 @@
 													</select>
 												</td>
 												<td class="right"><?php _e('Duration', 'LayerSlider') ?></td>
-												<td><input type="text" name="durationin" class="sublayerprop" value="1500" data-help="<?php _e('The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
+												<td><input type="text" name="durationin" class="sublayerprop" value="1000" data-help="<?php _e('The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
 												<td class="right"><a href="http://easings.net/" target="_blank"><?php _e('Easing', 'LayerSlider') ?></a></td>
 												<td>
 													<select name="easingin" class="sublayerprop" data-help="<?php _e('The timing function of the animation, with it you can manipualte the layer movement. Please click on the link next to this select field to open easings.net for more information and real-time examples.', 'LayerSlider') ?>">
@@ -375,9 +402,19 @@
 												<td class="right"><?php _e('Delay', 'LayerSlider') ?></td>
 												<td><input type="text" name="delayin" class="sublayerprop" value="0" data-help="<?php _e('Delay before the animation start when the layer slides in. This value is in millisecs, so the value 1000 means 1 second.', 'LayerSlider') ?>"> (ms)</td>
 											</tr>
+											<tr>
+												<td class="right notfirst"><?php _e('Rotation', 'LayerSlider') ?></td>
+												<td><input type="text" name="rotatein" value="0" class="sublayerprop" data-help="You can set the initial rotation of this layer here which will animate to the default (0deg) value. You can use negative values."></td>
+												<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+												<td><input type="text" name="scalein" value="1.0" class="sublayerprop" data-help="You can set the initial scale of this layer here which will be animated to the default (1.0) value."></td>
+												<td class="right"></td>
+												<td></td>
+												<td class="right"></td>
+												<td></td>
+											</tr>
 
 											<tr>
-												<td><?php _e('Transition out', 'LayerSlider') ?></td>
+												<td rowspan="2"><?php _e('Transition out', 'LayerSlider') ?></td>
 												<td class="right"><?php _e('Type', 'LayerSlider') ?></td>
 												<td>
 													<select name="slideoutdirection" class="sublayerprop" data-help="<?php _e('The type of the transition.', 'LayerSlider') ?>">
@@ -390,7 +427,7 @@
 													</select>
 												</td>
 												<td class="right"><?php _e('Duration', 'LayerSlider') ?></td>
-												<td><input type="text" name="durationout" class="sublayerprop" value="1500" data-help="<?php _e('The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
+												<td><input type="text" name="durationout" class="sublayerprop" value="1000" data-help="<?php _e('The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
 												<td class="right"><a href="http://easings.net/" target="_blank"><?php _e('Easing', 'LayerSlider') ?></a></td>
 												<td>
 													<select name="easingout" class="sublayerprop" data-help="<?php _e('The timing function of the animation, with it you can manipualte the layer movement. Please click on the link next to this select field to open easings.net for more information and real-time examples.', 'LayerSlider') ?>">
@@ -433,9 +470,20 @@
 											</tr>
 
 											<tr>
+												<td class="right notfirst"><?php _e('Rotation', 'LayerSlider') ?></td>
+												<td><input type="text" name="rotateout" value="0" class="sublayerprop" data-help="You can set the ending rotation here, this sublayer will be animated from the default (0deg) value to yours. You can use negative values."></td>
+												<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+												<td><input type="text" name="scaleout" value="1.0" class="sublayerprop" data-help="You can set the ending scale value here, this sublayer will be animated from the default (1.0) value to yours."></td>
+												<td class="right"></td>
+												<td></td>
+												<td class="right"></td>
+												<td></td>
+											</tr>
+
+											<tr>
 												<td><?php _e('Other options', 'LayerSlider') ?></td>
 												<td class="right"><?php _e('Distance', 'LayerSlider') ?></td>
-												<td><input type="text" name="level" value="-1" data-help="<?php _e('The default value is -1 which means that the layer will be positioned exactly outside the of slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values.', 'LayerSlider') ?>"></td>
+												<td><input type="text" name="level" value="-1" data-help="<?php _e('The default value is -1 which means that the layer will be positioned exactly outside of the slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values.', 'LayerSlider') ?>"></td>
 												<td class="right"><?php _e('Show until', 'LayerSlider') ?></td>
 												<td><input type="text" name="showuntil" class="sublayerprop" value="0" data-help="<?php _e('The layer will be visible for the time you specify here, then it will slide out. You can use this setting for layers to leave the slide before the slide itself animates out, or for example before other layers will slide in. This value in millisecs, so the value 1000 means 1 second.', 'LayerSlider') ?>"> (ms)</td>
 												<td class="right"><?php _e('Hidden', 'LayerSlider') ?></td>
@@ -449,7 +497,7 @@
 										<tbody>
 											<tr>
 												<td><?php _e('URL', 'LayerSlider') ?></td>
-												<td class="url"><input type="text" name="url" value="" data-help="<?php _e('If you want to link your layer, type here the URL.', 'LayerSlider') ?>"></td>
+												<td class="url"><input type="text" name="url" value="" data-help="<?php _e('If you want to link your layer, type here the URL. You can use a hash mark followed by a number to link this layer to another slide. Example: #3 - this will switch to the third slide.', 'LayerSlider') ?>"></td>
 												<td>
 													<select name="target" data-help="<?php _e('You can control here the link behaviour: _self means the linked page will open in the current tab/window, _blank will open it in a new tab/window.', 'LayerSlider') ?>">
 														<option>_self</option>
@@ -473,9 +521,9 @@
 												<td class="right"><?php _e('Height', 'LayerSlider') ?></td>
 												<td><input type="text" name="height" class="auto" value="" data-help="<?php _e("You can set the height of your layer. You can use pixels, percents, or the default value 'auto'. Examples: 100px, 50% or auto", "LayerSlider") ?>"></td>
 												<td class="right"><?php _e('Top', 'LayerSlider') ?></td>
-												<td><input type="text" name="top" value="20px" data-help="<?php _e("The layer position from the top of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
+												<td><input type="text" name="top" value="0px" data-help="<?php _e("The layer position from the top of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
 												<td class="right"><?php _e('Left', 'LayerSlider') ?></td>
-												<td><input type="text" name="left" value="20px" data-help="<?php _e("The layer position from the left side of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
+												<td><input type="text" name="left" value="0px" data-help="<?php _e("The layer position from the left side of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
 											</tr>
 											<tr>
 												<td><?php _e('Padding', 'LayerSlider') ?></td>
@@ -508,12 +556,12 @@
 												<td class="right"><?php _e('Line-height', 'LayerSlider') ?></td>
 												<td><input type="text" name="line-height" class="auto" value="" data-help="<?php _e("The line height of your text. The default setting is 'normal'. Example: 22px", "LayerSlider") ?>"></td>
 												<td class="right"><?php _e('Color', 'LayerSlider') ?></td>
-												<td><input type="text" name="color" class="auto" value="" data-help="<?php _e('The color of your text. You can use color names, hexadecimal, RGB or RGBA values. Example: #333', 'LayerSlider') ?>"></td>
+												<td><input type="text" name="color" class="auto ls-colorpicker" value="" data-help="<?php _e('The color of your text. You can use color names, hexadecimal, RGB or RGBA values. Example: #333', 'LayerSlider') ?>"></td>
 											</tr>
 											<tr>
 												<td><?php _e('Misc', 'LayerSlider') ?></td>
 												<td class="right"><?php _e('Background', 'LayerSlider') ?></td>
-												<td><input type="text" name="background" class="auto" value="" data-help="<?php _e("The background color of your layer. You can use color names, hexadecimal, RGB or RGBA values as well as the 'transparent' keyword. Example: #FFF", "LayerSlider") ?>"></td>
+												<td><input type="text" name="background" class="auto ls-colorpicker" value="" data-help="<?php _e("The background color of your layer. You can use color names, hexadecimal, RGB or RGBA values as well as the 'transparent' keyword. Example: #FFF", "LayerSlider") ?>"></td>
 												<td class="right"><?php _e('Rounded corners', 'LayerSlider') ?></td>
 												<td><input type="text" name="border-radius" class="auto" value="" data-help="<?php _e('If you want rounded corners, you can set here its radius. Example: 5px', 'LayerSlider') ?>"></td>
 												<td class="right"><?php _e('Word-wrap', 'LayerSlider') ?></td>
@@ -620,7 +668,7 @@
 						<tr>
 							<td><?php _e('Full-width slider', 'LayerSlider') ?></td>
 							<td><input type="checkbox" name="forceresponsive"></td>
-							<td class="desc"><?php _e('When you are using a responsiveness or percentage dimensions for the slider, it will respond the parent element size changes. With tis option you can bypass this behaviour and LayerSlider will be a full-width slider.', 'LayerSlider') ?></td>
+							<td class="desc"><?php _e('When you are using a responsiveness or percentage dimensions for the slider, it will respond the parent element size changes. With this option you can bypass this behaviour and LayerSlider will be a full-width slider.', 'LayerSlider') ?></td>
 						</tr>
 						<tr>
 							<td><?php _e('Responsive under', 'LayerSlider') ?></td>
@@ -630,7 +678,7 @@
 						<tr>
 							<td><?php _e('Layers Container', 'LayerSlider') ?></td>
 							<td><input type="text" name="sublayercontainer" value="0"></td>
-							<td class="desc">(px) <?php _e('This feature is needed if you are using a full-width slider and you need that your layers forced to positioning inside a centered custom width container. Just specify the width of this container in pixels! Note, that this feature is working only with pixel-positioned layers, but of course if you add left: 50% position to a layer it will be positioned horizontally to the center, as before!', 'LayerSlider') ?></td>
+							<td class="desc">(px) <?php _e("This feature is useful if you are using a full-width slider and you want to avoid stretching your layers across the full viewport horizontally. Just specify a custom width in pixels, and the slider will create a centered inner area to place your content into that. Note that this feature is working only with pixel-positioned layers, but you can still use the value '50%' if you want centered positions.", "LayerSlider") ?></td>
 						</tr>
 					</tbody>
 					<thead>
@@ -702,7 +750,7 @@
 									<option value="disabled"><?php _e('disabled', 'LayerSlider') ?></option>
 								</select>
 							</td>
-							<td class="desc"><?php _e("If you enabled automatically play videos, the auto value means that the slideshow will stop UNTIL the video is playing and after that it continues. Enabled means slideshow will stop and it won't continue after video is played.", "LayerSlider") ?></td>
+							<td class="desc"><?php _e("If you enabled the 'automatically play videos' option, the 'auto' value means that the slideshow will pause UNTIL the video is finished playing and after that it will continue. The 'enabled' value means that the slideshow will stop and will not resume after the video has been played.", "LayerSlider") ?></td>
 						</tr>
 						<tr>
 							<td><?php _e('Youtube preview', 'LayerSlider') ?></td>
@@ -740,14 +788,10 @@
 							<td><?php _e('Skin', 'LayerSlider') ?></td>
 							<td>
 								<select name="skin">
-									<?php $files = scandir(dirname(__FILE__) . '/skins'); ?>
-									<?php foreach($files as $entry) : ?>
-									<?php if($entry == '.' || $entry == '..' || $entry == 'preview') continue; ?>
-									<?php if($entry == 'defaultskin') { ?>
-									<option selected="selected"><?php echo $entry ?></option>
-									<?php } else { ?>
-									<option><?php echo $entry ?></option>
-									<?php } ?>
+									<?php $skins = array_map('basename', glob(dirname(__FILE__) . '/skins/*', GLOB_ONLYDIR)); ?>
+									<?php foreach($skins as $skin) : ?>
+									<?php $selected = ($skin == 'defaultskin') ? ' selected="selected"' : '' ?>
+									<option<?php echo $selected ?>><?php echo $skin ?></option>
 									<?php endforeach; ?>
 								</select>
 							</td>
@@ -760,7 +804,7 @@
 									<input type="text" name="backgroundcolor" value="transparent" class="input ls-colorpicker">
 								</div>
 							</td>
-							<td class="desc"><?php _e('Background color of LayerSlider. You can use all CSS methods, like hexa colors, rgb(r,g,b) method, color names, etc. Note, that slides with background are covering the global background.', 'LayerSlider') ?></td>
+							<td class="desc"><?php _e('Background color of LayerSlider. You can use all CSS methods, like hexa colors, rgb(r,g,b) method, color names, etc. Note, that slides with background will cover up the global background image.', 'LayerSlider') ?></td>
 						</tr>
 						<tr>
 							<td><?php _e('Background image', 'LayerSlider') ?></td>
@@ -770,7 +814,7 @@
 									<span class="ls-reset">x</span>
 								</div>
 							</td>
-							<td class="desc"><?php _e('Background image of LayerSlider. This will be a fixed background image of LayerSlider by default. Note, that slides with background are covering the global background image.', 'LayerSlider') ?></td>
+							<td class="desc"><?php _e('Background image of LayerSlider. This will be a fixed background image of LayerSlider by default. Note, that slides with background will cover up the global background image.', 'LayerSlider') ?></td>
 						</tr>
 						<tr>
 							<td><?php _e('Slider style', 'LayerSlider') ?></td>
@@ -816,6 +860,16 @@
 							<td><?php _e('Bottom navigation on hover', 'LayerSlider') ?></td>
 							<td><input type="checkbox" name="hoverbottomnav"></td>
 							<td class="desc"><?php _e('The bottom navigation controls (with also thumbnails) will be shown only if you move your mouse cursor over the slider.', 'LayerSlider') ?></td>
+						</tr>
+						<tr>
+							<td><?php _e('Show bar timer', 'LayerSlider') ?></td>
+							<td><input type="checkbox" name="bartimer"></td>
+							<td class="desc"><?php _e('You can hide or show the bar timer with this option.', 'LayerSlider') ?></td>
+						</tr>
+						<tr>
+							<td><?php _e('Show circle timer', 'LayerSlider') ?></td>
+							<td><input type="checkbox" name="circletimer" checked="checked"></td>
+							<td class="desc"><?php _e('You can hide or show the circle timer with this option.', 'LayerSlider') ?></td>
 						</tr>
 						<tr>
 							<td><?php _e('Thumbnail navigation', 'LayerSlider') ?></td>
@@ -885,7 +939,7 @@
 					<tbody>
 						<tr>
 							<td><?php _e('Put JS includes to body', 'LayerSlider') ?></td>
-							<td><input type="checkbox" name="bodyinclude" checked ="checked"></td>
+							<td><input type="checkbox" name="bodyinclude" checked="checked"></td>
 							<td class="desc"><?php _e("If the slider doesn't showing up on your front-end page, you probably have a jQuery conflict when multiple libraries loaded to the document and causes a Javascript error. Enabling this option may solve your problem. Please don't enable this option if you don't experiencing any issues.", "LayerSlider") ?></td>
 						</tr>
 					</tbody>
@@ -992,7 +1046,7 @@
 								<td class="right">Use 3D/2D</td>
 								<td>
 									<input type="checkbox" name="new_transitions" checked="checked" data-help="<?php _e('You can choose between the old and the new 3D/2D slide transitions introduced in version 4.0.0.', 'LayerSlider') ?>">
-									<span>Old transision</span>
+									<span>Old transition</span>
 								</td>
 								<td class="right">
 									<span class="new"><?php _e('Transitions', 'LayerSlider') ?></span>
@@ -1163,6 +1217,8 @@
 									<div class="ls-sublayer-wrapper">
 										<span class="ls-sublayer-number">1</span>
 										<span class="ls-highlight"><input type="checkbox" class="noreplace"></span>
+										<span class="ls-icon-eye"></span>
+										<span class="ls-icon-lock"></span>
 										<input type="text" name="subtitle" class="ls-sublayer-title" value="Layer #1">
 										<div class="clear"></div>
 										<div class="ls-sublayer-nav">
@@ -1257,7 +1313,7 @@
 												<table>
 													<tbody>
 														<tr>
-															<td><?php _e('Transition in', 'LayerSlider') ?></td>
+															<td rowspan="2"><?php _e('Transition in', 'LayerSlider') ?></td>
 															<td class="right"><?php _e('Type', 'LayerSlider') ?></td>
 															<td>
 																<select name="slidedirection" class="sublayerprop" data-help="<?php _e('The type of the transition.', 'LayerSlider') ?>">
@@ -1270,7 +1326,7 @@
 																</select>
 															</td>
 															<td class="right"><?php _e('Duration', 'LayerSlider') ?></td>
-															<td><input type="text" name="durationin" class="sublayerprop" value="1500" data-help="<?php _e('The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
+															<td><input type="text" name="durationin" class="sublayerprop" value="1000" data-help="<?php _e('The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
 															<td class="right"><a href="http://easings.net/" target="_blank"><?php _e('Easing', 'LayerSlider') ?></a></td>
 															<td>
 																<select name="easingin" class="sublayerprop" data-help="<?php _e('The timing function of the animation, with it you can manipualte the layer movement. Please click on the link next to this select field to open easings.net for more information and real-time examples.', 'LayerSlider') ?>">
@@ -1313,7 +1369,18 @@
 														</tr>
 
 														<tr>
-															<td><?php _e('Transition out', 'LayerSlider') ?></td>
+															<td class="right notfirst"><?php _e('Rotation', 'LayerSlider') ?></td>
+															<td><input type="text" name="rotatein" value="0" class="sublayerprop" data-help="You can set the initial rotation of this layer here which will animate to the default (0deg) value. You can use negative values."></td>
+															<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+															<td><input type="text" name="scalein" value="1.0" class="sublayerprop" data-help="You can set the initial scale of this layer here which will be animated to the default (1.0) value."></td>
+															<td class="right"></td>
+															<td></td>
+															<td class="right"></td>
+															<td></td>
+														</tr>
+
+														<tr>
+															<td rowspan="2"><?php _e('Transition out', 'LayerSlider') ?></td>
 															<td class="right"><?php _e('Type', 'LayerSlider') ?></td>
 															<td>
 																<select name="slideoutdirection" class="sublayerprop" data-help="<?php _e('The type of the transition.', 'LayerSlider') ?>">
@@ -1326,7 +1393,7 @@
 																</select>
 															</td>
 															<td class="right"><?php _e('Duration', 'LayerSlider') ?></td>
-															<td><input type="text" name="durationout" class="sublayerprop" value="1500" data-help="<?php _e('The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
+															<td><input type="text" name="durationout" class="sublayerprop" value="1000" data-help="<?php _e('The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations.', 'LayerSlider') ?>"> (ms)</td>
 															<td class="right"><a href="http://easings.net/" target="_blank"><?php _e('Easing', 'LayerSlider') ?></a></td>
 															<td>
 																<select name="easingout" class="sublayerprop" data-help="<?php _e('The timing function of the animation, with it you can manipualte the layer movement. Please click on the link next to this select field to open easings.net for more information and real-time examples.', 'LayerSlider') ?>">
@@ -1369,9 +1436,20 @@
 														</tr>
 
 														<tr>
+															<td class="right notfirst"><?php _e('Rotation', 'LayerSlider') ?></td>
+															<td><input type="text" name="rotateout" value="0" class="sublayerprop" data-help="You can set the ending rotation here, this sublayer will be animated from the default (0deg) value to yours. You can use negative values."></td>
+															<td class="right"><?php _e('Scale', 'LayerSlider') ?></td>
+															<td><input type="text" name="scaleout" value="1.0" class="sublayerprop" data-help="You can set the ending scale value here, this sublayer will be animated from the default (1.0) value to yours."></td>
+															<td class="right"></td>
+															<td></td>
+															<td class="right"></td>
+															<td></td>
+														</tr>
+
+														<tr>
 															<td><?php _e('Other options', 'LayerSlider') ?></td>
 															<td class="right"><?php _e('Distance', 'LayerSlider') ?></td>
-															<td><input type="text" name="level" value="-1" data-help="<?php _e('The default value is -1 which means that the layer will be positioned exactly outside the of slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values.', 'LayerSlider') ?>"></td>
+															<td><input type="text" name="level" value="-1" data-help="<?php _e('The default value is -1 which means that the layer will be positioned exactly outside of the slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values.', 'LayerSlider') ?>"></td>
 															<td class="right"><?php _e('Show until', 'LayerSlider') ?></td>
 															<td><input type="text" name="showuntil" class="sublayerprop" value="0" data-help="<?php _e('The layer will be visible for the time you specify here, then it will slide out. You can use this setting for layers to leave the slide before the slide itself animates out, or for example before other layers will slide in. This value in millisecs, so the value 1000 means 1 second.', 'LayerSlider') ?>"> (ms)</td>
 															<td class="right"><?php _e('Hidden', 'LayerSlider') ?></td>
@@ -1385,7 +1463,7 @@
 													<tbody>
 														<tr>
 															<td><?php _e('URL', 'LayerSlider') ?></td>
-															<td class="url"><input type="text" name="url" value="" data-help="<?php _e('If you want to link your layer, type here the URL.', 'LayerSlider') ?>"></td>
+															<td class="url"><input type="text" name="url" value="" data-help="<?php _e('If you want to link your layer, type here the URL. You can use a hash mark followed by a number to link this layer to another slide. Example: #3 - this will switch to the third slide.', 'LayerSlider') ?>"></td>
 															<td>
 																<select name="target" data-help="<?php _e('You can control here the link behaviour: _self means the linked page will open in the current tab/window, _blank will open it in a new tab/window.', 'LayerSlider') ?>">
 																	<option>_self</option>
@@ -1409,9 +1487,9 @@
 															<td class="right"><?php _e('Height', 'LayerSlider') ?></td>
 															<td><input type="text" name="height" class="auto" value="" data-help="<?php _e("You can set the height of your layer. You can use pixels, percents, or the default value 'auto'. Examples: 100px, 50% or auto", "LayerSlider") ?>"></td>
 															<td class="right"><?php _e('Top', 'LayerSlider') ?></td>
-															<td><input type="text" name="top" value="20px" data-help="<?php _e("The layer position from the top of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
+															<td><input type="text" name="top" value="0px" data-help="<?php _e("The layer position from the top of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
 															<td class="right"><?php _e('Left', 'LayerSlider') ?></td>
-															<td><input type="text" name="left" value="20px" data-help="<?php _e("The layer position from the left side of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
+															<td><input type="text" name="left" value="0px" data-help="<?php _e("The layer position from the left side of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here.", "LayerSlider") ?>"></td>
 														</tr>
 														<tr>
 															<td><?php _e('Padding', 'LayerSlider') ?></td>
@@ -1444,12 +1522,12 @@
 															<td class="right"><?php _e('Line-height', 'LayerSlider') ?></td>
 															<td><input type="text" name="line-height" class="auto" value="" data-help="<?php _e("The line height of your text. The default setting is 'normal'. Example: 22px", "LayerSlider") ?>"></td>
 															<td class="right"><?php _e('Color', 'LayerSlider') ?></td>
-															<td><input type="text" name="color" class="auto" value="" data-help="<?php _e('The color of your text. You can use color names, hexadecimal, RGB or RGBA values. Example: #333', 'LayerSlider') ?>"></td>
+															<td><input type="text" name="color" class="auto ls-colorpicker" value="" data-help="<?php _e('The color of your text. You can use color names, hexadecimal, RGB or RGBA values. Example: #333', 'LayerSlider') ?>"></td>
 														</tr>
 														<tr>
 															<td><?php _e('Misc', 'LayerSlider') ?></td>
 															<td class="right"><?php _e('Background', 'LayerSlider') ?></td>
-															<td><input type="text" name="background" class="auto" value="" data-help="<?php _e("The background color of your layer. You can use color names, hexadecimal, RGB or RGBA values as well as the 'transparent' keyword. Example: #FFF", "LayerSlider") ?>"></td>
+															<td><input type="text" name="background" class="auto ls-colorpicker" value="" data-help="<?php _e("The background color of your layer. You can use color names, hexadecimal, RGB or RGBA values as well as the 'transparent' keyword. Example: #FFF", "LayerSlider") ?>"></td>
 															<td class="right"><?php _e('Rounded corners', 'LayerSlider') ?></td>
 															<td><input type="text" name="border-radius" class="auto" value="" data-help="<?php _e('If you want rounded corners, you can set here its radius. Example: 5px', 'LayerSlider') ?>"></td>
 															<td class="right"><?php _e('Word-wrap', 'LayerSlider') ?></td>
@@ -1563,7 +1641,6 @@
 		</div>
 	</div>
 </form>
-
 <script type="text/javascript">
 
 	// Plugin path
@@ -1579,4 +1656,6 @@
 	var newMediaUploader = false;
 	<?php } ?>
 
+	// Screen options
+	var lsScreenOptions = <?php echo json_encode($lsScreenOptions) ?>;
 </script>

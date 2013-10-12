@@ -30,27 +30,37 @@ class Pyre_Tabs_Widget extends WP_Widget {
 		$show_recent_posts = isset($instance['show_recent_posts']) ? 'true' : 'false';
 		$show_comments = isset($instance['show_comments']) ? 'true' : 'false';
 		$show_tags = isset($instance['show_tags']) ? 'true' : 'false';
-		
+		$orderby = $instance['orderby'];
+
+		if(!$orderby) {
+			$orderby = 'Highest Comments';
+		}
+
 		echo $before_widget;
 		?>
 		<div class="tab-holder">
 			<div class="tab-hold tabs-wrapper">
 				<ul id="tabs" class="tabset tabs">
 					<?php if($show_popular_posts == 'true'): ?>
-					<li><a href="#tab1"><?php echo __('Popular', 'Avada'); ?></a></li>
+					<li><a href="#tab-popular"><?php echo __('Popular', 'Avada'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_recent_posts == 'true'): ?>
-					<li><a href="#tab2"><?php echo __('Recent', 'Avada'); ?></a></li>
+					<li><a href="#tab-recent"><?php echo __('Recent', 'Avada'); ?></a></li>
 					<?php endif; ?>
 					<?php if($show_comments == 'true'): ?>
-					<li><a href="#tab3"><span class="chat-icon"></span></a></li>
+					<li><a href="#tab-comments"><span class="chat-icon"></span></a></li>
 					<?php endif; ?>
 				</ul>
 				<div class="tab-box tabs-container">
 					<?php if($show_popular_posts == 'true'): ?>
-					<div id="tab1" class="tab tab_content" style="display: none;">
+					<div id="tab-popular" class="tab tab_content" style="display: none;">
 						<?php
-						$popular_posts = new WP_Query('showposts='.$posts.'&orderby=comment_count&order=DESC');
+						if($orderby == 'Highest Comments') {
+							$order_string = '&orderby=comment_count';
+						} else {
+							$order_string = '&meta_key=avada_post_views_count&orderby=meta_value_num';
+						}
+						$popular_posts = new WP_Query('showposts='.$posts.$order_string.'&order=DESC');
 						if($popular_posts->have_posts()): ?>
 						<ul class="news-list">
 							<?php while($popular_posts->have_posts()): $popular_posts->the_post(); ?>
@@ -75,7 +85,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 					</div>
 					<?php endif; ?>
 					<?php if($show_recent_posts == 'true'): ?>
-					<div id="tab2" class="tab tab_content" style="display: none;">
+					<div id="tab-recent" class="tab tab_content" style="display: none;">
 						<?php
 						$recent_posts = new WP_Query('showposts='.$posts);
 						if($recent_posts->have_posts()):
@@ -103,7 +113,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 					</div>
 					<?php endif; ?>
 					<?php if($show_comments == 'true'): ?>
-					<div id="tab3" class="tab tab_content" style="display: none;">
+					<div id="tab-comments" class="tab tab_content" style="display: none;">
 						<ul class="news-list">
 							<?php
 							$number = $instance['comments'];
@@ -118,7 +128,7 @@ class Pyre_Tabs_Widget extends WP_Widget {
 									</a>
 								</div>
 								<div class="post-holder">
-									<p><?php echo strip_tags($comment->comment_author); ?> says:</p>
+									<p><?php echo strip_tags($comment->comment_author); ?> <?php _e('says', 'Avada'); ?>:</p>
 									<div class="meta">
 										<a class="comment-text-side" href="<?php echo get_permalink($comment->ID); ?>#comment-<?php echo $comment->comment_ID; ?>" title="<?php echo strip_tags($comment->comment_author); ?> on <?php echo $comment->post_title; ?>"><?php echo string_limit_words(strip_tags($comment->com_excerpt), 12); ?>...</a>
 									</div>
@@ -146,14 +156,22 @@ class Pyre_Tabs_Widget extends WP_Widget {
 		$instance['show_recent_posts'] = $new_instance['show_recent_posts'];
 		$instance['show_comments'] = $new_instance['show_comments'];
 		$instance['show_tags'] = $new_instance['show_tags'];
-		
+		$instance['orderby'] = $new_instance['orderby'];
+
 		return $instance;
 	}
 
 	function form($instance)
 	{
-		$defaults = array('posts' => 3, 'comments' => '3', 'tags' => 20, 'show_popular_posts' => 'on', 'show_recent_posts' => 'on', 'show_comments' => 'on', 'show_tags' =>  'on');
+		$defaults = array('posts' => 3, 'comments' => '3', 'tags' => 20, 'show_popular_posts' => 'on', 'show_recent_posts' => 'on', 'show_comments' => 'on', 'show_tags' =>  'on', 'orderby' => 'Highest Comments');
 		$instance = wp_parse_args((array) $instance, $defaults); ?>
+		<p>
+			<label for="<?php echo $this->get_field_id('orderby'); ?>">Popular Posts Order By:</label> 
+			<select id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>" class="widefat" style="width:100%;">
+				<option <?php if ('Highest Comments' == $instance['orderby']) echo 'selected="selected"'; ?>>Highest Comments</option>
+				<option <?php if ('Highest Views' == $instance['orderby']) echo 'selected="selected"'; ?>>Highest Views</option>
+			</select>
+		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id('posts'); ?>">Number of popular posts:</label>
 			<input class="widefat" style="width: 30px;" id="<?php echo $this->get_field_id('posts'); ?>" name="<?php echo $this->get_field_name('posts'); ?>" value="<?php echo $instance['posts']; ?>" />

@@ -1,11 +1,5 @@
- <div class="pyre_metabox">
-<?php
-$this->select(	'page_title',
-				'Page Title Bar',
-				array('yes' => 'Show', 'no' => 'Hide'),
-				''
-			);
-?>
+<div class="pyre_metabox">
+<h2 style="margin-top:0;">Slider Options:</h2>
 <?php
 $this->select(	'slider_type',
 				'Slider Type',
@@ -22,7 +16,7 @@ $table_name = $wpdb->prefix . "layerslider";
 // Get sliders
 $sliders = $wpdb->get_results( "SELECT * FROM $table_name
 									WHERE flag_hidden = '0' AND flag_deleted = '0'
-									ORDER BY date_c ASC LIMIT 100" );
+									ORDER BY date_c ASC" );
 
 if(!empty($sliders)):
 foreach($sliders as $key => $item):
@@ -105,6 +99,7 @@ $this->select(	'elasticslider',
 			);
 ?>
 <?php $this->upload('fallback', 'Slider Fallback Image'); ?>
+<h2>Page options:</h2>
 <?php
 $this->select(	'full_width',
 				'Page: Full Width',
@@ -115,10 +110,11 @@ $this->select(	'full_width',
 <?php
 $this->select(	'sidebar_position',
 				'Page: Sidebar Position',
-				array('right' => 'Right', 'left' => 'Left'),
+				array('default' => 'Default', 'right' => 'Right', 'left' => 'Left'),
 				''
 			);
 ?>
+<h2>Portfolio options:</h2>
 <?php
 $this->text(	'portfolio_excerpt',
 				'Portfolio: Excerpt Length',
@@ -135,7 +131,7 @@ $this->select(	'portfolio_full_width',
 <?php
 $this->select(	'portfolio_sidebar_position',
 				'Portfolio: Sidebar Position',
-				array('right' => 'Right', 'left' => 'Left'),
+				array('default' => 'Default', 'right' => 'Right', 'left' => 'Left'),
 				''
 			);
 ?>
@@ -154,12 +150,27 @@ $this->multiple(	'portfolio_category',
 }
 ?>
 <?php
+$this->select(	'portfolio_filters',
+				'Show Portfolio Filters',
+				array('yes' => 'Show', 'no' => 'Hide'),
+				''
+			);
+?>
+<h2>Background options:</h2>
+<?php
+$this->select(	'page_bg_layout',
+				'Layout',
+				array('default' => 'Default', 'wide' => 'Wide', 'boxed' => 'Boxed')
+			);
+?>
+<h2>Following options only work in boxed mode:</h2>
+<?php $this->upload('page_bg', 'Background Image'); ?>
+<?php
 $this->text(	'page_bg_color',
 				'Background Color (Hex Code)',
 				''
 			);
 ?>
-<?php $this->upload('page_bg', 'Background Image'); ?>
 <?php
 $this->select(	'page_bg_full',
 				'100% Background Image',
@@ -174,11 +185,92 @@ $this->select(	'page_bg_repeat',
 				''
 			);
 ?>
+<h2>Following options work in boxed and wide mode:</h2>
+<?php $this->upload('wide_page_bg', 'Background Image'); ?>
+<?php
+$this->text(	'wide_page_bg_color',
+				'Background Color (Hex Code)',
+				''
+			);
+?>
+<?php
+$this->select(	'wide_page_bg_full',
+				'100% Background Image',
+				array('no' => 'No', 'yes' => 'Yes'),
+				''
+			);
+?>
+<?php
+$this->select(	'wide_page_bg_repeat',
+				'Background Repeat',
+				array('repeat' => 'Tile', 'repeat-x' => 'Tile Horizontally', 'repeat-y' => 'Tile Vertically', 'no-repeat' => 'No Repeat'),
+				''
+			);
+?>
+<h2>Header background options:</h2>
+<?php $this->upload('header_bg', 'Background Image'); ?>
+<?php
+$this->text(	'header_bg_color',
+				'Background Color (Hex Code)',
+				''
+			);
+?>
+<?php
+$this->select(	'header_bg_full',
+				'100% Background Image',
+				array('no' => 'No', 'yes' => 'Yes'),
+				''
+			);
+?>
+<?php
+$this->select(	'header_bg_repeat',
+				'Background Repeat',
+				array('repeat' => 'Tile', 'repeat-x' => 'Tile Horizontally', 'repeat-y' => 'Tile Vertically', 'no-repeat' => 'No Repeat'),
+				''
+			);
+?>
+<h2>Page title bar options:</h2>
+<?php
+$this->select(	'page_title',
+				'Page Title Bar',
+				array('yes' => 'Show', 'no' => 'Hide'),
+				''
+			);
+?>
+<?php
+$this->select(	'page_title_text',
+				'Page Title Bar Text',
+				array('yes' => 'Show', 'no' => 'Hide'),
+				''
+			);
+?>
 <?php $this->upload('page_title_bar_bg', 'Page Title Bar Background'); ?>
+<?php $this->upload('page_title_bar_bg_retina', 'Page Title Bar Background Retina'); ?>
 <?php
 $this->text(	'page_title_bar_bg_color',
 				'Page Title Bar Background Color (Hex Code)',
 				''
+			);
+?>
+<?php
+$this->select(	'page_title_bar_bg_full',
+				'100% Background Image',
+				array('no' => 'No', 'yes' => 'Yes'),
+				''
+			);
+?>
+<h2>Rollover options:</h2>
+<?php
+$this->select(	'image_rollover_icons',
+				'Image Rollover Icons',
+				array('linkzoom' => 'Link + Zoom', 'link' => 'Link', 'zoom' => 'Zoom', 'no' => 'No Icons'),
+				''
+			);
+?>
+<?php
+$this->text(	'link_icon_url',
+				'Link Icon URL',
+				'Leave blank for post URL'
 			);
 ?>
 </div>

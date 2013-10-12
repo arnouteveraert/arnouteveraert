@@ -1,23 +1,25 @@
 jQuery(document).ready(function($){
-    window.formfield = '';
+    var send_to_editor_backup = window.send_to_editor;
+    var uploadfield = '';
 
     $('.upload_button').live('click', function() {
-        window.formfield = $('.upload_field',$(this).parent());
-        tb_show('', 'media-upload.php?type=image&TB_iframe=true');
+        uploadfield = $('.upload_field', $(this).parent());
+        tb_show('Upload', 'media-upload.php?type=image&TB_iframe=true', false);
+
         return false;
     });
 
-    window.original_send_to_editor = window.send_to_editor;
     window.send_to_editor = function(html) {
-        if (window.formfield) {
-            imgurl = $('img',html).attr('src');
-            window.formfield.val(imgurl);
+        if(uploadfield) {
+            var image_url = $('img', html).attr('src');
+            $(uploadfield).val(image_url);
             tb_remove();
+        } else {
+            window.send_to_editor = send_to_editor_backup(html);
         }
-        else {
-            window.original_send_to_editor(html);
-        }
-        window.formfield = '';
-        window.imagefield = false;
     }
+
+   $('#TB_window').bind('tb_unload', function () {
+        window.send_to_editor = send_to_editor_backup;
+    });
 });

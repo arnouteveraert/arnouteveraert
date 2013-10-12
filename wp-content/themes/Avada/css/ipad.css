@@ -7,7 +7,7 @@
 	}
 	.columns .col{
 		float:none;
-		width:100%;
+		width:100% !important;
 		padding:0 0 20px;
 	}
 	.avada-container .columns {
@@ -26,7 +26,7 @@
 	}
 	.footer-area .columns .col{
 		float:left;
-		width:98%;
+		width:98% !important;
 		padding:0 2% 20px 0;
 	}
 	.social-networks,
@@ -74,14 +74,14 @@
 	#header .logo{
 		float:none;
 		text-align:center;
-		margin:0;
+		margin:0 !important;
 		margin-bottom:20px !important;
 	}
 	#header .nav-holder{
 		float:none;
 	}
-	.nav-holder ul{display:none;}
-	.nav-holder select{display:block !important;width:100%;}
+	.nav-holder ul,.top-menu .menu{display:none;}
+	.nav-holder .dd-container,.top-menu .dd-container{display:block !important;width:100%;}
 	.one_half, .one_third, .two_third, .three_fourth, .one_fourth{
 		width:100%;
 		margin-bottom:20px;
@@ -96,14 +96,14 @@
 	}
 
 	#content{
-		width:100%;
-		float:none;
+		width:100% !important;
+		float:none !important;
 		margin-bottom:50px;
 	}
 
 	#sidebar{
-		width:100%;
-		float:none;
+		width:100% !important;
+		float:none !important;
 	}
 
 	#sidebar .social_links .social li{
@@ -171,7 +171,7 @@
 	.share-box{
 		height:auto;
 	}
-	.share-box h4{
+	#wrapper .share-box h4{
 		float:none;
 		line-height:20px !important;
 		padding-top:25px;
@@ -234,7 +234,7 @@
 		width:100% !important;
 	}
 
-	.page-title-container{height:auto;max-height:87px;padding-bottom:20px;}
+	#wrapper .page-title-container{height:auto !important;max-height:87px;padding-bottom:20px;}
 
 	.error_page .useful_links{width:100%;padding-left:0;}
 
@@ -273,4 +273,24 @@
 	#wrapper .ei-slider{height:200px !important;}
 
 	.progress-bar{margin-bottom:10px !important;}
+
+	.large-alternate .post-content{width:100%;margin-top:10px;}
+
+	.medium-alternate .date-and-formats{float:none;margin-bottom:20px;}
+	.medium-alternate .flexslider{float:none !important;}
+	.medium-alternate .post-content{float:none;width:100%;margin-top:20px;}
+
+	.content-boxes-icon-boxed .col{height:auto !important;padding-bottom:20px;}
+	.content-boxes-icon-on-top .col,.content-boxes-icon-boxed .col{margin-bottom:55px;}
+
+	.counter-circle-wrapper{margin-bottom:20px;}
+	.counters-circle .counter-circle-wrapper:last-child{margin-bottom:0;}
+	.counters-box .counter-box-wrapper{margin-bottom:20px;width:95.3%;}
+	.counters-box .counter-box-wrapper:last-child{margin-bottom:0;}
+
+	.tagline-shadow{display:none;}
+
+	.popup{display:none !important;}
+
+	.share-box .social-networks{text-align:left;}
 }

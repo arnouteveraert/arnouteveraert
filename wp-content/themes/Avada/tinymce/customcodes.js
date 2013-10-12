@@ -1,680 +1,421 @@
 //////////////////////////////////////////////////////////////////
-// Add Youtube button
+// Add ThemeFusion Button
 //////////////////////////////////////////////////////////////////
 (function() {  
-    tinymce.create('tinymce.plugins.youtube', {  
+    tinymce.create('tinymce.plugins.tfbutton', {
         init : function(ed, url) {  
-            ed.addButton('youtube', {  
-                title : 'Add a Youtube video',  
-                image : url+'/button-youtube.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[youtube id="Enter video ID (eg. Wq4Y7ztznKc)" width="600" height="350"]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
+            avada_shortcode_url = url;
+        },    
+        createControl : function(n, cm) {
+            switch(n) {
+                case 'tfbutton':
+                    var c = cm.createSplitButton('tfbutton', {
+                        title : 'ThemeFusion Shortcodes',
+                        image : avada_shortcode_url+'/tfbutton.png'
+                    }); 
+
+                    c.onRenderMenu.add(function(c, m) {
+                        m.add({
+                            title : 'Shortcodes',
+                            'class' : 'mceMenuItemTitle'
+                        }).setDisabled(1);
+
+                        m.add({
+                            title : 'Alert',
+                            icon: 'avada_alert',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[alert type="e.g. general, error, success, notice"]Your Message Goes Here.[/alert]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Buttons',
+                            icon: 'avada_button',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[button color="e.g. green, darkgreen, orange, blue, red, pink, darkgray, lightgray or leave blank" size="large or small" link="" target=""]Text here[/button]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Blog',
+                            icon: 'avada_blog',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[blog number_posts="10" cat_slug="" title="yes" thumbnail="yes" excerpt="yes" excerpt_words="35" meta_all="yes" meta_author="yes" meta_categories="yes" meta_comments="yes" meta_date="yes" meta_link="yes" paging="yes" scrolling="pagination" strip_html="yes" layout="large"][/blog]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Checklist',
+                            icon: 'avada_checklist',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[checklist icon="check, star, arrow, asterik, cross, plus" iconcolor="#ffffff" circle="yes or no"]<ul>\r<li>Item #1</li>\r<li>Item #2</li>\r<li>Item #3</li>\r</ul>[/checklist]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Client Slider',
+                            icon: 'avada_client_slider',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[clients][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][/clients]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Content Boxes',
+                            icon: 'avada_content_boxes',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[content_boxes layout="icon-with-title, icon-on-top, icon-on-side, icon-boxed" iconcolor="" circlecolor="" circlebordercolor="" backgroundcolor=""]<br />[content_box title="Responsive Design" icon="tablet" image="" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada is fully responsive and can adapt to any screen size. Try resizing your browser window to see the adaptation.[/content_box]<br />[content_box title="Awesome Sliders" icon="thumbs-up" image="" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada includes the awesome Layer Parallax Slider as well as the popular FlexSlider2. Both are super easy to use![/content_box]<br />[content_box title="Unlimited Colors"  icon="magic" image="" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]We included a backend color picker for unlimited color options. Anything can be changed, including the gradients![/content_box]<br />[content_box last="yes" title="500+ Google Fonts" icon="beaker" image="" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada loves fonts, choose from over 500+ Google Fonts. You can change all headings and body copy with ease![/content_box]<br />[/content_boxes]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Counters Circle',
+                            icon: 'avada_counters_circle',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[counters_circle][counter_circle filledcolor="" unfilledcolor="" value="75"]75%[/counter_circle][counter_circle filledcolor="" unfilledcolor="" value="30"][fontawesome icon="adjust" circle="no" size="large"][/counter_circle][counter_circle filledcolor="" unfilledcolor="" value="70"]7/10[/counter_circle][counter_circle filledcolor="" unfilledcolor="" value="50"]Title[/counter_circle][/counters_circle]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Counters Box',
+                            icon: 'avada_counters_box',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[counters_box][counter_box value="75"]Counter Title Goes Here[/counter_box][counter_box value="55"]Counter Title Goes Here[/counter_box][counter_box value="65"]Counter Title Goes Here[/counter_box][counter_box value="85"]Counter Title Goes Here[/counter_box][/counters_box]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Dropcap',
+                            icon: 'avada_dropcap',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[dropcap]...[/dropcap]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Full Width',
+                            icon: 'avada_full',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[fullwidth backgroundcolor="" backgroundimage="" backgroundrepeat="no-repeat" backgroundposition="top left" backgroundattachment="scroll" bordersize="1px" bordercolor="" paddingTop="20px" paddingBottom="20px"]...[/fullwidth]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Flexslider',
+                            icon: 'avada_flexslider',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[flexslider layout="posts, posts-with-excerpt, attachments" excerpt="25" category="" limit="3" id="" lightbox="yes or no (only works with attachments layout)"][/flexslider]');
+                            }
+                        });
+
+
+
+                        m.add({
+                            title : 'FontAwesome',
+                            icon: 'avada_fontawesome',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[fontawesome icon="adjust" circle="yes or no" size="large medium or small" iconcolor="" circlecolor="" circlebordercolor=""]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Google Map',
+                            icon: 'avada_map',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[map address="" type="roadmap, satellite, hybrid, terrain" width="100%" height="300px" zoom="14" scrollwheel="yes" scale="yes" zoom_pancontrol="yes"][/map]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Highlight',
+                            icon: 'avada_highlight',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[highlight color="eg. yellow, black or #333333"]...[/highlight]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Image Frames',
+                            icon: 'avada_img_frames',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[imageframe style="border,glow,dropshadow,bottomshadow" bordercolor="" bordersize="4px" stylecolor="" align=""]<img src="Image Link" alt="Image Description" />[/imageframe]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Images Carousel',
+                            icon: 'avada_img_carousel',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[images  lightbox="yes or no"][image link="" linktarget="" image=""][image link="" linktarget="" image=""][image link="" linktarget="" image=""][image link="" linktarget="" image=""][image link="" linktarget="" image=""][/images]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Lightbox',
+                            icon: 'avada_lightbox',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('<a title="lightbox description" href="full image link" rel="prettyPhoto"><img alt="lightbox title" src="thumbnail image link" /></a>');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Progress Bar',
+                            icon: 'avada_progress_bar',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[progress percentage="60" filledcolor="" unfilledcolor=""]Web Design[/progress]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Person',
+                            icon: 'avada_person',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[person name="John Doe" picture="" title="Developer" facebook="http://facebook.com" twitter="http://twitter.com" linkedin="http://linkedin.com" dribbble="http://dribbble.com" linktarget=""]Redantium, totam rem aperiam, eaque ipsa qu ab illo inventore veritatis et quasi architectos beatae vitae dicta sunt explicabo. Nemo enim.[/person]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Pricing Table',
+                            icon: 'avada_pricing_table',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[pricing_table type="e.g. 1 or 2" backgroundcolor="" bordercolor="" dividercolor=""][pricing_column title="Standard"][pricing_price currency="$" price="15.55" time="monthly"][/pricing_price][pricing_row]Feature 1[/pricing_row][pricing_footer]Signup[/pricing_footer][/pricing_column][/pricing_table]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Recent Works',
+                            icon: 'avada_recent_works',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[recent_works layout="carousel, grid, grid-with-excerpts" filters="yes or no" columns="1-4" cat_slug="" number_posts="10" excerpt_words="15"][/recent_works]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Recent Posts',
+                            icon: 'avada_recent_posts',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[recent_posts layout="default, thumbnails-on-side, date-on-side" columns="1-4" number_posts="4" cat_slug="" exclude_cats="" thumbnail="yes" title="yes" meta="yes" excerpt="yes" excerpt_words="15" strip_html="yes"][/recent_posts]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'SoundCloud',
+                            icon: 'avada_soundcloud',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[soundcloud url="http://api.soundcloud.com/tracks/15565763" comments="yes" auto_play="no" color="ff7700" width="100%" height="81"]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Slider',
+                            icon: 'avada_slider',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[slider width="100%" height="100%"][slide type="video"][vimeo id="10145153" width="600" height="350"][/slide][slide link="" linktarget="" lightbox="yes or no"]image link here[/slide][/slider]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Social Links',
+                            icon: 'avada_social_links',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[social_links colorscheme="" linktarget="" rss="" facebook="" twitter="" dribbble="" google="" linkedin="" blogger="" tumblr="" reddit="" yahoo="" deviantart="" vimeo="" youtube="" pinterest="" digg="" flickr="" forrst="" myspace="" skype=""]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Separator',
+                            icon: 'avada_separator',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[separator top="40" style="none, single, double, dashed, dotted, shadow"]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Sharing Box',
+                            icon: 'avada_sharing_box',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[sharing tagline="Share This Story, Choose Your Platform!" title="Title To Share" link="http://google.com" description="A small description of the page" backgroundcolor=""][/sharing]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Tabs',
+                            icon: 'avada_tabs',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[tabs tab1=\"Tab 1\" tab2=\"Tab 2\" tab3=\"Tab 3\" layout="horizontal or vertical" backgroundcolor="" inactivecolor=""]<br /><br />[tab id=1]Tab content 1[/tab]<br />[tab id=2]Tab content 2[/tab]<br />[tab id=3]Tab content 3[/tab]<br /><br />[/tabs]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Toggles',
+                            icon: 'avada_toggle',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[accordian][toggle title="Title" open="yes"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][/accordian]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Testimonial',
+                            icon: 'avada_testimonial',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[testimonials backgroundcolor="" textcolor=""]<br />[testimonial name="John Doe" gender="male or female" company="My Company" link="" target=""]"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec tetur, adipisci velit, sed quia non numquam eius modi tempora incidunt utis labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minimas veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur slores amet untras vel illum qui."[/testimonial]<br />[testimonial name="Doe John" gender="male or female" company="My Company" link="" target=""]"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec tetur, adipisci velit, sed quia non numquam eius modi tempora incidunt utis labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minimas veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur slores amet untras vel illum qui."[/testimonial]<br />[/testimonials]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Title',
+                            icon: 'avada_title',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[title size="1 to 6"]Title[/title]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Tagline Box',
+                            icon: 'avada_tagline',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[tagline_box backgroundcolor="" shadow="no" shadowopacity="0.1-1" border="1px" bordercolor="" highlightposition="right, left, top or bottom" link="http://themeforest.net/user/ThemeFusion" linktarget="" buttoncolor="e.g. green, darkgreen, orange, blue, red, pink, darkgray, lightgray or leave blank" button="Purchase Now" title="Avada is incredibly responsive, with a refreshingly clean design" description="And it has some awesome features, premium sliders, unlimited colors, advanced theme options and so much more!"][/tagline_box]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Tooltip',
+                            icon: 'avada_tooltip',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[tooltip title="Text Tooltip"]Hover over this text for Tooltip[/tooltip]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Table',
+                            icon: 'avada_table',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('<div class="table-1"> \
+<table width="100%"> \
+<thead> \
+<tr> \
+<th>Column 1</th> \
+<th>Column 2</th> \
+<th>Column 3</th> \
+<th>Column 4</th> \
+</tr> \
+</thead> \
+<tbody> \
+<tr> \
+<td>Item #1</td> \
+<td>Description</td> \
+<td>Subtotal:</td> \
+<td>$1.00</td> \
+</tr> \
+<tr> \
+<td>Item #2</td> \
+<td>Description</td> \
+<td>Discount:</td> \
+<td>$2.00</td> \
+</tr> \
+<tr> \
+<td>Item #3</td> \
+<td>Description</td> \
+<td>Shipping:</td> \
+<td>$3.00</td> \
+</tr> \
+<tr> \
+<td>Item #4</td> \
+<td>Description</td> \
+<td>Tax:</td> \
+<td>$4.00</td> \
+</tr> \
+<tr> \
+<td><strong>All Items</strong></td> \
+<td><strong>Description</strong></td> \
+<td><strong>Your Total:</strong></td> \
+<td><strong>$10.00</strong></td> \
+</tr> \
+</tbody> \
+</table>');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Vimeo',
+                            icon: 'avada_vimeo',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[vimeo id="Enter video ID (eg. 10145153)" width="600" height="350"]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Woo Featured',
+                            icon: 'avada_woo',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[featured_products_slider]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Woo Products',
+                            icon: 'avada_woo',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[products_slider cat_slug="" number_posts="5" show_cats="no" show_price="no" show_buttons="no"]');
+                            }
+                        });
+
+                        m.add({
+                            title : 'Youtube',
+                            icon: 'avada_youtube',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[youtube id="Enter video ID (eg. Wq4Y7ztznKc)" width="600" height="350"]');
+                            }
+                        });
+
+
+                        m.add({
+                            title : '1/2',
+                            icon: 'avada_half',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[one_half last="no"]...[/one_half]');
+                            }
+                        });
+
+                        m.add({
+                            title : '1/3',
+                            icon: 'avada_third',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[one_third last="no"]...[/one_third]');
+                            }
+                        });
+
+                        m.add({
+                            title : '2/3',
+                            icon: 'avada_two_third',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[two_third last="no"]...[/two_third]');
+                            }
+                        });
+
+                        m.add({
+                            title : '1/4',
+                            icon: 'avada_fourth',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[one_fourth last="no"]...[/one_fourth]');
+                            }
+                        });
+
+                        m.add({
+                            title : '3/4',
+                            icon: 'avada_three_fourth',
+                            onclick : function() {
+                                tinyMCE.activeEditor.selection.setContent('[three_fourth last="no"]...[/three_fourth]');
+                            }
+                        });
+                    });
+
+                  // Return the new menubutton instance
+                  return c;
+            }
+
+            return null;
         },  
     });  
-    tinymce.PluginManager.add('youtube', tinymce.plugins.youtube);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Vimeo button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.vimeo', {  
-        init : function(ed, url) {  
-            ed.addButton('vimeo', {  
-                title : 'Add a Vimeo video',  
-                image : url+'/button-vimeo.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[vimeo id="Enter video ID (eg. 10145153)" width="600" height="350"]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('vimeo', tinymce.plugins.vimeo);  
-})();
-
-//////////////////////////////////////////////////////////////////
-//Add SoundCloud button
-//////////////////////////////////////////////////////////////////
-(function() {  
- tinymce.create('tinymce.plugins.soundcloud', {  
-     init : function(ed, url) {  
-         ed.addButton('soundcloud', {  
-             title : 'Add a SoundCloud widget',  
-             image : url+'/soundcloud.png',  
-             onclick : function() {  
-                  ed.selection.setContent('[soundcloud url="http://api.soundcloud.com/tracks/15565763" comments="true" auto_play="false" color="ff7700" width="100%" height="81"]');  
-
-             }  
-         });  
-     },  
-     createControl : function(n, cm) {  
-         return null;  
-     },  
- });  
- tinymce.PluginManager.add('soundcloud', tinymce.plugins.soundcloud);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Button button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.button', {  
-        init : function(ed, url) {  
-            ed.addButton('button', {  
-                title : 'Add a button',  
-                image : url+'/button-button.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[button color="e.g. green, darkgreen, orange, blue, red, pink, darkgray, lightgray or leave blank" size="large or small" link="" target=""]Text here[/button]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('button', tinymce.plugins.button);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Dropcap button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.dropcap', {  
-        init : function(ed, url) {  
-            ed.addButton('dropcap', {  
-                title : 'Add a dropcap',  
-                image : url+'/button-dropcap.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[dropcap]...[/dropcap]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('dropcap', tinymce.plugins.dropcap);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Highlight button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.highlight', {  
-        init : function(ed, url) {  
-            ed.addButton('highlight', {  
-                title : 'Add a highlight',  
-                image : url+'/button-highlight.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[highlight color="eg. yellow, black"]...[/highlight]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('highlight', tinymce.plugins.highlight);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Checklist button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.checklist', {  
-        init : function(ed, url) {  
-            ed.addButton('checklist', {  
-                title : 'Add a checklist',  
-                image : url+'/button-checklist.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[checklist]<ul>\r<li>Item #1</li>\r<li>Item #2</li>\r<li>Item #3</li>\r</ul>[/checklist]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('checklist', tinymce.plugins.checklist);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Badlist button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.badlist', {  
-        init : function(ed, url) {  
-            ed.addButton('badlist', {  
-                title : 'Add a badlist',  
-                image : url+'/button-badlist.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[badlist]<ul>\r<li>Item #1</li>\r<li>Item #2</li>\r<li>Item #3</li>\r</ul>[/badlist]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('badlist', tinymce.plugins.badlist);  
-})();
-	
-//////////////////////////////////////////////////////////////////
-// Add Tabs button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.tabs', {  
-        init : function(ed, url) {  
-            ed.addButton('tabs', {  
-                title : 'Add tabs',  
-                image : url+'/button-tabs.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[tabs tab1=\"Tab 1\" tab2=\"Tab 2\" tab3=\"Tab 3\"]<br /><br />[tab id=1]Tab content 1[/tab]<br />[tab id=2]Tab content 2[/tab]<br />[tab id=3]Tab content 3[/tab]<br /><br />[/tabs]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('tabs', tinymce.plugins.tabs);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Toggle button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.toggle', {  
-        init : function(ed, url) {  
-            ed.addButton('toggle', {  
-                title : 'Add a toggle',  
-                image : url+'/button-toggle.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[accordian][toggle title="Title" open="yes"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][toggle title="Title" open="no"]...[/toggle][/accordian]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('toggle', tinymce.plugins.toggle);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add One_half button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.one_half', {  
-        init : function(ed, url) {  
-            ed.addButton('one_half', {  
-                title : 'Add a one_half column',  
-                image : url+'/button-12.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[one_half last="no"]...[/one_half]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('one_half', tinymce.plugins.one_half);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add One_half button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.one_third', {  
-        init : function(ed, url) {  
-            ed.addButton('one_third', {  
-                title : 'Add a one_third column',  
-                image : url+'/button-13.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[one_third last="no"]...[/one_third]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('one_third', tinymce.plugins.one_third);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Two_half button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.two_third', {  
-        init : function(ed, url) {  
-            ed.addButton('two_third', {  
-                title : 'Add a two_third column',  
-                image : url+'/button-23.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[two_third last="no"]...[/two_third]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('two_third', tinymce.plugins.two_third);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add one_fourth button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.one_fourth', {  
-        init : function(ed, url) {  
-            ed.addButton('one_fourth', {  
-                title : 'Add a one_fourth column',  
-                image : url+'/button-14.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[one_fourth last="no"]...[/one_fourth]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('one_fourth', tinymce.plugins.one_fourth);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add three_fourth button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.three_fourth', {  
-        init : function(ed, url) {  
-            ed.addButton('three_fourth', {  
-                title : 'Add a three_fourth column',  
-                image : url+'/button-34.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[three_fourth last="no"]...[/three_fourth]');   
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('three_fourth', tinymce.plugins.three_fourth);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add slider button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.slider', {  
-        init : function(ed, url) {  
-            ed.addButton('slider', {  
-                title : 'Add a slider',  
-                image : url+'/slider-icon.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[slider][slide type="video"][vimeo id="10145153" width="600" height="350"][/slide][slide link="" linktarget=""]image link here[/slide][/slider]');
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('slider', tinymce.plugins.slider);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add testimonial button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.testimonial', {  
-        init : function(ed, url) {  
-            ed.addButton('testimonial', {  
-                title : 'Add a testimonial',  
-                image : url+'/testimonial-icon.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[testimonials]<br />[testimonial name="John Doe" gender="male or female" company="My Company" link="" target=""]"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec tetur, adipisci velit, sed quia non numquam eius modi tempora incidunt utis labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minimas veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur slores amet untras vel illum qui."[/testimonial]<br />[testimonial name="Doe John" gender="male or female" company="My Company" link="" target=""]"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consec tetur, adipisci velit, sed quia non numquam eius modi tempora incidunt utis labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minimas veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur slores amet untras vel illum qui."[/testimonial]<br />[/testimonials]');
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('testimonial', tinymce.plugins.testimonial);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Progress Bar Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.progress', {  
-        init : function(ed, url) {  
-            ed.addButton('progress', {  
-                title : 'Add a progress bar',  
-                image : url+'/button-progress.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[progress percentage="60"]Web Design[/progress]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('progress', tinymce.plugins.progress);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Person Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.person', {  
-        init : function(ed, url) {  
-            ed.addButton('person', {  
-                title : 'Add a person',  
-                image : url+'/person-button.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[person name="John Doe" picture="" title="Developer" facebook="http://facebook.com" twitter="http://twitter.com" linkedin="http://linkedin.com" dribbble="http://dribbble.com" linktarget=""]Redantium, totam rem aperiam, eaque ipsa qu ab illo inventore veritatis et quasi architectos beatae vitae dicta sunt explicabo. Nemo enim.[/person]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('person', tinymce.plugins.person);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Alert Messages Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.alert', {  
-        init : function(ed, url) {  
-            ed.addButton('alert', {  
-                title : 'Add an alert message',  
-                image : url+'/alert-icon.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[alert type="e.g. general, error, success, notice"]Your Message Goes Here.[/alert]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('alert', tinymce.plugins.alert);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Pricing Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.pricing_table', {  
-        init : function(ed, url) {  
-            ed.addButton('pricing_table', {  
-                title : 'Add pricing table',  
-                image : url+'/pricing-icon.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[pricing_table type="e.g. 1 or 2"][pricing_column title="Standard"][pricing_price currency="$" price="15.55" time="monthly"][/pricing_price][pricing_row]Feature 1[/pricing_row][pricing_footer]Signup[/pricing_footer][/pricing_column][/pricing_table]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('pricing_table', tinymce.plugins.pricing_table);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Recent Works Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.recent_works', {  
-        init : function(ed, url) {  
-            ed.addButton('recent_works', {  
-                title : 'Add recent works slider',  
-                image : url+'/recent-works-icon.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[recent_works cat_slug="" number_posts="10"][/recent_works]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('recent_works', tinymce.plugins.recent_works);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Tagline Box Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.tagline_box', {  
-        init : function(ed, url) {  
-            ed.addButton('tagline_box', {  
-                title : 'Add tagline box',  
-                image : url+'/tagline-box.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[tagline_box link="http://themeforest.net/user/ThemeFusion" linktarget="" button="Purchase Now" title="Avada is incredibly responsive, with a refreshingly clean design" description="And it has some awesome features, premium sliders, unlimited colors, advanced theme options and so much more!"][/tagline_box]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('tagline_box', tinymce.plugins.tagline_box);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Content Boxes Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.content_boxes', {  
-        init : function(ed, url) {  
-            ed.addButton('content_boxes', {  
-                title : 'Add content boxes',  
-                image : url+'/content-boxes.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[content_boxes]<br />[content_box title="Responsive Design" icon="" image="http://theme-fusion.com/avada/wp-content/uploads/2012/07/ico-02.gif" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada is fully responsive and can adapt to any screen size. Try resizing your browser window to see the adaptation.[/content_box]<br />[content_box title="Awesome Sliders" icon="" image="http://theme-fusion.com/avada/wp-content/uploads/2012/07/ico-02.gif" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada includes the awesome Layer Parallax Slider as well as the popular FlexSlider2. Both are super easy to use![/content_box]<br />[content_box title="Unlimited Colors"  icon="" image="http://theme-fusion.com/avada/wp-content/uploads/2012/07/ico-03.gif" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]We included a backend color picker for unlimited color options. Anything can be changed, including the gradients![/content_box]<br />[content_box last="yes" title="500+ Google Fonts" icon="" image="http://theme-fusion.com/avada/wp-content/uploads/2012/07/ico-04.gif" link="http://themeforest.net/user/ThemeFusion" linktarget="" linktext="Learn More"]Avada loves fonts, choose from over 500+ Google Fonts. You can change all headings and body copy with ease![/content_box]<br />[/content_boxes]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('content_boxes', tinymce.plugins.content_boxes);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Recent Posts Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.recent_posts', {  
-        init : function(ed, url) {  
-            ed.addButton('recent_posts', {  
-                title : 'Add recent posts',  
-                image : url+'/recent-posts.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[recent_posts columns="3 or 4" number_posts="4" cat_slug="" thumbnail="yes" title="yes" meta="yes" excerpt="yes" excerpt_words="15" strip_html="true"][/recent_posts]');
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('recent_posts', tinymce.plugins.recent_posts);  
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add FontAwesome Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.fontawesome', {  
-        init : function(ed, url) {  
-            ed.addButton('fontawesome', {  
-                title : 'Add FontAwesome Icon',  
-                image : url+'/fontawesome.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[fontawesome icon="adjust" circle="yes or no" size="large medium or small"]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('fontawesome', tinymce.plugins.fontawesome);
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Social Links Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.social_links', {  
-        init : function(ed, url) {  
-            ed.addButton('social_links', {  
-                title : 'Add Social Links',  
-                image : url+'/social.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[social_links linktarget="" rss="" facebook="" twitter="" dribbble="" google="" linkedin="" blogger="" tumblr="" reddit="" yahoo="" deviantart="" vimeo="" youtube="" pinterest="" digg="" flickr="" forrst="" myspace="" skype=""]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('social_links', tinymce.plugins.social_links);
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Clients Slider Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.clients', {  
-        init : function(ed, url) {  
-            ed.addButton('clients', {  
-                title : 'Add Clients Slider',  
-                image : url+'/clients.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[clients][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][client link="" linktarget="" image=""][/clients]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('clients', tinymce.plugins.clients);
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add Title Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.title', {  
-        init : function(ed, url) {  
-            ed.addButton('title', {  
-                title : 'Add a Title',  
-                image : url+'/title.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[title size="1 to 6"]Title[/title]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('title', tinymce.plugins.title);
-})();
-
-
-//////////////////////////////////////////////////////////////////
-// Add Separator Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.separatoor', {  
-        init : function(ed, url) {  
-            ed.addButton('separatoor', {  
-                title : 'Add a Separator',  
-                image : url+'/separator.png',  
-                onclick : function() {  
-                     ed.selection.setContent('[separator top="40"]');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('separatoor', tinymce.plugins.separatoor);
-})();
-
-//////////////////////////////////////////////////////////////////
-// Add PrettyPhoto Button
-//////////////////////////////////////////////////////////////////
-(function() {  
-    tinymce.create('tinymce.plugins.tfprettyphoto', {  
-        init : function(ed, url) {  
-            ed.addButton('tfprettyphoto', {  
-                title : 'Add a Lightbox Image',  
-                image : url+'/lightbox.png',  
-                onclick : function() {  
-                     ed.selection.setContent('<a href="full image link" rel="prettyPhoto" title="lightbox description"><img src="thumbnail image link" alt="lightbox title" /></a>');  
-  
-                }  
-            });  
-        },  
-        createControl : function(n, cm) {  
-            return null;  
-        },  
-    });  
-    tinymce.PluginManager.add('tfprettyphoto', tinymce.plugins.tfprettyphoto);
+    tinymce.PluginManager.add('tfbutton', tinymce.plugins.tfbutton);  
 })();

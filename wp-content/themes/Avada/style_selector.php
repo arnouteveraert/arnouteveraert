@@ -122,13 +122,24 @@
 jQuery(document).ready(function() {
 	jQuery('#style_selector select[name=layout]').change(function() {
 		var current = jQuery(this).find('option:selected').val();
-		
+
 		if(current == 'Boxed') {
-			var html = 'body{background-color:#d7d6d6;background-image:url("http://isharis.dnsalias.com/wp-content/themes/Avada/images/patterns/pattern1.png");background-repeat:repeat;}#wrapper{background:#fff;width:1000px;margin:0 auto;}#layerslider-container{overflow:hidden;}';
+			var html = 'body{background-color:#d7d6d6;background-image:url("http://isharis.dnsalias.com/wp-content/themes/Avada/images/patterns/pattern1.png");background-repeat:repeat;}#wrapper{background:#fff;width:1000px;margin:0 auto;}';
+			jQuery('head').append('<style type="text/css" id="ss"></style>');
 			jQuery('style#ss').append(html);
 		} else {
 			jQuery('style#ss').empty();
 			jQuery('body').attr('style', '');
+		}
+
+	});
+	jQuery('#style_selector select[name=color_skin]').change(function() {
+		var current = jQuery(this).find('option:selected').val();
+		
+		if(current == 'Light') {
+			window.location = 'http://theme-fusion.com/avada/';
+		} else {
+			window.location = 'http://theme-fusion.com/avadadark/';
 		}
 
 	});
@@ -170,7 +181,7 @@ jQuery(document).ready(function() {
 				jQuery('body').css('background-size', 'auto');
 			}
 		} else {
-		alert('Select boxed layout');
+			alert('Select boxed layout');
 		}
 	});
 
@@ -185,6 +196,8 @@ jQuery(document).ready(function() {
 		if(name == 'green') {
 			jQuery('#style_selector_ss').attr('href', '');
 		} else {
+			jQuery('head').append('<link rel="stylesheet" id="style_selector_ss" href="#" />');
+			alert('wat');
 			jQuery('#style_selector_ss').attr('href', '<?php bloginfo("template_directory"); ?>/css/skins/'+name+'.css');
 		}
 
@@ -208,6 +221,15 @@ jQuery(document).ready(function() {
 			</select>
 		</div>
 	</div>
+	<div class="box-title">Choose Your Color Skin</div>
+	<div class="input-box">
+		<div class="input">
+			<select name="color_skin">
+				<option>Light</option>
+				<option>Dark</option>
+			</select>
+		</div>
+	</div>
 	<div class="box-title">Patterns for Boxed Version</div>
 	<div class="images patterns">
 		<a href="#" name="pattern1"><img src="<?php bloginfo('template_directory'); ?>/images/patterns/pattern1.png" alt="" class="active" /></a>
@@ -228,7 +250,7 @@ jQuery(document).ready(function() {
 		<a href="#" class="bkgd" name="bkgd3"><img src="<?php bloginfo('template_directory'); ?>/images/patterns/bkgd3_thumbnail.png" alt="" /></a>
 		<a href="#" class="bkgd" name="bkgd4"><img src="<?php bloginfo('template_directory'); ?>/images/patterns/bkgd4_thumbnail.png" alt="" /></a>
 	</div>
-	<div class="box-title">10 Predefined Color Skins</div>
+	<div class="box-title">10 Predefined Color Schemes</div>
 	<div class="images predefined">
 		<a href="#" name="green"><img src="<?php bloginfo('template_directory'); ?>/images/colorpicker/green.png" alt="" class="active" /></a>
 		<a href="#" name="darkgreen"><img src="<?php bloginfo('template_directory'); ?>/images/colorpicker/darkgreen.png" alt="" /></a>

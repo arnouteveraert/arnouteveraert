@@ -50,8 +50,19 @@ define( 'THEMEVERSION', $theme_version );
 define( 'THEMEURI', $theme_uri );
 define( 'THEMEAUTHORURI', $author_uri );
 
-define( 'OPTIONS', $theme_name.'_options' );
-define( 'BACKUPS',$theme_name.'_backups' );
+$lang = '';
+if(defined('ICL_LANGUAGE_CODE')) {
+	if(ICL_LANGUAGE_CODE != 'en') {
+		$lang = '_'.ICL_LANGUAGE_CODE;
+		if(!get_option($theme_name.'_options'.$lang)) {
+			update_option($theme_name.'_options'.$lang, get_option($theme_name.'_options'));
+		}
+	} else {
+		$lang = '';
+	}
+}
+define( 'OPTIONS', $theme_name.'_options'.$lang );
+define( 'BACKUPS',$theme_name.'_backups'.$lang );
 
 /**
  * Required action filters

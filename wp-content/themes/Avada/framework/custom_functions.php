@@ -230,3 +230,51 @@ function tf_addURLParameter($url, $paramName, $paramValue) {
      }
      return $url;
  }
+
+function getClassAlign($post_count)
+{
+    if(($post_count % 2)>0)
+        return " align-left ";
+    else
+        return " align-right ";
+}
+
+function avada_hex2rgb($hex) {
+   $hex = str_replace("#", "", $hex);
+
+   if(strlen($hex) == 3) {
+      $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+      $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+      $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+   } else {
+      $r = hexdec(substr($hex,0,2));
+      $g = hexdec(substr($hex,2,2));
+      $b = hexdec(substr($hex,4,2));
+   }
+   $rgb = array($r, $g, $b);
+   //return implode(",", $rgb); // returns the rgb values separated by commas
+   return $rgb; // returns an array with the rgb values
+}
+
+add_action('wp_head', 'avada_set_post_views');
+function avada_set_post_views() {
+    global $post;
+    
+    if('post' == get_post_type() && is_single()) {
+        $postID = $post->ID;
+
+        if(!empty($postID)) {
+            $count_key = 'avada_post_views_count';
+            $count = get_post_meta($postID, $count_key, true);
+
+            if($count == '') {
+                $count = 0;
+                delete_post_meta($postID, $count_key);
+                add_post_meta($postID, $count_key, '0');
+            } else {
+                $count++;
+                update_post_meta($postID, $count_key, $count);
+            }
+        }
+    }
+}

@@ -1,2468 +1,2679 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: LayerSlider WP v4.5.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2013-06-16 18:57:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
 
-#. Text in echo
 #: add.php:183
-#: add.php:1124
+#: add.php:1152
 #: edit.php:191
-#: edit.php:1145
+#: edit.php:1174
+#@ LayerSlider
 msgid "#ID"
 msgstr ""
 
-#. Text in echo
-#: builder.php:533
+#: builder.php:545
+#@ LayerSlider
 msgid "2D transitions"
 msgstr ""
 
-#. Text in echo
-#: builder.php:514
+#: builder.php:526
+#@ LayerSlider
 msgid "3D transitions"
 msgstr ""
 
-#. Text in echo
+#: builder.php:99
 #: builder.php:381
-#: builder.php:923
+#: builder.php:603
+#: builder.php:935
+#@ LayerSlider
 msgid "<number> or <min_number>,<max_number> If you specify a value greater than 1, LayerSlider will cut your slide into tiles. You can specify here how many columns of your transition should have. If you specify two numbers separated with a comma, LayerSlider will use that as a range and pick a random number between your values."
 msgstr ""
 
-#. Text in echo
+#: builder.php:97
 #: builder.php:379
-#: builder.php:921
+#: builder.php:601
+#: builder.php:933
+#@ LayerSlider
 msgid "<number> or <min_number>,<max_number> If you specify a value greater than 1, LayerSlider will cut your slide into tiles. You can specify here how many rows of your transition should have. If you specify two numbers separated with a comma, LayerSlider will use that as a range and pick a random number between your values."
 msgstr ""
 
-#. Text in echo
 #: list.php:36
+#@ LayerSlider
 msgid "Actions"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:620
 #: list.php:25
+#@ LayerSlider
 msgid "Add New"
 msgstr ""
 
-#. Text in echo
+#: builder.php:183
+#: builder.php:259
 #: builder.php:319
-#: builder.php:527
-#: builder.php:546
-#: builder.php:850
+#: builder.php:539
+#: builder.php:558
+#: builder.php:704
+#: builder.php:785
+#: builder.php:862
+#@ LayerSlider
 msgid "Add new"
 msgstr ""
 
-#. Text in echo
-#: add.php:566
+#: add.php:589
+#@ LayerSlider
 msgid "Add new LayerSlider"
 msgstr ""
 
-#. Text in echo
-#: add.php:555
-#: add.php:1496
-#: edit.php:563
-#: edit.php:1525
+#: add.php:578
+#: add.php:1548
+#: edit.php:587
+#: edit.php:1578
+#@ LayerSlider
 msgid "Add new layer"
 msgstr ""
 
-#. Text in echo
-#: add.php:953
-#: edit.php:970
+#: add.php:981
+#: edit.php:999
+#@ LayerSlider
 msgid "Add new slide"
 msgstr ""
 
-#. Text in echo
 #: builder.php:273
-#: builder.php:791
+#: builder.php:803
+#@ LayerSlider
 msgid "After animation"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:619
+#@ LayerSlider
 msgid "All Sliders"
 msgstr ""
 
-#. Text in echo
-#: add.php:541
-#: add.php:1482
-#: edit.php:549
-#: edit.php:1509
+#: add.php:564
+#: add.php:1534
+#: edit.php:573
+#: edit.php:1562
+#@ LayerSlider
 msgid "Alt"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:300
+#@ LayerSlider
 msgid "An Unexpected HTTP Error occurred during the API request.</p> <p><a href=\"?\" onclick=\"document.location.reload(); return false;\">Try again</a>"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:305
+#@ LayerSlider
 msgid "An unknown error occurred"
 msgstr ""
 
-#. Text in echo
-#: add.php:661
-#: edit.php:669
+#: add.php:684
+#: edit.php:693
+#@ LayerSlider
 msgid "Animate first slide"
 msgstr ""
 
-#. Text in echo
 #: builder.php:197
-#: builder.php:706
+#: builder.php:718
+#@ LayerSlider
 msgid "Animation"
 msgstr ""
 
-#. Text in echo
-#: add.php:734
-#: edit.php:746
+#: add.php:757
+#: edit.php:770
+#@ LayerSlider
 msgid "Appearance"
 msgstr ""
 
-#. Text in echo
-#: add.php:237
-#: add.php:534
-#: add.php:1178
-#: add.php:1475
-#: edit.php:245
-#: edit.php:542
-#: edit.php:1203
-#: edit.php:1502
+#: add.php:239
+#: add.php:557
+#: add.php:1208
+#: add.php:1527
+#: edit.php:247
+#: edit.php:566
+#: edit.php:1234
+#: edit.php:1555
+#@ LayerSlider
 msgid "Attributes"
 msgstr ""
 
-#. Text in echo
-#: add.php:329
-#: add.php:1270
-#: edit.php:337
-#: edit.php:1296
+#: add.php:331
+#: add.php:1300
+#: edit.php:339
+#: edit.php:1327
+#@ LayerSlider
 msgid "Auto (Slide from auto direction)"
 msgstr ""
 
-#. Text in echo
-#: add.php:385
-#: add.php:1326
-#: edit.php:393
-#: edit.php:1352
+#: add.php:397
+#: add.php:1367
+#: edit.php:406
+#: edit.php:1394
+#@ LayerSlider
 msgid "Auto (Slide to auto direction)"
 msgstr ""
 
-#. Text in echo
 #: list.php:71
+#@ LayerSlider
 msgid "Auto-updates"
 msgstr ""
 
-#. Text in echo
-#: add.php:697
-#: edit.php:709
+#: add.php:720
+#: edit.php:733
+#@ LayerSlider
 msgid "Automatically pause slideshow"
 msgstr ""
 
-#. Text in echo
-#: add.php:692
-#: edit.php:704
+#: add.php:715
+#: edit.php:728
+#@ LayerSlider
 msgid "Automatically play videos"
 msgstr ""
 
-#. Text in echo
-#: add.php:646
-#: edit.php:654
+#: add.php:669
+#: edit.php:678
+#@ LayerSlider
 msgid "Automatically start slideshow"
 msgstr ""
 
-#. Text in echo
+#: add.php:590
+#: builder.php:512
+#: edit.php:599
 #: editor.php:32
-#: add.php:567
-#: builder.php:500
 #: style_editor.php:20
-#: edit.php:575
+#@ LayerSlider
 msgid "Back to the list"
 msgstr ""
 
-#. Text in echo
-#: add.php:515
-#: add.php:1456
-#: edit.php:523
-#: edit.php:1483
+#: add.php:538
+#: add.php:1508
+#: edit.php:547
+#: edit.php:1536
+#@ LayerSlider
 msgid "Background"
 msgstr ""
 
-#. Text in echo
-#: add.php:757
-#: edit.php:769
+#: add.php:780
+#: edit.php:793
+#@ LayerSlider
 msgid "Background color"
 msgstr ""
 
-#. Text in echo
-#: add.php:763
-#: edit.php:775
+#: add.php:786
+#: edit.php:799
+#@ LayerSlider
 msgid "Background color of LayerSlider. You can use all CSS methods, like hexa colors, rgb(r,g,b) method, color names, etc. Note, that slides with background are covering the global background."
 msgstr ""
 
-#. Text in echo
-#: add.php:766
-#: edit.php:778
+#: add.php:789
+#: edit.php:802
+#@ LayerSlider
 msgid "Background image"
 msgstr ""
 
-#. Text in echo
-#: add.php:773
-#: edit.php:785
+#: add.php:796
+#: edit.php:809
+#@ LayerSlider
 msgid "Background image of LayerSlider. This will be a fixed background image of LayerSlider by default. Note, that slides with background are covering the global background image."
 msgstr ""
 
-#. Text in echo
-#: add.php:233
-#: add.php:600
-#: add.php:1174
-#: edit.php:241
-#: edit.php:608
-#: edit.php:1199
+#: add.php:235
+#: add.php:623
+#: add.php:1204
+#: edit.php:243
+#: edit.php:632
+#: edit.php:1230
+#@ LayerSlider
 msgid "Basic"
 msgstr ""
 
-#. Text in echo
+#: builder.php:87
 #: builder.php:369
-#: builder.php:909
+#: builder.php:589
+#: builder.php:921
+#@ LayerSlider
 msgid "Basic properties"
 msgstr ""
 
-#. Text in echo
 #: builder.php:137
-#: builder.php:633
+#: builder.php:645
+#@ LayerSlider
 msgid "Before animation"
 msgstr ""
 
-#. Text in echo
-#: builder.php:1052
+#: builder.php:1076
+#@ LayerSlider
 msgid "Before you can save your changes, you need to make writeable your \"/wp-content/uploads\" folder. See the <a href=\"http://codex.wordpress.org/Changing_File_Permissions\" target=\"_blank\">Codex</a>"
 msgstr ""
 
-#. Text in echo
-#: add.php:492
-#: add.php:1433
-#: edit.php:500
-#: edit.php:1460
+#: add.php:515
+#: add.php:1485
+#: edit.php:524
+#: edit.php:1513
+#@ LayerSlider
 msgid "Border"
 msgstr ""
 
-#. Text in echo
-#: add.php:498
-#: add.php:1439
-#: edit.php:506
-#: edit.php:1466
+#: add.php:521
+#: add.php:1491
+#: edit.php:530
+#: edit.php:1519
+#@ LayerSlider
 msgid "Border on the bottom of the layer. Example: 5px solid #000"
 msgstr ""
 
-#. Text in echo
-#: add.php:500
-#: add.php:1441
-#: edit.php:508
-#: edit.php:1468
+#: add.php:523
+#: add.php:1493
+#: edit.php:532
+#: edit.php:1521
+#@ LayerSlider
 msgid "Border on the left side of the layer. Example: 5px solid #000"
 msgstr ""
 
-#. Text in echo
-#: add.php:496
-#: add.php:1437
-#: edit.php:504
-#: edit.php:1464
+#: add.php:519
+#: add.php:1489
+#: edit.php:528
+#: edit.php:1517
+#@ LayerSlider
 msgid "Border on the right side of the layer. Example: 5px solid #000"
 msgstr ""
 
-#. Text in echo
-#: add.php:494
-#: add.php:1435
-#: edit.php:502
-#: edit.php:1462
+#: add.php:517
+#: add.php:1487
+#: edit.php:526
+#: edit.php:1515
+#@ LayerSlider
 msgid "Border on the top of the layer. Example: 5px solid #000"
 msgstr ""
 
-#. Text in echo
-#: add.php:497
-#: add.php:1438
+#: add.php:509
+#: add.php:520
+#: add.php:1479
+#: add.php:1490
 #: builder.php:466
-#: builder.php:1008
-#: edit.php:505
-#: edit.php:1465
+#: builder.php:1020
+#: edit.php:518
+#: edit.php:529
+#: edit.php:1507
+#: edit.php:1518
+#@ LayerSlider
 msgid "Bottom"
 msgstr ""
 
-#. Text in echo
-#: add.php:332
-#: add.php:1273
-#: edit.php:340
-#: edit.php:1299
+#: add.php:334
+#: add.php:1303
+#: edit.php:342
+#: edit.php:1330
+#@ LayerSlider
 msgid "Bottom (Slide from bottom)"
 msgstr ""
 
-#. Text in echo
-#: add.php:388
-#: add.php:1329
-#: edit.php:396
-#: edit.php:1355
+#: add.php:400
+#: add.php:1370
+#: edit.php:409
+#: edit.php:1397
+#@ LayerSlider
 msgid "Bottom (Slide to bottom)"
 msgstr ""
 
-#. Text in echo
 #: builder.php:471
-#: builder.php:1013
+#: builder.php:1025
+#@ LayerSlider
 msgid "Bottom left"
 msgstr ""
 
-#. Text in echo
-#: add.php:816
-#: edit.php:828
+#: add.php:839
+#: edit.php:852
+#@ LayerSlider
 msgid "Bottom navigation on hover"
 msgstr ""
 
-#. Text in echo
 #: builder.php:472
-#: builder.php:1014
+#: builder.php:1026
+#@ LayerSlider
 msgid "Bottom right"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:876
+#: layerslider.php:986
+#@ LayerSlider
 msgid "Cannot write to file"
 msgstr ""
 
-#. Text in echo
 #: editor.php:44
+#@ LayerSlider
 msgid "Choose a skin:"
 msgstr ""
 
-#. Text in echo
-#: layerslider.php:1401
+#: layerslider.php:1417
+#@ LayerSlider
 msgid "Choose a slider:"
 msgstr ""
 
-#. Text in echo
-#: builder.php:535
+#: builder.php:528
+#: builder.php:547
+#@ LayerSlider
 msgid "Choose:"
 msgstr ""
 
-#. Text in echo
-#: add.php:537
-#: add.php:1478
-#: edit.php:545
-#: edit.php:1505
+#: add.php:560
+#: add.php:1530
+#: edit.php:569
+#: edit.php:1558
+#@ LayerSlider
 msgid "Classes"
 msgstr ""
 
-#. Text in echo
-#: add.php:311
-#: add.php:1252
-#: edit.php:319
-#: edit.php:1278
+#: add.php:313
+#: add.php:1282
+#: edit.php:321
+#: edit.php:1309
+#@ LayerSlider
 msgid "Click into this text field to open WordPress Media Library where you can upload new images or select previously used ones."
 msgstr ""
 
-#. Text in echo
+#: builder.php:116
 #: builder.php:398
-#: builder.php:940
+#: builder.php:620
+#: builder.php:952
+#@ LayerSlider
 msgid "Col-forward"
 msgstr ""
 
-#. Text in echo
+#: builder.php:117
 #: builder.php:399
-#: builder.php:941
+#: builder.php:621
+#: builder.php:953
+#@ LayerSlider
 msgid "Col-reverse"
 msgstr ""
 
-#. Text in echo
-#: add.php:510
-#: add.php:1451
-#: edit.php:518
-#: edit.php:1478
+#: add.php:533
+#: add.php:1503
+#: edit.php:542
+#: edit.php:1531
+#@ LayerSlider
 msgid "Color"
 msgstr ""
 
-#. Text in echo
+#: builder.php:98
 #: builder.php:380
-#: builder.php:922
+#: builder.php:602
+#: builder.php:934
+#@ LayerSlider
 msgid "Cols"
 msgstr ""
 
-#. Text in echo
 #: style_editor.php:29
+#@ LayerSlider
 msgid "Contents of your custom CSS file"
 msgstr ""
 
-#. Text in echo
-#: layerslider.php:1092
+#: layerslider.php:1106
+#@ LayerSlider
 msgid "Convert Data"
 msgstr ""
 
-#. Text in echo
 #: list.php:37
+#@ LayerSlider
 msgid "Created"
 msgstr ""
 
-#. Text in echo
-#: add.php:316
-#: add.php:1257
-#: edit.php:324
-#: edit.php:1283
+#: add.php:318
+#: add.php:1287
+#: edit.php:326
+#: edit.php:1314
+#@ LayerSlider
 msgid "Custom HTML content"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:623
+#@ LayerSlider
 msgid "Custom Styles Editor"
 msgstr ""
 
-#. Text in echo
 #: list.php:108
+#@ LayerSlider
 msgid "Custom capability"
 msgstr ""
 
-#. Text in echo
-#: add.php:523
-#: add.php:1464
-#: edit.php:531
-#: edit.php:1491
+#: add.php:546
+#: add.php:1516
+#: edit.php:555
+#: edit.php:1544
+#@ LayerSlider
 msgid "Custom style settings"
 msgstr ""
 
-#. Text in echo
-#: add.php:524
-#: add.php:1465
-#: edit.php:532
-#: edit.php:1492
+#: add.php:547
+#: add.php:1517
+#: edit.php:556
+#: edit.php:1545
+#@ LayerSlider
 msgid "Custom styles"
 msgstr ""
 
-#. Text in echo
 #: add.php:185
-#: add.php:1126
+#: add.php:1154
 #: edit.php:193
-#: edit.php:1147
+#: edit.php:1176
+#@ LayerSlider
 msgid "Deeplink"
 msgstr ""
 
-#. Text in echo
-#: add.php:714
-#: edit.php:726
+#: add.php:737
+#: edit.php:750
+#@ LayerSlider
 msgid "Default quality"
 msgstr ""
 
-#. Text in echo
-#: add.php:717
-#: edit.php:729
+#: add.php:740
+#: edit.php:753
+#@ LayerSlider
 msgid "Default thumbnail picture of YouTube videos. Note, that Maximum quaility is not available to all (not HD) videos."
 msgstr ""
 
-#. Text in echo
-#: add.php:431
-#: add.php:1372
-#: builder.php:391
+#: add.php:377
+#: add.php:443
+#: add.php:1346
+#: add.php:1413
+#: builder.php:109
+#: builder.php:188
+#: builder.php:264
 #: builder.php:324
-#: builder.php:933
-#: builder.php:855
-#: edit.php:439
-#: edit.php:1398
+#: builder.php:391
+#: builder.php:613
+#: builder.php:709
+#: builder.php:790
+#: builder.php:867
+#: builder.php:945
+#: edit.php:385
+#: edit.php:452
+#: edit.php:1373
+#: edit.php:1440
+#@ LayerSlider
 msgid "Delay"
 msgstr ""
 
-#. Text in echo
-#: add.php:376
-#: add.php:1317
-#: edit.php:384
-#: edit.php:1343
+#: add.php:378
+#: add.php:1347
+#: edit.php:386
+#: edit.php:1374
+#@ LayerSlider
 msgid "Delay before the animation start when the layer slides in. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
-#: add.php:432
-#: add.php:1373
-#: edit.php:440
-#: edit.php:1399
+#: add.php:444
+#: add.php:1414
+#: edit.php:453
+#: edit.php:1441
+#@ LayerSlider
 msgid "Delay before the animation start when the layer slides out. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
 #: add.php:119
-#: add.php:1060
+#: add.php:1088
 #: edit.php:127
-#: edit.php:1080
+#: edit.php:1109
+#@ LayerSlider
 msgid "Delay before the animation start when the slide slides in. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
 #: add.php:163
-#: add.php:1104
+#: add.php:1132
 #: edit.php:171
-#: edit.php:1124
+#: edit.php:1153
+#@ LayerSlider
 msgid "Delay before the animation start when the slide slides out. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
 #: add.php:118
-#: add.php:1059
+#: add.php:1087
 #: edit.php:126
-#: edit.php:1079
+#: edit.php:1108
+#@ LayerSlider
 msgid "Delay in"
 msgstr ""
 
-#. Text in echo
 #: add.php:162
-#: add.php:1103
+#: add.php:1131
 #: edit.php:170
-#: edit.php:1123
+#: edit.php:1152
+#@ LayerSlider
 msgid "Delay out"
 msgstr ""
 
-#. Text in echo
 #: builder.php:125
-#: builder.php:617
+#: builder.php:629
+#@ LayerSlider
 msgid "Depth"
 msgstr ""
 
-#. Text in echo
 #: add.php:63
-#: add.php:1004
+#: add.php:1032
+#: builder.php:239
 #: builder.php:461
-#: builder.php:1003
+#: builder.php:760
+#: builder.php:1015
 #: edit.php:71
-#: edit.php:1024
+#: edit.php:1053
+#@ LayerSlider
 msgid "Direction"
 msgstr ""
 
-#. Text in echo
-#: add.php:437
-#: add.php:1378
-#: edit.php:445
-#: edit.php:1404
+#: add.php:460
+#: add.php:1430
+#: edit.php:469
+#: edit.php:1457
+#@ LayerSlider
 msgid "Distance"
 msgstr ""
 
-#. Text in echo
-#: add.php:263
-#: add.php:1204
-#: edit.php:271
-#: edit.php:1229
+#: add.php:265
+#: add.php:1234
+#: edit.php:273
+#: edit.php:1260
+#@ LayerSlider
 msgid "Div / Video"
 msgstr ""
 
-#. Text in echo
-#: add.php:575
-#: edit.php:583
+#: add.php:598
+#: edit.php:607
+#@ LayerSlider
 msgid "Documentation"
 msgstr ""
 
-#. Text in echo
 #: list.php:51
+#@ LayerSlider
 msgid "Duplicate"
 msgstr ""
 
-#. Text in echo
-#: add.php:443
-#: add.php:1384
-#: edit.php:451
+#: add.php:466
+#: add.php:1436
+#: edit.php:475
+#: edit.php:1463
+#@ LayerSlider
 msgid "Duplicate this layer"
 msgstr ""
 
-#. Text in echo
 #: add.php:25
-#: add.php:966
+#: add.php:994
 #: edit.php:33
-#: edit.php:986
+#: edit.php:1015
+#@ LayerSlider
 msgid "Duplicate this slide"
 msgstr ""
 
-#. Text in echo
-#: edit.php:1410
-msgid "Duplicate this sublayer"
-msgstr ""
-
-#. Text in echo
+#: add.php:79
 #: add.php:123
-#: add.php:392
-#: add.php:1064
-#: add.php:1333
+#: add.php:338
+#: add.php:404
+#: add.php:1048
+#: add.php:1092
+#: add.php:1307
+#: add.php:1374
+#: builder.php:146
+#: builder.php:203
+#: builder.php:282
 #: builder.php:412
-#: builder.php:954
+#: builder.php:654
+#: builder.php:724
+#: builder.php:812
+#: builder.php:966
+#: edit.php:87
 #: edit.php:131
-#: edit.php:400
-#: edit.php:1084
-#: edit.php:1359
+#: edit.php:346
+#: edit.php:413
+#: edit.php:1069
+#: edit.php:1113
+#: edit.php:1334
+#: edit.php:1401
+#@ LayerSlider
 msgid "Duration"
 msgstr ""
 
-#. Text in echo
+#: add.php:81
 #: add.php:125
-#: add.php:394
-#: add.php:1066
-#: add.php:1335
+#: add.php:340
+#: add.php:406
+#: add.php:1050
+#: add.php:1094
+#: add.php:1309
+#: add.php:1376
+#: builder.php:148
+#: builder.php:205
+#: builder.php:284
 #: builder.php:414
-#: builder.php:956
+#: builder.php:656
+#: builder.php:726
+#: builder.php:814
+#: builder.php:968
+#: edit.php:89
 #: edit.php:133
-#: edit.php:402
-#: edit.php:1086
-#: edit.php:1361
+#: edit.php:348
+#: edit.php:415
+#: edit.php:1071
+#: edit.php:1115
+#: edit.php:1336
+#: edit.php:1403
+#@ LayerSlider
 msgid "Easing"
 msgstr ""
 
-#. Text in echo
 #: list.php:50
+#@ LayerSlider
 msgid "Edit"
 msgstr ""
 
-#. Text in echo
-#: edit.php:574
+#: edit.php:598
+#@ LayerSlider
 msgid "Edit this LayerSlider"
 msgstr ""
 
-#. Text in echo
-#: add.php:618
-#: edit.php:626
+#: add.php:641
+#: edit.php:650
+#@ LayerSlider
 msgid "Enable this option to turn LayerSlider into a responsive slider."
 msgstr ""
 
-#. Text in echo
 #: add.php:209
-#: add.php:1150
+#: add.php:1178
 #: edit.php:217
-#: edit.php:1171
+#: edit.php:1200
+#@ LayerSlider
 msgid "Enter Preview"
 msgstr ""
 
-#. Text in echo
-#: add.php:574
-#: edit.php:582
+#: add.php:597
+#: edit.php:606
+#@ LayerSlider
 msgid "Event Callbacks"
 msgstr ""
 
-#. Text in echo
 #: list.php:144
+#@ LayerSlider
 msgid "Export sliders"
 msgstr ""
 
-#. Text in echo
-#: add.php:384
-#: add.php:1325
+#: add.php:330
+#: add.php:396
+#: add.php:1299
+#: add.php:1366
 #: builder.php:457
-#: builder.php:999
-#: edit.php:392
-#: edit.php:1295
-#: edit.php:1351
+#: builder.php:1011
+#: edit.php:338
+#: edit.php:405
+#: edit.php:1326
+#: edit.php:1393
+#@ LayerSlider
 msgid "Fade"
 msgstr ""
 
-#. Text in echo
-#: add.php:504
-#: add.php:1445
-#: edit.php:512
-#: edit.php:1472
+#: add.php:527
+#: add.php:1497
+#: edit.php:536
+#: edit.php:1525
+#@ LayerSlider
 msgid "Family"
 msgstr ""
 
-#. Text in echo
-#: add.php:656
-#: edit.php:664
+#: add.php:679
+#: edit.php:688
+#@ LayerSlider
 msgid "First slide"
 msgstr ""
 
-#. Text in echo
-#: add.php:503
-#: add.php:1444
-#: edit.php:511
-#: edit.php:1471
+#: add.php:526
+#: add.php:1496
+#: edit.php:535
+#: edit.php:1524
+#@ LayerSlider
 msgid "Font"
 msgstr ""
 
-#. Text in echo
-#: layerslider.php:1090
+#: layerslider.php:1104
+#@ LayerSlider
 msgid "For a faster and more reliable solution, LayerSlider WP needs to convert your data associated with the plugin. Your sliders and settings will remain still, and it only takes a click on this button."
 msgstr ""
 
-#. Text in echo
-#: add.php:687
-#: edit.php:699
+#: add.php:710
+#: edit.php:723
+#@ LayerSlider
 msgid "Force the number of loops"
 msgstr ""
 
-#. Text in echo
+#: builder.php:114
 #: builder.php:396
-#: builder.php:938
+#: builder.php:618
+#: builder.php:950
+#@ LayerSlider
 msgid "Forward"
 msgstr ""
 
-#. Text in echo
-#: add.php:621
-#: edit.php:629
+#: add.php:644
+#: edit.php:653
+#@ LayerSlider
 msgid "Full-width slider"
 msgstr ""
 
-#. Text in echo
-#: add.php:572
-#: add.php:594
-#: edit.php:580
-#: edit.php:602
+#: add.php:595
+#: add.php:617
+#: edit.php:604
+#: edit.php:626
+#@ LayerSlider
 msgid "Global Settings"
 msgstr ""
 
-#. Text in echo
-#: add.php:278
-#: add.php:1219
-#: edit.php:286
-#: edit.php:1244
+#: add.php:280
+#: add.php:1249
+#: edit.php:288
+#: edit.php:1275
+#@ LayerSlider
 msgid "H1"
 msgstr ""
 
-#. Text in echo
-#: add.php:283
-#: add.php:1224
-#: edit.php:291
-#: edit.php:1249
+#: add.php:285
+#: add.php:1254
+#: edit.php:293
+#: edit.php:1280
+#@ LayerSlider
 msgid "H2"
 msgstr ""
 
-#. Text in echo
-#: add.php:288
-#: add.php:1229
-#: edit.php:296
-#: edit.php:1254
+#: add.php:290
+#: add.php:1259
+#: edit.php:298
+#: edit.php:1285
+#@ LayerSlider
 msgid "H3"
 msgstr ""
 
-#. Text in echo
-#: add.php:293
-#: add.php:1234
-#: edit.php:301
-#: edit.php:1259
+#: add.php:295
+#: add.php:1264
+#: edit.php:303
+#: edit.php:1290
+#@ LayerSlider
 msgid "H4"
 msgstr ""
 
-#. Text in echo
-#: add.php:298
-#: add.php:1239
-#: edit.php:306
-#: edit.php:1264
+#: add.php:300
+#: add.php:1269
+#: edit.php:308
+#: edit.php:1295
+#@ LayerSlider
 msgid "H5"
 msgstr ""
 
-#. Text in echo
-#: add.php:303
-#: add.php:1244
-#: edit.php:311
-#: edit.php:1269
+#: add.php:305
+#: add.php:1274
+#: edit.php:313
+#: edit.php:1300
+#@ LayerSlider
 msgid "H6"
 msgstr ""
 
-#. Text in echo
-#: add.php:473
-#: add.php:611
-#: add.php:1414
-#: edit.php:481
-#: edit.php:1441
+#: add.php:496
+#: add.php:634
+#: add.php:1466
+#: edit.php:505
+#: edit.php:1494
+#@ LayerSlider
 msgid "Height"
 msgstr ""
 
-#. Text in echo
-#: add.php:783
-#: edit.php:795
+#: add.php:806
+#: edit.php:819
+#@ LayerSlider
 msgid "Here you can apply your custom CSS style settings to the slider."
 msgstr ""
 
-#. Text in echo
 #: add.php:52
-#: add.php:993
+#: add.php:1021
 #: edit.php:60
-#: edit.php:1013
+#: edit.php:1042
+#@ LayerSlider
 msgid "Here you can set the time interval between slide changes, this slide will stay visible for the time specified here. This value is in millisecs, so the value 1000 means 1 second. Please don't use 0 or very low values."
 msgstr ""
 
-#. Text in echo
 #: add.php:187
-#: add.php:441
-#: add.php:1128
-#: add.php:1382
+#: add.php:464
+#: add.php:1156
+#: add.php:1434
 #: edit.php:195
-#: edit.php:449
-#: edit.php:1149
-#: edit.php:1408
+#: edit.php:473
+#: edit.php:1178
+#: edit.php:1461
+#@ LayerSlider
 msgid "Hidden"
 msgstr ""
 
-#. Text in echo
-#: add.php:712
-#: edit.php:724
+#: add.php:735
+#: edit.php:748
+#@ LayerSlider
 msgid "High quality"
 msgstr ""
 
-#. Text in echo
 #: builder.php:243
-#: builder.php:752
+#: builder.php:764
+#@ LayerSlider
 msgid "Horizontal"
 msgstr ""
 
-#. Text in echo
-#: add.php:535
-#: add.php:1476
-#: edit.php:543
-#: edit.php:1503
+#: add.php:558
+#: add.php:1528
+#: edit.php:567
+#: edit.php:1556
+#@ LayerSlider
 msgid "ID"
 msgstr ""
 
-#. Text in echo
-#: add.php:941
-#: edit.php:955
+#: add.php:969
+#: edit.php:984
+#@ LayerSlider
 msgid "If '_blank', the clicked url will open in a new window."
 msgstr ""
 
-#. Text in echo
-#: add.php:798
-#: edit.php:810
+#: add.php:821
+#: edit.php:834
+#@ LayerSlider
 msgid "If disabled, Prev and Next buttons will be invisible."
 msgstr ""
 
-#. Text in echo
-#: add.php:803
-#: edit.php:815
+#: add.php:826
+#: edit.php:839
+#@ LayerSlider
 msgid "If disabled, Start and Stop buttons will be invisible."
 msgstr ""
 
-#. Text in echo
-#: add.php:808
-#: edit.php:820
+#: add.php:831
+#: edit.php:844
+#@ LayerSlider
 msgid "If disabled, slide buttons will be invisible."
 msgstr ""
 
-#. Text in echo
-#: add.php:874
-#: edit.php:887
+#: add.php:907
+#: edit.php:921
+#@ LayerSlider
 msgid "If enabled, LayerSlider WP will use relative URLs for images."
 msgstr ""
 
-#. Text in echo
-#: add.php:648
-#: edit.php:656
+#: add.php:671
+#: edit.php:680
+#@ LayerSlider
 msgid "If enabled, slideshow will automatically start after loading the page."
 msgstr ""
 
-#. Text in echo
-#: add.php:673
-#: edit.php:681
+#: add.php:696
+#: edit.php:705
+#@ LayerSlider
 msgid "If enabled, slideshow will go backwards if you click the prev button."
 msgstr ""
 
-#. Text in echo
-#: add.php:663
-#: edit.php:671
+#: add.php:686
+#: edit.php:695
+#@ LayerSlider
 msgid "If enabled, the layers of the first slide will animate (slide in) instead of fading in with the slide."
 msgstr ""
 
-#. Text in echo
-#: add.php:813
-#: edit.php:825
+#: add.php:836
+#: edit.php:849
+#@ LayerSlider
 msgid "If enabled, the prev and next buttons will be shown only if you move your mouse cursor over the slider."
 msgstr ""
 
-#. Text in echo
-#: add.php:689
-#: edit.php:701
+#: add.php:712
+#: edit.php:725
+#@ LayerSlider
 msgid "If enabled, the slider will always stop at the given number of loops even if the user restarts the slideshow."
 msgstr ""
 
-#. Text in echo
-#: add.php:694
-#: edit.php:706
+#: add.php:717
+#: edit.php:730
+#@ LayerSlider
 msgid "If enabled, the slider will automatically play youtube and vimeo videos."
 msgstr ""
 
-#. Text in echo
-#: add.php:894
-#: edit.php:907
+#: add.php:922
+#: edit.php:936
+#@ LayerSlider
 msgid "If the slider doesn't showing up on your front-end page, you probably have a jQuery conflict when multiple libraries loaded to the document and causes a Javascript error. Enabling this option may solve your problem. Please don't enable this option if you don't experiencing any issues."
 msgstr ""
 
-#. Text in echo
-#: add.php:442
-#: add.php:1383
-#: edit.php:450
-#: edit.php:1409
+#: add.php:465
+#: add.php:1435
+#: edit.php:474
+#: edit.php:1462
+#@ LayerSlider
 msgid "If you don't want to use this layer, but you want to keep it, you can hide it with this switch."
 msgstr ""
 
-#. Text in echo
 #: add.php:188
-#: add.php:1129
+#: add.php:1157
 #: edit.php:196
-#: edit.php:1150
+#: edit.php:1179
+#@ LayerSlider
 msgid "If you don't want to use this slide in your front-page, but you want to keep it, you can hide it with this switch."
 msgstr ""
 
-#. Text in echo
-#: add.php:705
-#: edit.php:717
+#: add.php:728
+#: edit.php:741
+#@ LayerSlider
 msgid "If you enabled automatically play videos, the auto value means that the slideshow will stop UNTIL the video is playing and after that it continues. Enabled means slideshow will stop and it won't continue after video is played."
 msgstr ""
 
-#. Text in echo
-#: add.php:520
-#: add.php:1461
-#: edit.php:528
-#: edit.php:1488
+#: add.php:543
+#: add.php:1513
+#: edit.php:552
+#: edit.php:1541
+#@ LayerSlider
 msgid "If you use custom sized layers, you have to enable this setting to wrap your text."
 msgstr ""
 
-#. Text in echo
-#: add.php:518
-#: add.php:1459
-#: edit.php:526
-#: edit.php:1486
+#: add.php:541
+#: add.php:1511
+#: edit.php:550
+#: edit.php:1539
+#@ LayerSlider
 msgid "If you want rounded corners, you can set here its radius. Example: 5px"
 msgstr ""
 
-#. Text in echo
 #: list.php:110
+#@ LayerSlider
 msgid "If you want to give access for other users than admins to this page, you can specify a custom capability. You can find all the available capabilities on"
 msgstr ""
 
-#. Text in echo
 #: add.php:168
-#: add.php:1109
+#: add.php:1137
 #: edit.php:176
-#: edit.php:1129
+#: edit.php:1158
+#@ LayerSlider
 msgid "If you want to link the whole slide, enter the URL of your link here."
 msgstr ""
 
-#. Text in echo
-#: add.php:452
-#: add.php:1393
-#: edit.php:460
-#: edit.php:1419
+#: add.php:475
+#: add.php:1445
+#: edit.php:484
+#: edit.php:1472
+#@ LayerSlider
 msgid "If you want to link your layer, type here the URL."
 msgstr ""
 
-#. Text in echo
-#: add.php:525
-#: add.php:1466
-#: edit.php:533
-#: edit.php:1493
+#: add.php:548
+#: add.php:1518
+#: edit.php:557
+#: edit.php:1546
+#@ LayerSlider
 msgid "If you want to set style settings other then above, you can use here any CSS codes. Please make sure to write valid markup."
 msgstr ""
 
-#. Text in echo
-#: add.php:443
-#: add.php:1384
-#: edit.php:451
-#: edit.php:1410
+#: add.php:466
+#: add.php:1436
+#: edit.php:475
+#: edit.php:1463
+#@ LayerSlider
 msgid "If you will use similar settings for other layers or you want to experiment on a copy, you can duplicate this layer."
 msgstr ""
 
-#. Text in echo
 #: add.php:37
-#: add.php:258
-#: add.php:978
-#: add.php:1199
+#: add.php:260
+#: add.php:1006
+#: add.php:1229
 #: edit.php:45
-#: edit.php:266
-#: edit.php:998
-#: edit.php:1224
+#: edit.php:268
+#: edit.php:1027
+#: edit.php:1255
+#@ LayerSlider
 msgid "Image"
 msgstr ""
 
-#. Text in echo
-#: add.php:867
-#: edit.php:880
+#: add.php:900
+#: edit.php:914
+#@ LayerSlider
 msgid "Image preload"
 msgstr ""
 
-#. Text in echo
 #: list.php:127
+#@ LayerSlider
 msgid "Import"
 msgstr ""
 
-#. Text in echo
 #: list.php:26
+#@ LayerSlider
 msgid "Import sample sliders"
 msgstr ""
 
-#. Text in echo
 #: list.php:124
+#@ LayerSlider
 msgid "Import sliders"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1096
+#: layerslider.php:1367
+#@ LayerSlider
 msgid "Insert a slider with LayerSlider WP Widget"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:1050
+#@ LayerSlider
 msgid "Invalid shortcode"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:876
+#: layerslider.php:986
+#@ LayerSlider
 msgid "It looks like your files isn't writable, so PHP couldn't make any changes (CHMOD)."
 msgstr ""
 
-#. Text in echo
-#: add.php:720
-#: edit.php:732
+#: add.php:743
+#: edit.php:756
+#@ LayerSlider
 msgid "Keyboard navigation"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1096
+#: layerslider.php:1401
+#@ LayerSlider
 msgid "LayerSlider"
 msgstr ""
 
-#. Text in echo
 #: style_editor.php:19
+#@ LayerSlider
 msgid "LayerSlider Custom Styles Editor"
 msgstr ""
 
-#. Text in echo
 #: editor.php:31
+#@ LayerSlider
 msgid "LayerSlider Skin Editor"
 msgstr ""
 
-#. Text in echo
-#: builder.php:499
+#: builder.php:511
+#@ LayerSlider
 msgid "LayerSlider Transition Builder"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1096
+#: layerslider.php:1369
+#@ LayerSlider
 msgid "LayerSlider WP Widget"
 msgstr ""
 
-#. Text in echo
 #: list.php:24
+#@ LayerSlider
 msgid "LayerSlider sliders"
 msgstr ""
 
-#. Text in echo
-#: add.php:668
-#: edit.php:676
+#: add.php:691
+#: edit.php:700
+#@ LayerSlider
 msgid "LayerSlider will change to a random slide instead of changing to the next / prev slide. Note that 'loops' feature won't work with this option."
 msgstr ""
 
-#. Text in echo
-#: add.php:658
-#: edit.php:666
+#: add.php:681
+#: edit.php:690
+#@ LayerSlider
 msgid "LayerSlider will start with this slide (you can type the word <i>random</i> if you want the slider to start with a random slide)."
 msgstr ""
 
-#. Text in echo
 #: add.php:220
-#: add.php:1161
+#: add.php:1189
 #: edit.php:228
-#: edit.php:1182
+#: edit.php:1211
+#@ LayerSlider
 msgid "Layers"
 msgstr ""
 
-#. Text in echo
-#: add.php:631
-#: edit.php:639
+#: add.php:654
+#: edit.php:663
+#@ LayerSlider
 msgid "Layers Container"
 msgstr ""
 
-#. Text in echo
-#: add.php:470
-#: add.php:1411
-#: edit.php:478
-#: edit.php:1438
+#: add.php:493
+#: add.php:1463
+#: edit.php:502
+#: edit.php:1491
+#@ LayerSlider
 msgid "Layout & Positions"
 msgstr ""
 
-#. Text in echo
-#: add.php:499
-#: add.php:1440
+#: add.php:500
+#: add.php:511
+#: add.php:522
+#: add.php:1470
+#: add.php:1481
+#: add.php:1492
 #: builder.php:467
-#: builder.php:1009
-#: edit.php:507
-#: edit.php:1467
+#: builder.php:1021
+#: edit.php:509
+#: edit.php:520
+#: edit.php:531
+#: edit.php:1498
+#: edit.php:1509
+#: edit.php:1520
+#@ LayerSlider
 msgid "Left"
 msgstr ""
 
-#. Text in echo
-#: add.php:333
-#: add.php:1274
-#: edit.php:341
-#: edit.php:1300
+#: add.php:335
+#: add.php:1304
+#: edit.php:343
+#: edit.php:1331
+#@ LayerSlider
 msgid "Left (Slide from left)"
 msgstr ""
 
-#. Text in echo
-#: add.php:389
-#: add.php:1330
-#: edit.php:397
-#: edit.php:1356
+#: add.php:401
+#: add.php:1371
+#: edit.php:410
+#: edit.php:1398
+#@ LayerSlider
 msgid "Left (Slide to left)"
 msgstr ""
 
-#. Text in echo
-#: add.php:508
-#: add.php:1449
-#: edit.php:516
-#: edit.php:1476
+#: add.php:531
+#: add.php:1501
+#: edit.php:540
+#: edit.php:1529
+#@ LayerSlider
 msgid "Line-height"
 msgstr ""
 
-#. Text in echo
-#: add.php:235
-#: add.php:1176
-#: edit.php:243
-#: edit.php:1201
+#: add.php:237
+#: add.php:1206
+#: edit.php:245
+#: edit.php:1232
+#@ LayerSlider
 msgid "Link"
 msgstr ""
 
-#. Text in echo
 #: add.php:167
-#: add.php:1108
+#: add.php:1136
 #: edit.php:175
-#: edit.php:1128
+#: edit.php:1157
+#@ LayerSlider
 msgid "Link URL"
 msgstr ""
 
-#. Text in echo
 #: add.php:169
-#: add.php:1110
+#: add.php:1138
 #: edit.php:177
-#: edit.php:1130
+#: edit.php:1159
+#@ LayerSlider
 msgid "Link target"
 msgstr ""
 
-#. Text in echo
 #: add.php:166
-#: add.php:1107
+#: add.php:1135
 #: edit.php:174
+#@ LayerSlider
 msgid "Link this slide"
 msgstr ""
 
-#. Text in echo
-#: edit.php:1127
+#: edit.php:1156
+#@ LayerSlider
 msgid "Link this slide "
 msgstr ""
 
-#. Text in echo
-#: add.php:505
-#: add.php:1446
-#: edit.php:513
-#: edit.php:1473
+#: add.php:528
+#: add.php:1498
+#: edit.php:537
+#: edit.php:1526
+#@ LayerSlider
 msgid "List of your chosen fonts separated with a comma. Please use apostrophes if your font names contains white spaces. Example: Helvetica, Arial, sans-serif"
 msgstr ""
 
-#. Text in echo
-#: add.php:676
-#: edit.php:684
+#: add.php:699
+#: edit.php:708
+#@ LayerSlider
 msgid "Loops"
 msgstr ""
 
-#. Text in echo
-#: add.php:711
-#: edit.php:723
+#: add.php:734
+#: edit.php:747
+#@ LayerSlider
 msgid "Maximum quality"
 msgstr ""
 
-#. Text in echo
-#: add.php:713
-#: edit.php:725
+#: add.php:736
+#: edit.php:749
+#@ LayerSlider
 msgid "Medium quality"
 msgstr ""
 
-#. Text in echo
 #: add.php:182
-#: add.php:514
-#: add.php:861
-#: add.php:1123
-#: add.php:1455
+#: add.php:537
+#: add.php:894
+#: add.php:1151
+#: add.php:1507
 #: edit.php:190
-#: edit.php:522
-#: edit.php:874
-#: edit.php:1144
-#: edit.php:1482
+#: edit.php:546
+#: edit.php:908
+#: edit.php:1173
+#: edit.php:1535
+#@ LayerSlider
 msgid "Misc"
 msgstr ""
 
-#. Text in echo
 #: builder.php:458
-#: builder.php:1000
+#: builder.php:1012
+#@ LayerSlider
 msgid "Mixed"
 msgstr ""
 
-#. Text in echo
 #: list.php:38
+#@ LayerSlider
 msgid "Modified"
 msgstr ""
 
-#. Text in echo
 #: editor.php:67
+#@ LayerSlider
 msgid "Modifying a skin could be dangerous, these changes will be permanent, you can't revert it."
 msgstr ""
 
-#. Text in echo
 #: list.php:34
+#@ LayerSlider
 msgid "Name"
 msgstr ""
 
-#. Text in echo
-#: add.php:790
-#: edit.php:802
+#: add.php:813
+#: edit.php:826
+#@ LayerSlider
 msgid "Navigation"
 msgstr ""
 
-#. Text in echo
-#: add.php:806
-#: edit.php:818
+#: add.php:829
+#: edit.php:842
+#@ LayerSlider
 msgid "Navigation buttons"
 msgstr ""
 
-#. Text in echo
-#: add.php:684
-#: edit.php:696
+#: add.php:707
+#: edit.php:720
+#@ LayerSlider
 msgid "Number of loops if automatically start slideshow is enabled (0 means infinite!)"
 msgstr ""
 
-#. Text in echo
-#: add.php:234
-#: add.php:1175
-#: edit.php:242
-#: edit.php:1200
+#: add.php:236
+#: add.php:1205
+#: edit.php:244
+#: edit.php:1231
+#@ LayerSlider
 msgid "Options"
 msgstr ""
 
-#. Text in echo
-#: add.php:436
-#: add.php:1377
-#: edit.php:444
-#: edit.php:1403
+#: add.php:459
+#: add.php:1429
+#: edit.php:468
+#: edit.php:1456
+#@ LayerSlider
 msgid "Other options"
 msgstr ""
 
-#. Text in echo
-#: add.php:481
-#: add.php:1422
-#: edit.php:489
-#: edit.php:1449
+#: add.php:504
+#: add.php:1474
+#: edit.php:513
+#: edit.php:1502
+#@ LayerSlider
 msgid "Padding"
 msgstr ""
 
-#. Text in echo
-#: add.php:487
-#: add.php:1428
-#: edit.php:495
-#: edit.php:1455
+#: add.php:510
+#: add.php:1480
+#: edit.php:519
+#: edit.php:1508
+#@ LayerSlider
 msgid "Padding on the bottom of the layer. Example: 10px"
 msgstr ""
 
-#. Text in echo
-#: add.php:489
-#: add.php:1430
-#: edit.php:497
-#: edit.php:1457
+#: add.php:512
+#: add.php:1482
+#: edit.php:521
+#: edit.php:1510
+#@ LayerSlider
 msgid "Padding on the left side of the layer. Example: 10px"
 msgstr ""
 
-#. Text in echo
-#: add.php:485
-#: add.php:1426
-#: edit.php:493
-#: edit.php:1453
+#: add.php:508
+#: add.php:1478
+#: edit.php:517
+#: edit.php:1506
+#@ LayerSlider
 msgid "Padding on the right side of the layer. Example: 10px"
 msgstr ""
 
-#. Text in echo
-#: add.php:483
-#: add.php:1424
-#: edit.php:491
-#: edit.php:1451
+#: add.php:506
+#: add.php:1476
+#: edit.php:515
+#: edit.php:1504
+#@ LayerSlider
 msgid "Padding on the top of the layer. Example: 10px"
 msgstr ""
 
-#. Text in echo
-#: add.php:268
-#: add.php:1209
-#: edit.php:276
-#: edit.php:1234
+#: add.php:270
+#: add.php:1239
+#: edit.php:278
+#: edit.php:1265
+#@ LayerSlider
 msgid "Paragraph"
 msgstr ""
 
-#. Text in echo
-#: add.php:651
-#: edit.php:659
+#: add.php:674
+#: edit.php:683
+#@ LayerSlider
 msgid "Pause on hover"
 msgstr ""
 
-#. Text in echo
 #: list.php:104
+#@ LayerSlider
 msgid "Permissions"
 msgstr ""
 
-#. Text in echo
 #: list.php:147
+#@ LayerSlider
 msgid "Place this export code into the import text field in your new site and press \"Import\"."
 msgstr ""
 
-#. Text in echo
-#: add.php:869
-#: edit.php:882
+#: add.php:902
+#: edit.php:916
+#@ LayerSlider
 msgid "Preloads all images and background-images of the next slide."
 msgstr ""
 
-#. Text in echo
-#: add.php:796
-#: edit.php:808
+#: add.php:819
+#: edit.php:832
+#@ LayerSlider
 msgid "Prev and Next buttons"
 msgstr ""
 
-#. Text in echo
-#: add.php:811
-#: edit.php:823
+#: add.php:834
+#: edit.php:847
+#@ LayerSlider
 msgid "Prev and next buttons on hover"
 msgstr ""
 
-#. Text in echo
 #: add.php:197
-#: add.php:1138
+#: add.php:1166
+#: builder.php:70
 #: builder.php:352
-#: builder.php:892
+#: builder.php:572
+#: builder.php:904
 #: edit.php:205
-#: edit.php:1159
+#: edit.php:1188
+#@ LayerSlider
 msgid "Preview"
 msgstr ""
 
-#. Text in echo
-#: add.php:1563
-#: builder.php:1045
-#: edit.php:1594
+#: add.php:1615
+#: builder.php:1069
+#: edit.php:1647
+#@ LayerSlider
 msgid "Publish"
 msgstr ""
 
-#. Text in echo
 #: list.php:75
+#@ LayerSlider
 msgid "Purchase code"
 msgstr ""
 
-#. Text in echo
-#: add.php:887
-#: edit.php:900
+#: add.php:920
+#: edit.php:934
+#@ LayerSlider
 msgid "Put JS includes to body"
 msgstr ""
 
-#. Text in echo
+#: builder.php:118
+#: builder.php:400
 #: builder.php:468
-#: builder.php:942
-#: builder.php:1010
+#: builder.php:622
+#: builder.php:954
+#: builder.php:1022
+#@ LayerSlider
 msgid "Random"
 msgstr ""
 
-#. Text in echo
-#: add.php:666
-#: edit.php:674
+#: add.php:689
+#: edit.php:698
+#@ LayerSlider
 msgid "Random slideshow"
 msgstr ""
 
-#. Text in echo
-#: add.php:543
-#: add.php:1484
-#: edit.php:551
-#: edit.php:1511
+#: add.php:566
+#: add.php:1536
+#: edit.php:575
+#: edit.php:1564
+#@ LayerSlider
 msgid "Rel"
 msgstr ""
 
-#. Text in echo
 #: list.php:52
+#@ LayerSlider
 msgid "Remove"
 msgstr ""
 
-#. Text in echo
-#: add.php:238
-#: add.php:1179
-#: edit.php:246
+#: add.php:240
+#: add.php:1209
+#: edit.php:248
+#@ LayerSlider
 msgid "Remove this layer"
 msgstr ""
 
-#. Text in echo
 #: builder.php:338
-#: builder.php:485
-#: builder.php:869
-#: builder.php:1027
+#: builder.php:497
+#: builder.php:881
+#: builder.php:1051
+#@ LayerSlider
 msgid "Remove transition"
 msgstr ""
 
-#. Text in echo
-#: add.php:616
-#: edit.php:624
+#: add.php:639
+#: edit.php:648
+#@ LayerSlider
 msgid "Responsive"
 msgstr ""
 
-#. Text in echo
-#: add.php:626
-#: edit.php:634
+#: add.php:649
+#: edit.php:658
+#@ LayerSlider
 msgid "Responsive under"
 msgstr ""
 
-#. Text in echo
+#: builder.php:115
 #: builder.php:397
-#: builder.php:939
+#: builder.php:619
+#: builder.php:951
+#@ LayerSlider
 msgid "Reverse"
 msgstr ""
 
-#. Text in echo
-#: add.php:495
-#: add.php:1436
+#: add.php:507
+#: add.php:518
+#: add.php:1477
+#: add.php:1488
 #: builder.php:465
-#: builder.php:1007
-#: edit.php:503
-#: edit.php:1463
+#: builder.php:1019
+#: edit.php:516
+#: edit.php:527
+#: edit.php:1505
+#: edit.php:1516
+#@ LayerSlider
 msgid "Right"
 msgstr ""
 
-#. Text in echo
-#: add.php:331
-#: add.php:1272
-#: edit.php:339
-#: edit.php:1298
+#: add.php:333
+#: add.php:1302
+#: edit.php:341
+#: edit.php:1329
+#@ LayerSlider
 msgid "Right (Slide from right)"
 msgstr ""
 
-#. Text in echo
-#: add.php:387
-#: add.php:1328
-#: edit.php:395
-#: edit.php:1354
+#: add.php:399
+#: add.php:1369
+#: edit.php:408
+#: edit.php:1396
+#@ LayerSlider
 msgid "Right (Slide to right)"
 msgstr ""
 
-#. Text in echo
-#: builder.php:322
+#: builder.php:186
 #: builder.php:252
-#: builder.php:853
+#: builder.php:262
+#: builder.php:322
+#: builder.php:477
+#: builder.php:707
+#: builder.php:788
+#: builder.php:865
+#: builder.php:1031
+#@ LayerSlider
 msgid "RotateX"
 msgstr ""
 
-#. Text in echo
+#: builder.php:187
+#: builder.php:263
 #: builder.php:323
-#: builder.php:854
+#: builder.php:479
+#: builder.php:708
+#: builder.php:789
+#: builder.php:866
+#: builder.php:1033
+#@ LayerSlider
 msgid "RotateY"
 msgstr ""
 
-#. Text in echo
-#: add.php:517
-#: add.php:1458
-#: edit.php:525
-#: edit.php:1485
+#: builder.php:483
+#: builder.php:1037
+#@ LayerSlider
+msgid "RotateZ"
+msgstr ""
+
+#: add.php:381
+#: add.php:448
+#: add.php:1351
+#: add.php:1418
+#: edit.php:390
+#: edit.php:457
+#: edit.php:1378
+#: edit.php:1445
+#@ LayerSlider
+msgid "Rotation"
+msgstr ""
+
+#: add.php:540
+#: add.php:1510
+#: edit.php:549
+#: edit.php:1538
+#@ LayerSlider
 msgid "Rounded corners"
 msgstr ""
 
-#. Text in echo
+#: builder.php:96
 #: builder.php:378
-#: builder.php:920
+#: builder.php:600
+#: builder.php:932
+#@ LayerSlider
 msgid "Rows"
 msgstr ""
 
-#. Text in echo
+#: add.php:1617
+#: builder.php:1072
+#: edit.php:1649
 #: editor.php:66
-#: add.php:1565
-#: builder.php:1048
-#: style_editor.php:37
+#: list.php:85
 #: list.php:116
-#: edit.php:1596
+#: style_editor.php:37
+#@ LayerSlider
 msgid "Save changes"
 msgstr ""
 
-#. Text in echo
+#: add.php:383
+#: add.php:450
+#: add.php:1353
+#: add.php:1420
+#: builder.php:485
+#: builder.php:1039
+#: edit.php:392
+#: edit.php:459
+#: edit.php:1380
+#: edit.php:1447
+#@ LayerSlider
+msgid "Scale"
+msgstr ""
+
+#: builder.php:185
+#: builder.php:261
 #: builder.php:321
-#: builder.php:852
+#: builder.php:706
+#: builder.php:787
+#: builder.php:864
+#@ LayerSlider
 msgid "Scale3D"
 msgstr ""
 
-#. Text in echo
+#: builder.php:111
 #: builder.php:393
-#: builder.php:935
+#: builder.php:615
+#: builder.php:947
+#@ LayerSlider
 msgid "Sequence"
 msgstr ""
 
-#. Text in echo
 #: list.php:35
+#@ LayerSlider
 msgid "Shortcode"
 msgstr ""
 
-#. Text in echo
-#: add.php:439
-#: add.php:1380
-#: edit.php:447
-#: edit.php:1406
+#: add.php:844
+#: edit.php:857
+#@ LayerSlider
+msgid "Show bar timer"
+msgstr ""
+
+#: add.php:849
+#: edit.php:862
+#@ LayerSlider
+msgid "Show circle timer"
+msgstr ""
+
+#: add.php:462
+#: add.php:1432
+#: edit.php:471
+#: edit.php:1459
+#@ LayerSlider
 msgid "Show until"
 msgstr ""
 
-#. Text in echo
-#: add.php:506
-#: add.php:1447
-#: edit.php:514
-#: edit.php:1474
+#: add.php:529
+#: add.php:1499
+#: edit.php:538
+#: edit.php:1527
+#@ LayerSlider
 msgid "Size"
 msgstr ""
 
-#. Text in echo
-#: add.php:740
-#: edit.php:752
+#: add.php:763
+#: edit.php:776
+#@ LayerSlider
 msgid "Skin"
 msgstr ""
 
-#. Text in echo
 #: editor.php:42
-#: layerslider.php:1
+#: layerslider.php:621
+#@ LayerSlider
 msgid "Skin Editor"
 msgstr ""
 
-#. Text in echo
 #: builder.php:456
-#: builder.php:998
+#: builder.php:1010
+#@ LayerSlider
 msgid "Slide"
 msgstr ""
 
-#. Text in echo
 #: add.php:24
-#: add.php:965
+#: add.php:993
 #: edit.php:32
-#: edit.php:985
+#: edit.php:1014
+#@ LayerSlider
 msgid "Slide Options"
 msgstr ""
 
-#. Text in echo
 #: add.php:51
-#: add.php:992
+#: add.php:1020
 #: edit.php:59
-#: edit.php:1012
+#: edit.php:1041
+#@ LayerSlider
 msgid "Slide delay"
 msgstr ""
 
-#. Text in echo
 #: add.php:78
-#: add.php:1019
+#: add.php:1047
 #: edit.php:86
-#: edit.php:1039
+#: edit.php:1068
+#@ LayerSlider
 msgid "Slide in"
 msgstr ""
 
-#. Text in echo
 #: add.php:36
-#: add.php:977
+#: add.php:1005
 #: edit.php:44
-#: edit.php:997
+#: edit.php:1026
+#@ LayerSlider
 msgid "Slide options"
 msgstr ""
 
-#. Text in echo
 #: add.php:122
-#: add.php:1063
+#: add.php:1091
 #: edit.php:130
-#: edit.php:1083
+#: edit.php:1112
+#@ LayerSlider
 msgid "Slide out"
 msgstr ""
 
-#. Text in echo
 #: add.php:55
-#: add.php:996
+#: add.php:1024
 #: edit.php:63
-#: edit.php:1016
+#: edit.php:1045
+#@ LayerSlider
 msgid "Slide transition"
 msgstr ""
 
-#. Text in echo
-#: edit.php:619
+#: edit.php:643
+#@ LayerSlider
 msgid "Slider height"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:1070
+#@ LayerSlider
 msgid "Slider not found"
 msgstr ""
 
-#. Text in echo
-#: add.php:776
-#: edit.php:788
+#: add.php:799
+#: edit.php:812
+#@ LayerSlider
 msgid "Slider style"
 msgstr ""
 
-#. Text in echo
-#: edit.php:614
+#: edit.php:638
+#@ LayerSlider
 msgid "Slider width"
 msgstr ""
 
-#. Text in echo
-#: add.php:573
-#: edit.php:581
+#: add.php:596
+#: edit.php:605
+#@ LayerSlider
 msgid "Slides"
 msgstr ""
 
-#. Text in echo
-#: add.php:640
-#: edit.php:648
+#: add.php:663
+#: edit.php:672
+#@ LayerSlider
 msgid "Slideshow"
 msgstr ""
 
-#. Text in echo
-#: add.php:653
-#: edit.php:661
+#: add.php:676
+#: edit.php:685
+#@ LayerSlider
 msgid "Slideshow will pause when mouse pointer is over LayerSlider."
 msgstr ""
 
-#. Text in echo
-#: add.php:544
-#: add.php:1485
-#: edit.php:552
-#: edit.php:1512
+#: add.php:567
+#: add.php:1537
+#: edit.php:576
+#: edit.php:1565
+#@ LayerSlider
 msgid "Some plugin may use the rel attribute of a linked content, here you can specify it to make interaction with these plugins."
 msgstr ""
 
-#. Text in echo
-#: add.php:273
-#: add.php:1214
-#: edit.php:281
-#: edit.php:1239
+#: add.php:275
+#: add.php:1244
+#: edit.php:283
+#: edit.php:1270
+#@ LayerSlider
 msgid "Span"
 msgstr ""
 
-#. Text in echo
-#: add.php:801
-#: edit.php:813
+#: add.php:824
+#: edit.php:837
+#@ LayerSlider
 msgid "Start and Stop buttons"
 msgstr ""
 
-#. Text in echo
-#: add.php:236
-#: add.php:1177
-#: edit.php:244
-#: edit.php:1202
+#: add.php:238
+#: add.php:1207
+#: edit.php:246
+#: edit.php:1233
+#@ LayerSlider
 msgid "Style"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
-#: list.php:87
+#: layerslider.php:216
+#: list.php:89
+#@ LayerSlider
 msgid "Thank you for purchasing LayerSlider WP. You successfully validated your purchase code for auto-updates."
 msgstr ""
 
-#. Text in echo
-#: add.php:516
-#: add.php:1457
-#: edit.php:524
-#: edit.php:1484
+#: add.php:539
+#: add.php:1509
+#: edit.php:548
+#: edit.php:1537
+#@ LayerSlider
 msgid "The background color of your layer. You can use color names, hexadecimal, RGB or RGBA values as well as the 'transparent' keyword. Example: #FFF"
 msgstr ""
 
-#. Text in echo
-#: add.php:818
-#: edit.php:830
+#: add.php:841
+#: edit.php:854
+#@ LayerSlider
 msgid "The bottom navigation controls (with also thumbnails) will be shown only if you move your mouse cursor over the slider."
 msgstr ""
 
-#. Text in echo
-#: add.php:511
-#: add.php:1452
-#: edit.php:519
-#: edit.php:1479
+#: add.php:534
+#: add.php:1504
+#: edit.php:543
+#: edit.php:1532
+#@ LayerSlider
 msgid "The color of your text. You can use color names, hexadecimal, RGB or RGBA values. Example: #333"
 msgstr ""
 
-#. Text in echo
-#: add.php:438
-#: add.php:1379
-#: edit.php:446
-#: edit.php:1405
-msgid "The default value is -1 which means that the layer will be positioned exactly outside the of slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values."
+#: add.php:461
+#: add.php:1431
+#: edit.php:470
+#: edit.php:1458
+#@ LayerSlider
+msgid "The default value is -1 which means that the layer will be positioned exactly outside of the slide container. You can use the default setting in most of the cases. If you need to set the start or end position of the layer from further of the edges of the slide container, you can use 2, 3 or higher values."
 msgstr ""
 
-#. Text in echo
 #: builder.php:241
-#: builder.php:750
+#: builder.php:762
+#@ LayerSlider
 msgid "The direction of rotation."
 msgstr ""
 
-#. Text in echo
 #: builder.php:463
-#: builder.php:1005
+#: builder.php:1017
+#@ LayerSlider
 msgid "The direction of the slide or mixed animation if you chose these type in the previous setting."
 msgstr ""
 
-#. Text in echo
 #: list.php:166
+#@ LayerSlider
 msgid "The documentation is here"
 msgstr ""
 
-#. Text in echo
 #: builder.php:413
-#: builder.php:955
+#: builder.php:967
+#@ LayerSlider
 msgid "The duration of the animation. This value is in millisecs, so the value 1000 measn 1 second."
 msgstr ""
 
-#. Text in echo
 #: add.php:80
-#: add.php:1021
+#: add.php:1049
 #: edit.php:88
-#: edit.php:1041
+#: edit.php:1070
+#@ LayerSlider
 msgid "The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
-#: add.php:337
-#: add.php:1278
-#: edit.php:345
-#: edit.php:1304
+#: add.php:339
+#: add.php:1308
+#: edit.php:347
+#: edit.php:1335
+#@ LayerSlider
 msgid "The duration of the slide in animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations."
 msgstr ""
 
-#. Text in echo
 #: add.php:124
-#: add.php:1065
+#: add.php:1093
 #: edit.php:132
-#: edit.php:1085
+#: edit.php:1114
+#@ LayerSlider
 msgid "The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
-#: add.php:393
-#: add.php:1334
-#: edit.php:401
-#: edit.php:1360
+#: add.php:405
+#: add.php:1375
+#: edit.php:414
+#: edit.php:1402
+#@ LayerSlider
 msgid "The duration of the slide out animation. This value is in millisecs, so the value 1000 means 1 second. Lower values results faster animations."
 msgstr ""
 
-#. Text in echo
+#: builder.php:147
+#: builder.php:204
 #: builder.php:283
-#: builder.php:643
-#: builder.php:713
-#: builder.php:801
+#: builder.php:655
+#: builder.php:725
+#: builder.php:813
+#@ LayerSlider
 msgid "The duration of your animation. This value is in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
-#: add.php:507
-#: add.php:1448
-#: edit.php:515
-#: edit.php:1475
+#: add.php:530
+#: add.php:1500
+#: edit.php:539
+#: edit.php:1528
+#@ LayerSlider
 msgid "The font size in pixels. Example: 16px."
 msgstr ""
 
-#. Text in echo
-#: add.php:839
-#: edit.php:852
+#: add.php:872
+#: edit.php:886
+#@ LayerSlider
 msgid "The height of the thumbnails in the navigation area."
 msgstr ""
 
-#. Text in echo
-#: add.php:478
-#: add.php:1419
-#: edit.php:486
-#: edit.php:1446
+#: add.php:501
+#: add.php:1471
+#: edit.php:510
+#: edit.php:1499
+#@ LayerSlider
 msgid "The layer position from the left side of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here."
 msgstr ""
 
-#. Text in echo
-#: add.php:476
-#: add.php:1417
-#: edit.php:484
-#: edit.php:1444
+#: add.php:499
+#: add.php:1469
+#: edit.php:508
+#: edit.php:1497
+#@ LayerSlider
 msgid "The layer position from the top of the slide. You can use pixels and percents. Examples: 100px or 50%. You can move your layers in the preview above with a drag n' drop, or set the exact values here."
 msgstr ""
 
-#. Text in echo
-#: add.php:440
-#: add.php:1381
-#: edit.php:448
-#: edit.php:1407
+#: add.php:463
+#: add.php:1433
+#: edit.php:472
+#: edit.php:1460
+#@ LayerSlider
 msgid "The layer will be visible for the time you specify here, then it will slide out. You can use this setting for layers to leave the slide before the slide itself animates out, or for example before other layers will slide in. This value in millisecs, so the value 1000 means 1 second."
 msgstr ""
 
-#. Text in echo
-#: add.php:509
-#: add.php:1450
-#: edit.php:517
-#: edit.php:1477
+#: add.php:532
+#: add.php:1502
+#: edit.php:541
+#: edit.php:1530
+#@ LayerSlider
 msgid "The line height of your text. The default setting is 'normal'. Example: 22px"
 msgstr ""
 
-#. Text in echo
+#: builder.php:93
 #: builder.php:375
-#: builder.php:915
+#: builder.php:595
+#: builder.php:927
+#@ LayerSlider
 msgid "The name of your custom transition. When you will edit a slider, it will appear with this name, so you can easily identify the individual transitions."
 msgstr ""
 
-#. Text in echo
-#: layerslider.php:1088
+#: layerslider.php:1102
+#@ LayerSlider
 msgid "The new version of LayerSlider WP is almost ready!"
 msgstr ""
 
-#. Text in echo
-#: add.php:854
-#: edit.php:867
+#: add.php:887
+#: edit.php:901
+#@ LayerSlider
 msgid "The opacity of inactive thumbnails (0-100)."
 msgstr ""
 
-#. Text in echo
 #: builder.php:127
-#: builder.php:619
+#: builder.php:631
+#@ LayerSlider
 msgid "The script will try to identify the optimal depth for your rotated objects (tiles). With this option, you can force your objects to have large depth when performing 180 degree (and its multiplies) rotation."
 msgstr ""
 
-#. Text in echo
-#: add.php:849
-#: edit.php:862
+#: add.php:882
+#: edit.php:896
+#@ LayerSlider
 msgid "The selected thumbnail opacity (0-100)."
 msgstr ""
 
-#. Text in echo
 #: add.php:40
-#: add.php:981
+#: add.php:1009
 #: edit.php:48
-#: edit.php:1001
+#: edit.php:1030
+#@ LayerSlider
 msgid "The slide image/background. Click into the field to open the WordPress Media Library to choose or upload an image."
 msgstr ""
 
-#. Text in echo
 #: add.php:66
-#: add.php:1007
+#: add.php:1035
 #: edit.php:74
-#: edit.php:1027
+#: edit.php:1056
+#@ LayerSlider
 msgid "The slide will slide in from this direction."
 msgstr ""
 
-#. Text in echo
-#: add.php:613
-#: edit.php:621
+#: add.php:636
+#: edit.php:645
+#@ LayerSlider
 msgid "The slider height in pixels."
 msgstr ""
 
-#. Text in echo
-#: add.php:608
-#: edit.php:616
+#: add.php:631
+#: edit.php:640
+#@ LayerSlider
 msgid "The slider width in pixels. For compatibility reasons, we still support percentage values, but for responsive layout, you should use pixels."
 msgstr ""
 
-#. Text in echo
 #: add.php:47
-#: add.php:988
+#: add.php:1016
 #: edit.php:55
-#: edit.php:1008
+#: edit.php:1037
+#@ LayerSlider
 msgid "The thumbnail image of this slide. Click into the field to open the WordPress Media Library to choose or upload an image. If you leave this field empty, the slide image will be used."
 msgstr ""
 
-#. Text in echo
-#: add.php:340
-#: add.php:396
-#: add.php:1281
-#: add.php:1337
-#: edit.php:348
-#: edit.php:404
-#: edit.php:1307
-#: edit.php:1363
+#: add.php:342
+#: add.php:408
+#: add.php:1311
+#: add.php:1378
+#: edit.php:350
+#: edit.php:417
+#: edit.php:1338
+#: edit.php:1405
+#@ LayerSlider
 msgid "The timing function of the animation, with it you can manipualte the layer movement. Please click on the link next to this select field to open easings.net for more information and real-time examples."
 msgstr ""
 
-#. Text in echo
+#: builder.php:150
+#: builder.php:207
+#: builder.php:286
 #: builder.php:416
-#: builder.php:958
+#: builder.php:659
+#: builder.php:728
+#: builder.php:817
+#: builder.php:970
+#@ LayerSlider
 msgid "The timing function of the animation, with it you can manipualte the movement of the animated object. Please click on the link next to this select field to open easings.net for more information and real-time examples."
 msgstr ""
 
-#. Text in echo
 #: add.php:83
 #: add.php:127
-#: add.php:1024
-#: add.php:1068
+#: add.php:1052
+#: add.php:1096
 #: edit.php:91
 #: edit.php:135
-#: edit.php:1044
-#: edit.php:1088
+#: edit.php:1073
+#: edit.php:1117
+#@ LayerSlider
 msgid "The timing function of the animation, with it you can manipualte the slide movement. Please click on the link next to this select field to open easings.net for more information and real-time examples."
 msgstr ""
 
-#. Text in echo
 #: builder.php:455
-#: builder.php:997
+#: builder.php:1009
+#@ LayerSlider
 msgid "The type of the animation, either slide, fade or both (mixed)."
 msgstr ""
 
-#. Text in echo
-#: add.php:327
-#: add.php:383
-#: add.php:1268
-#: add.php:1324
-#: edit.php:335
-#: edit.php:391
-#: edit.php:1294
-#: edit.php:1350
+#: add.php:329
+#: add.php:395
+#: add.php:1298
+#: add.php:1365
+#: edit.php:337
+#: edit.php:404
+#: edit.php:1325
+#: edit.php:1392
+#@ LayerSlider
 msgid "The type of the transition."
 msgstr ""
 
-#. Text in echo
-#: add.php:844
-#: edit.php:857
+#: add.php:877
+#: edit.php:891
+#@ LayerSlider
 msgid "The width of the thumbnail navigation area."
 msgstr ""
 
-#. Text in echo
-#: add.php:834
-#: edit.php:847
+#: add.php:867
+#: edit.php:881
+#@ LayerSlider
 msgid "The width of the thumbnails in the navigation area."
 msgstr ""
 
-#. Text in echo
-#: add.php:633
-#: edit.php:641
+#: add.php:656
+#: edit.php:665
+#@ LayerSlider
 msgid "This feature is needed if you are using a full-width slider and you need that your layers forced to positioning inside a centered custom width container. Just specify the width of this container in pixels! Note, that this feature is working only with pixel-positioned layers, but of course if you add left: 50% position to a layer it will be positioned horizontally to the center, as before!"
 msgstr ""
 
-#. Text in echo
 #: list.php:166
+#@ LayerSlider
 msgid "This is a WordPress contextual help menu, we use it to give you fast access to our documentation. Please keep in mind that because this menu is contextual, it only shows the relevant information to the page that you are currently viewing. So if you search something, you should visit the corresponding page first and then open this help menu."
 msgstr ""
 
-#. Text in echo
-#: add.php:914
-#: edit.php:927
+#: add.php:942
+#: edit.php:956
+#@ LayerSlider
 msgid "This is a fixed layer that will be shown above of LayerSlider container. For example if you want to display your own logo, etc., you can upload an image or choose one from the Media Library."
 msgstr ""
 
-#. Text in echo
 #: add.php:44
-#: add.php:985
+#: add.php:1013
 #: edit.php:52
-#: edit.php:1005
+#: edit.php:1034
+#@ LayerSlider
 msgid "Thumbnail"
 msgstr ""
 
-#. Text in echo
-#: add.php:847
-#: edit.php:860
+#: add.php:880
+#: edit.php:894
+#@ LayerSlider
 msgid "Thumbnail active opacity"
 msgstr ""
 
-#. Text in echo
-#: add.php:842
-#: edit.php:855
+#: add.php:875
+#: edit.php:889
+#@ LayerSlider
 msgid "Thumbnail container width"
 msgstr ""
 
-#. Text in echo
-#: add.php:837
-#: edit.php:850
+#: add.php:870
+#: edit.php:884
+#@ LayerSlider
 msgid "Thumbnail height"
 msgstr ""
 
-#. Text in echo
-#: add.php:852
-#: edit.php:865
+#: add.php:885
+#: edit.php:899
+#@ LayerSlider
 msgid "Thumbnail inactive opacity"
 msgstr ""
 
-#. Text in echo
-#: add.php:821
-#: edit.php:833
+#: add.php:854
+#: edit.php:867
+#@ LayerSlider
 msgid "Thumbnail navigation"
 msgstr ""
 
-#. Text in echo
-#: add.php:832
-#: edit.php:845
+#: add.php:865
+#: edit.php:879
+#@ LayerSlider
 msgid "Thumbnail width"
 msgstr ""
 
-#. Text in echo
+#: builder.php:104
 #: builder.php:386
-#: builder.php:928
+#: builder.php:608
+#: builder.php:940
+#@ LayerSlider
 msgid "Tiles"
 msgstr ""
 
-#. Text in echo
 #: add.php:74
-#: add.php:1015
+#: add.php:1043
 #: edit.php:82
-#: edit.php:1035
+#: edit.php:1064
+#@ LayerSlider
 msgid "Time shift"
 msgstr ""
 
-#. Text in echo
-#: add.php:539
-#: add.php:1480
-#: edit.php:547
-#: edit.php:1507
+#: add.php:562
+#: add.php:1532
+#: edit.php:571
+#: edit.php:1560
+#@ LayerSlider
 msgid "Title"
 msgstr ""
 
-#. Text in echo
-#: layerslider.php:1419
+#: layerslider.php:1435
+#@ LayerSlider
 msgid "Title:"
 msgstr ""
 
-#. Text in echo
-#: builder.php:1076
+#: builder.php:1100
+#@ LayerSlider
 msgid "To get started with the LayerSlider WP Transition Builder, please read our documentation by clicking on this \"Help\" menu item."
 msgstr ""
 
-#. Text in echo
 #: list.php:78
+#@ LayerSlider
 msgid "To receive auto-updates, you need to enter your item purchase code. You can find it on your CodeCanyon downloads page, just click on the \"Licence Certificate\" button of the corresponding item. This will download a text file which contains your purchase code."
 msgstr ""
 
-#. Text in echo
-#: add.php:493
-#: add.php:1434
+#: add.php:498
+#: add.php:505
+#: add.php:516
+#: add.php:1468
+#: add.php:1475
+#: add.php:1486
 #: builder.php:464
-#: builder.php:1006
-#: edit.php:501
-#: edit.php:1461
+#: builder.php:1018
+#: edit.php:507
+#: edit.php:514
+#: edit.php:525
+#: edit.php:1496
+#: edit.php:1503
+#: edit.php:1514
+#@ LayerSlider
 msgid "Top"
 msgstr ""
 
-#. Text in echo
-#: add.php:330
-#: add.php:1271
-#: edit.php:338
-#: edit.php:1297
+#: add.php:332
+#: add.php:1301
+#: edit.php:340
+#: edit.php:1328
+#@ LayerSlider
 msgid "Top (Slide from top)"
 msgstr ""
 
-#. Text in echo
-#: add.php:386
-#: add.php:1327
-#: edit.php:394
-#: edit.php:1353
+#: add.php:398
+#: add.php:1368
+#: edit.php:407
+#: edit.php:1395
+#@ LayerSlider
 msgid "Top (Slide to top)"
 msgstr ""
 
-#. Text in echo
 #: builder.php:469
-#: builder.php:1011
+#: builder.php:1023
+#@ LayerSlider
 msgid "Top left"
 msgstr ""
 
-#. Text in echo
 #: builder.php:470
-#: builder.php:1012
+#: builder.php:1024
+#@ LayerSlider
 msgid "Top right"
 msgstr ""
 
-#. Text in echo
-#: add.php:725
-#: edit.php:737
+#: add.php:748
+#: edit.php:761
+#@ LayerSlider
 msgid "Touch navigation"
 msgstr ""
 
-#. Text in echo
-#: add.php:727
-#: edit.php:739
+#: add.php:750
+#: edit.php:763
+#@ LayerSlider
 msgid "Touch-control (on mobile devices)."
 msgstr ""
 
-#. Text in echo
 #: builder.php:407
-#: builder.php:949
+#: builder.php:961
+#@ LayerSlider
 msgid "Transition"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
+#: layerslider.php:622
+#@ LayerSlider
 msgid "Transition Builder"
 msgstr ""
 
-#. Text in echo
-#: builder.php:1076
+#: builder.php:1100
+#@ LayerSlider
 msgid "Transition Builder documentation"
 msgstr ""
 
-#. Text in echo
-#: add.php:324
-#: add.php:1265
-#: edit.php:332
-#: edit.php:1291
+#: add.php:326
+#: add.php:1295
+#: edit.php:334
+#: edit.php:1322
+#@ LayerSlider
 msgid "Transition in"
 msgstr ""
 
-#. Text in echo
+#: builder.php:92
 #: builder.php:374
-#: builder.php:914
+#: builder.php:594
+#: builder.php:926
+#@ LayerSlider
 msgid "Transition name"
 msgstr ""
 
-#. Text in echo
-#: builder.php:479
-#: builder.php:1021
+#: builder.php:332
+#: builder.php:491
+#: builder.php:875
+#: builder.php:1045
+#@ LayerSlider
 msgid "Transition options"
 msgstr ""
 
-#. Text in echo
-#: add.php:380
-#: add.php:1321
-#: edit.php:388
-#: edit.php:1347
+#: add.php:392
+#: add.php:1362
+#: edit.php:401
+#: edit.php:1389
+#@ LayerSlider
 msgid "Transition out"
 msgstr ""
 
-#. Text in echo
 #: add.php:62
-#: add.php:1003
+#: add.php:1031
 #: edit.php:70
-#: edit.php:1023
+#: edit.php:1052
+#@ LayerSlider
 msgid "Transitions"
 msgstr ""
 
-#. Text in echo
-#: add.php:881
-#: edit.php:894
+#: add.php:914
+#: edit.php:928
+#@ LayerSlider
 msgid "Troubleshooting"
 msgstr ""
 
-#. Text in echo
-#: add.php:671
-#: edit.php:679
+#: add.php:694
+#: edit.php:703
+#@ LayerSlider
 msgid "Two way slideshow"
 msgstr ""
 
-#. Text in echo
-#: add.php:381
-#: add.php:1322
+#: add.php:327
+#: add.php:393
+#: add.php:1296
+#: add.php:1363
 #: builder.php:453
-#: builder.php:995
-#: edit.php:389
-#: edit.php:1348
+#: builder.php:1007
+#: edit.php:335
+#: edit.php:402
+#: edit.php:1323
+#: edit.php:1390
+#@ LayerSlider
 msgid "Type"
 msgstr ""
 
-#. Text in echo
-#: add.php:317
-#: add.php:1258
-#: edit.php:325
-#: edit.php:1284
+#: add.php:319
+#: add.php:1288
+#: edit.php:327
+#: edit.php:1315
+#@ LayerSlider
 msgid "Type here the contents of your layer. You can use any HTML codes in this field to insert other contents then text. This field is also shortcode-aware, so you can insert content from other plugins as well as video embed codes."
 msgstr ""
 
-#. Text in echo
-#: add.php:588
-#: edit.php:596
+#: add.php:611
+#: edit.php:620
+#@ LayerSlider
 msgid "Type your slider name here"
 msgstr ""
 
-#. Text in echo
-#: add.php:451
-#: add.php:1392
-#: edit.php:459
-#: edit.php:1418
+#: add.php:474
+#: add.php:1444
+#: edit.php:483
+#: edit.php:1471
+#@ LayerSlider
 msgid "URL"
 msgstr ""
 
-#. Text in echo
-#: add.php:892
-#: edit.php:905
-msgid "Use noConflict() mode of jQuery"
-msgstr ""
-
-#. Text in echo
-#: add.php:872
-#: edit.php:885
+#: add.php:905
+#: edit.php:919
+#@ LayerSlider
 msgid "Use relative URLs"
 msgstr ""
 
-#. Text in echo
 #: builder.php:242
-#: builder.php:751
+#: builder.php:763
+#@ LayerSlider
 msgid "Vertical"
 msgstr ""
 
-#. Text in echo
-#: add.php:623
-#: edit.php:631
+#: add.php:646
+#: edit.php:655
+#@ LayerSlider
 msgid "When you are using a responsiveness or percentage dimensions for the slider, it will respond the parent element size changes. With tis option you can bypass this behaviour and LayerSlider will be a full-width slider."
 msgstr ""
 
-#. Text in echo
-#: add.php:471
-#: add.php:606
-#: add.php:1412
-#: edit.php:479
-#: edit.php:1439
+#: add.php:494
+#: add.php:629
+#: add.php:1464
+#: edit.php:503
+#: edit.php:1492
+#@ LayerSlider
 msgid "Width"
 msgstr ""
 
-#. Text in echo
-#: add.php:519
-#: add.php:1460
-#: edit.php:527
-#: edit.php:1487
+#: add.php:542
+#: add.php:1512
+#: edit.php:551
+#: edit.php:1540
+#@ LayerSlider
 msgid "Word-wrap"
 msgstr ""
 
-#. Text in echo
-#: add.php:929
-#: edit.php:942
+#: add.php:957
+#: edit.php:971
+#@ LayerSlider
 msgid "You can add a link to your logo. Set false is you want to display only an image without a link."
 msgstr ""
 
-#. Text in echo
-#: add.php:540
-#: add.php:1481
-#: edit.php:548
-#: edit.php:1508
+#: add.php:563
+#: add.php:1533
+#: edit.php:572
+#: edit.php:1561
+#@ LayerSlider
 msgid "You can add a title to this layer which will display as a tooltip if someone holds his mouse cursor over the layer."
 msgstr ""
 
-#. Text in echo
-#: add.php:542
-#: add.php:1483
-#: edit.php:550
-#: edit.php:1510
+#: add.php:565
+#: add.php:1535
+#: edit.php:574
+#: edit.php:1563
+#@ LayerSlider
 msgid "You can add an alternative text to your layer which is indexed by search engine robots and it helps people with certain disabilities."
 msgstr ""
 
-#. Text in echo
+#: builder.php:110
 #: builder.php:392
-#: builder.php:934
+#: builder.php:614
+#: builder.php:946
+#@ LayerSlider
 msgid "You can apply a delay between the tiles and postpone their animation relative to each other."
 msgstr ""
 
-#. Text in echo
-#: add.php:536
-#: add.php:1477
-#: edit.php:544
-#: edit.php:1504
+#: add.php:559
+#: add.php:1529
+#: edit.php:568
+#: edit.php:1557
+#@ LayerSlider
 msgid "You can apply an ID attribute on the HTML element of this layer to work with it in your custom CSS or Javascript code."
 msgstr ""
 
-#. Text in echo
 #: add.php:184
-#: add.php:1125
+#: add.php:1153
 #: edit.php:192
-#: edit.php:1146
+#: edit.php:1175
+#@ LayerSlider
 msgid "You can apply an ID attribute on the HTML element of this slide to work with it in your custom CSS or Javascript code."
 msgstr ""
 
-#. Text in echo
-#: add.php:538
-#: add.php:1479
-#: edit.php:546
-#: edit.php:1506
+#: add.php:561
+#: add.php:1531
+#: edit.php:570
+#: edit.php:1559
+#@ LayerSlider
 msgid "You can apply classes on the HTML element of this layer to work with it in your custom CSS or Javascript code."
 msgstr ""
 
-#. Text in echo
-#: add.php:754
-#: edit.php:766
+#: add.php:777
+#: edit.php:790
+#@ LayerSlider
 msgid "You can change the skin of the slider. The 'noskin' skin is a border- and buttonless skin. Your custom skins will appear in the list when you create their folders as well."
 msgstr ""
 
-#. Text in echo
 #: add.php:58
-#: add.php:999
+#: add.php:1027
 #: edit.php:66
-#: edit.php:1019
+#: edit.php:1048
+#@ LayerSlider
 msgid "You can choose between the old and the new 3D/2D slide transitions introduced in version 4.0.0."
 msgstr ""
 
-#. Text in echo
 #: add.php:171
-#: add.php:1112
+#: add.php:1140
 #: edit.php:179
-#: edit.php:1133
+#: edit.php:1162
+#@ LayerSlider
 msgid "You can control here the link behaviour: _self means the linked page will open in the current tab/window, _blank will create a new tab/window."
 msgstr ""
 
-#. Text in echo
-#: add.php:454
-#: add.php:1395
-#: edit.php:462
-#: edit.php:1421
+#: add.php:477
+#: add.php:1447
+#: edit.php:486
+#: edit.php:1474
+#@ LayerSlider
 msgid "You can control here the link behaviour: _self means the linked page will open in the current tab/window, _blank will open it in a new tab/window."
 msgstr ""
 
-#. Text in echo
 #: add.php:75
+#@ LayerSlider
 msgid "You can control here the timing of the layer animations  when the slider changes to this slider with a 3D/2D transition. Zero means that the layers of this slide will animate in when the slide transition ends. You can time-shift the starting time of the layer animations with positive or negative values."
 msgstr ""
 
-#. Text in echo
-#: add.php:1016
+#: add.php:1044
 #: edit.php:83
-#: edit.php:1036
+#: edit.php:1065
+#@ LayerSlider
 msgid "You can control here the timing of the layer animations when the slider changes to this slide with a 3D/2D transition. Zero means that the layers of this slide will animate in when the slide transition ends. You can time-shift the starting time of the layer animations with positive or negative values."
 msgstr ""
 
-#. Text in echo
+#: builder.php:113
 #: builder.php:395
-#: builder.php:937
+#: builder.php:617
+#: builder.php:949
+#@ LayerSlider
 msgid "You can control the animation order of the tiles here."
 msgstr ""
 
-#. Text in echo
-#: add.php:628
-#: edit.php:636
+#: add.php:651
+#: edit.php:660
+#@ LayerSlider
 msgid "You can force the slider to change automatically into responsive mode but only if the slider width is smaller than responsiveUnder pixels. It can be used if you need a full-width slider with fixed height but you also need it to be responsive if the browser is smaller... Important! If you enter a value higher than 0, the normal responsive mode will be switched off automatically!"
 msgstr ""
 
-#. Text in echo
-#: add.php:722
-#: edit.php:734
+#: add.php:846
+#: edit.php:859
+#@ LayerSlider
+msgid "You can hide or show the bar timer with this option."
+msgstr ""
+
+#: add.php:851
+#: edit.php:864
+#@ LayerSlider
+msgid "You can hide or show the circle timer with this option."
+msgstr ""
+
+#: add.php:745
+#: edit.php:758
+#@ LayerSlider
 msgid "You can navigate with the left and right arrow keys."
 msgstr ""
 
-#. Text in echo
 #: add.php:72
-#: add.php:1013
+#: add.php:1041
 #: edit.php:80
-#: edit.php:1033
+#: edit.php:1062
+#@ LayerSlider
 msgid "You can select your desired slide transitions by clicking on this button."
 msgstr ""
 
-#. Text in echo
-#: add.php:474
-#: add.php:1415
-#: edit.php:482
-#: edit.php:1442
+#: add.php:497
+#: add.php:1467
+#: edit.php:506
+#: edit.php:1495
+#@ LayerSlider
 msgid "You can set the height of your layer. You can use pixels, percents, or the default value 'auto'. Examples: 100px, 50% or auto"
 msgstr ""
 
-#. Text in echo
-#: add.php:472
-#: add.php:1413
-#: edit.php:480
-#: edit.php:1440
+#: add.php:495
+#: add.php:1465
+#: edit.php:504
+#: edit.php:1493
+#@ LayerSlider
 msgid "You can set the width of your layer. You can use pixels, percents, or the default value 'auto'. Examples: 100px, 50% or auto"
 msgstr ""
 
-#. Text in echo
 #: add.php:186
-#: add.php:1127
+#: add.php:1155
 #: edit.php:194
-#: edit.php:1148
+#: edit.php:1177
+#@ LayerSlider
 msgid "You can specify a slide alias name which you can use in your URLs with a hash mark, so LayerSlider will start with the correspondig slide."
 msgstr ""
 
-#. Text in echo
-#: add.php:919
-#: edit.php:932
+#: add.php:947
+#: edit.php:961
+#@ LayerSlider
 msgid "You can style your logo. You can use any CSS properties, for example you can add left and top properties to place the image inside the LayerSlider container anywhere you want."
 msgstr ""
 
-#. Text in echo
 #: list.php:61
+#@ LayerSlider
 msgid "You didn't create a slider yet."
 msgstr ""
 
-#. Text in echo
 #: editor.php:64
+#@ LayerSlider
 msgid "You need to make this file writable before you can save your changes. See the <a href=\"http://codex.wordpress.org/Changing_File_Permissions\" target=\"_blank\">Codex</a> for more information."
 msgstr ""
 
-#. Text in echo
 #: style_editor.php:35
+#@ LayerSlider
 msgid "You need to make your uploads folder writable before you can save your changes. See the <a href=\"http://codex.wordpress.org/Changing_File_Permissions\" target=\"_blank\">Codex</a> for more information."
 msgstr ""
 
-#. Text in echo
+#: builder.php:516
 #: editor.php:36
-#: builder.php:504
 #: style_editor.php:24
+#@ LayerSlider
 msgid "Your changes has been saved!"
 msgstr ""
 
-#. Text in function
-#: layerslider.php:1
-#: list.php:87
+#: layerslider.php:224
+#: list.php:91
+#@ LayerSlider
 msgid "Your purchase code doesn't appear to be valid. Please make sure that you entered your purchase code correctly."
 msgstr ""
 
-#. Text in echo
-#: add.php:901
-#: add.php:907
-#: edit.php:914
-#: edit.php:920
+#: add.php:929
+#: add.php:935
+#: edit.php:943
+#: edit.php:949
+#@ LayerSlider
 msgid "YourLogo"
 msgstr ""
 
-#. Text in echo
-#: add.php:922
-#: edit.php:935
+#: add.php:950
+#: edit.php:964
+#@ LayerSlider
 msgid "YourLogo link"
 msgstr ""
 
-#. Text in echo
-#: add.php:932
-#: edit.php:945
+#: add.php:960
+#: edit.php:974
+#@ LayerSlider
 msgid "YourLogo link target"
 msgstr ""
 
-#. Text in echo
-#: add.php:917
-#: edit.php:930
+#: add.php:945
+#: edit.php:959
+#@ LayerSlider
 msgid "YourLogo style"
 msgstr ""
 
-#. Text in echo
-#: add.php:708
-#: edit.php:720
+#: add.php:731
+#: edit.php:744
+#@ LayerSlider
 msgid "Youtube preview"
 msgstr ""
 
-#. Text in echo
-#: add.php:826
+#: add.php:859
+#@ LayerSlider
 msgid "always"
 msgstr ""
 
-#. Text in echo
-#: add.php:700
+#: add.php:723
+#@ LayerSlider
 msgid "auto"
 msgstr ""
 
-#. Text in echo
 #: add.php:69
-#: add.php:1010
+#: add.php:1038
 #: edit.php:77
-#: edit.php:1030
+#: edit.php:1059
+#@ LayerSlider
 msgid "bottom"
 msgstr ""
 
-#. Text in echo
-#: add.php:824
+#: add.php:725
+#: add.php:857
+#@ LayerSlider
 msgid "disabled"
 msgstr ""
 
-#. Text in echo
-#: add.php:701
+#: add.php:724
+#@ LayerSlider
 msgid "enabled"
 msgstr ""
 
-#. Text in echo
-#: add.php:825
+#: add.php:858
+#@ LayerSlider
 msgid "hover"
 msgstr ""
 
-#. Text in echo
 #: add.php:70
-#: add.php:1011
+#: add.php:1039
 #: edit.php:78
-#: edit.php:1031
+#: edit.php:1060
+#@ LayerSlider
 msgid "left"
 msgstr ""
 
-#. Text in echo
-#: builder.php:545
+#: builder.php:538
+#: builder.php:557
+#@ LayerSlider
 msgid "or"
 msgstr ""
 
-#. Text in echo
 #: add.php:68
-#: add.php:1009
+#: add.php:1037
 #: edit.php:76
-#: edit.php:1029
+#: edit.php:1058
+#@ LayerSlider
 msgid "right"
 msgstr ""
 
-#. Text in echo
 #: list.php:110
+#@ LayerSlider
 msgid "this page"
 msgstr ""
 
-#. Text in echo
 #: add.php:67
-#: add.php:1008
+#: add.php:1036
 #: edit.php:75
-#: edit.php:1028
+#: edit.php:1057
+#@ LayerSlider
 msgid "top"
 msgstr ""
+
+#: layerslider.php:1430
+#@ LayerSlider
+msgid "You didn't create any slider yet."
+msgstr ""
+

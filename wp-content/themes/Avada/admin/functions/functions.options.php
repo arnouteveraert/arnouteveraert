@@ -129,10 +129,19 @@ if (!function_exists('of_options'))
 			'40' => '40',
 			'41' => '41',
 			'42' => '42',
+			'43' => '43',
+			'44' => '44',
+			'45' => '45',
+			'46' => '46',
+			'47' => '47',
+			'48' => '48',
+			'49' => '49',
+			'50' => '50',
 		);
 
 	$google_fonts = array(
 							"0" => "Select Font",
+							"ABeeZee" => "ABeeZee",
 							"Abel" => "Abel",
 							"Abril Fatface" => "Abril Fatface",
 							"Aclonica" => "Aclonica",
@@ -141,6 +150,7 @@ if (!function_exists('of_options'))
 							"Adamina" => "Adamina",
 							"Advent Pro" => "Advent Pro",
 							"Aguafina Script" => "Aguafina Script",
+							"Akronim" => "Akronim",
 							"Aladin" => "Aladin",
 							"Aldrich" => "Aldrich",
 							"Alegreya" => "Alegreya",
@@ -155,10 +165,13 @@ if (!function_exists('of_options'))
 							"Allerta Stencil" => "Allerta Stencil",
 							"Allura" => "Allura",
 							"Almendra" => "Almendra",
+							"Almendra Display" => "Almendra Display",
 							"Almendra SC" => "Almendra SC",
+							"Amarante" => "Amarante",
 							"Amaranth" => "Amaranth",
 							"Amatic SC" => "Amatic SC",
 							"Amethysta" => "Amethysta",
+							"Anaheim" => "Anaheim",
 							"Andada" => "Andada",
 							"Andika" => "Andika",
 							"Angkor" => "Angkor",
@@ -170,7 +183,10 @@ if (!function_exists('of_options'))
 							"Anton" => "Anton",
 							"Arapey" => "Arapey",
 							"Arbutus" => "Arbutus",
+							"Arbutus Slab" => "Arbutus Slab",
 							"Architects Daughter" => "Architects Daughter",
+							"Archivo Black" => "Archivo Black",
+							"Archivo Narrow" => "Archivo Narrow",
 							"Arimo" => "Arimo",
 							"Arizonia" => "Arizonia",
 							"Armata" => "Armata",
@@ -183,7 +199,9 @@ if (!function_exists('of_options'))
 							"Atomic Age" => "Atomic Age",
 							"Aubrey" => "Aubrey",
 							"Audiowide" => "Audiowide",
+							"Autour One" => "Autour One",
 							"Average" => "Average",
+							"Average Sans" => "Average Sans",
 							"Averia Gruesa Libre" => "Averia Gruesa Libre",
 							"Averia Libre" => "Averia Libre",
 							"Averia Sans Libre" => "Averia Sans Libre",
@@ -197,9 +215,11 @@ if (!function_exists('of_options'))
 							"Bayon" => "Bayon",
 							"Belgrano" => "Belgrano",
 							"Belleza" => "Belleza",
+							"BenchNine" => "BenchNine",
 							"Bentham" => "Bentham",
 							"Berkshire Swash" => "Berkshire Swash",
 							"Bevan" => "Bevan",
+							"Bigelow Rules" => "Bigelow Rules",
 							"Bigshot One" => "Bigshot One",
 							"Bilbo" => "Bilbo",
 							"Bilbo Swash Caps" => "Bilbo Swash Caps",
@@ -213,6 +233,7 @@ if (!function_exists('of_options'))
 							"Brawler" => "Brawler",
 							"Bree Serif" => "Bree Serif",
 							"Bubblegum Sans" => "Bubblegum Sans",
+							"Bubbler One" => "Bubbler One",
 							"Buda" => "Buda",
 							"Buenard" => "Buenard",
 							"Butcherman" => "Butcherman",
@@ -227,8 +248,12 @@ if (!function_exists('of_options'))
 							"Candal" => "Candal",
 							"Cantarell" => "Cantarell",
 							"Cantata One" => "Cantata One",
+							"Cantora One" => "Cantora One",
+							"Capriola" => "Capriola",
 							"Cardo" => "Cardo",
 							"Carme" => "Carme",
+							"Carrois Gothic" => "Carrois Gothic",
+							"Carrois Gothic SC" => "Carrois Gothic SC",
 							"Carter One" => "Carter One",
 							"Caudex" => "Caudex",
 							"Cedarville Cursive" => "Cedarville Cursive",
@@ -236,15 +261,21 @@ if (!function_exists('of_options'))
 							"Changa One" => "Changa One",
 							"Chango" => "Chango",
 							"Chau Philomene One" => "Chau Philomene One",
+							"Chela One" => "Chela One",
 							"Chelsea Market" => "Chelsea Market",
 							"Chenla" => "Chenla",
 							"Cherry Cream Soda" => "Cherry Cream Soda",
+							"Cherry Swash" => "Cherry Swash",
 							"Chewy" => "Chewy",
 							"Chicle" => "Chicle",
 							"Chivo" => "Chivo",
+							"Cinzel" => "Cinzel",
+							"Cinzel Decorative" => "Cinzel Decorative",
+							"Clicker Script" => "Clicker Script",
 							"Coda" => "Coda",
 							"Coda Caption" => "Coda Caption",
 							"Codystar" => "Codystar",
+							"Combo" => "Combo",
 							"Comfortaa" => "Comfortaa",
 							"Coming Soon" => "Coming Soon",
 							"Concert One" => "Concert One",
@@ -255,6 +286,7 @@ if (!function_exists('of_options'))
 							"Cookie" => "Cookie",
 							"Copse" => "Copse",
 							"Corben" => "Corben",
+							"Courgette" => "Courgette",
 							"Cousine" => "Cousine",
 							"Coustard" => "Coustard",
 							"Covered By Your Grace" => "Covered By Your Grace",
@@ -262,9 +294,11 @@ if (!function_exists('of_options'))
 							"Creepster" => "Creepster",
 							"Crete Round" => "Crete Round",
 							"Crimson Text" => "Crimson Text",
+							"Croissant One" => "Croissant One",
 							"Crushed" => "Crushed",
 							"Cuprum" => "Cuprum",
 							"Cutive" => "Cutive",
+							"Cutive Mono" => "Cutive Mono",
 							"Damion" => "Damion",
 							"Dancing Script" => "Dancing Script",
 							"Dangrek" => "Dangrek",
@@ -274,10 +308,13 @@ if (!function_exists('of_options'))
 							"Delius Swash Caps" => "Delius Swash Caps",
 							"Delius Unicase" => "Delius Unicase",
 							"Della Respira" => "Della Respira",
+							"Denk One" => "Denk One",
 							"Devonshire" => "Devonshire",
 							"Didact Gothic" => "Didact Gothic",
 							"Diplomata" => "Diplomata",
 							"Diplomata SC" => "Diplomata SC",
+							"Domine" => "Domine",
+							"Donegal One" => "Donegal One",
 							"Doppio One" => "Doppio One",
 							"Dorsa" => "Dorsa",
 							"Dosis" => "Dosis",
@@ -288,12 +325,16 @@ if (!function_exists('of_options'))
 							"Duru Sans" => "Duru Sans",
 							"Dynalight" => "Dynalight",
 							"EB Garamond" => "EB Garamond",
+							"Eagle Lake" => "Eagle Lake",
 							"Eater" => "Eater",
 							"Economica" => "Economica",
 							"Electrolize" => "Electrolize",
+							"Elsie" => "Elsie",
+							"Elsie Swash Caps" => "Elsie Swash Caps",
 							"Emblema One" => "Emblema One",
 							"Emilys Candy" => "Emilys Candy",
 							"Engagement" => "Engagement",
+							"Englebert" => "Englebert",
 							"Enriqueta" => "Enriqueta",
 							"Erica One" => "Erica One",
 							"Esteban" => "Esteban",
@@ -304,9 +345,14 @@ if (!function_exists('of_options'))
 							"Fanwood Text" => "Fanwood Text",
 							"Fascinate" => "Fascinate",
 							"Fascinate Inline" => "Fascinate Inline",
+							"Faster One" => "Faster One",
+							"Fasthand" => "Fasthand",
 							"Federant" => "Federant",
 							"Federo" => "Federo",
 							"Felipa" => "Felipa",
+							"Fenix" => "Fenix",
+							"Finger Paint" => "Finger Paint",
+							"Fjalla One" => "Fjalla One",
 							"Fjord One" => "Fjord One",
 							"Flamenco" => "Flamenco",
 							"Flavors" => "Flavors",
@@ -314,21 +360,27 @@ if (!function_exists('of_options'))
 							"Fontdiner Swanky" => "Fontdiner Swanky",
 							"Forum" => "Forum",
 							"Francois One" => "Francois One",
+							"Freckle Face" => "Freckle Face",
 							"Fredericka the Great" => "Fredericka the Great",
 							"Fredoka One" => "Fredoka One",
 							"Freehand" => "Freehand",
 							"Fresca" => "Fresca",
 							"Frijole" => "Frijole",
+							"Fruktur" => "Fruktur",
 							"Fugaz One" => "Fugaz One",
 							"GFS Didot" => "GFS Didot",
 							"GFS Neohellenic" => "GFS Neohellenic",
+							"Gabriela" => "Gabriela",
+							"Gafata" => "Gafata",
 							"Galdeano" => "Galdeano",
+							"Galindo" => "Galindo",
 							"Gentium Basic" => "Gentium Basic",
 							"Gentium Book Basic" => "Gentium Book Basic",
 							"Geo" => "Geo",
 							"Geostar" => "Geostar",
 							"Geostar Fill" => "Geostar Fill",
 							"Germania One" => "Germania One",
+							"Gilda Display" => "Gilda Display",
 							"Give You Glory" => "Give You Glory",
 							"Glass Antiqua" => "Glass Antiqua",
 							"Glegoo" => "Glegoo",
@@ -338,15 +390,20 @@ if (!function_exists('of_options'))
 							"Gorditas" => "Gorditas",
 							"Goudy Bookletter 1911" => "Goudy Bookletter 1911",
 							"Graduate" => "Graduate",
+							"Grand Hotel" => "Grand Hotel",
 							"Gravitas One" => "Gravitas One",
 							"Great Vibes" => "Great Vibes",
+							"Griffy" => "Griffy",
 							"Gruppo" => "Gruppo",
 							"Gudea" => "Gudea",
 							"Habibi" => "Habibi",
 							"Hammersmith One" => "Hammersmith One",
+							"Hanalei" => "Hanalei",
+							"Hanalei Fill" => "Hanalei Fill",
 							"Handlee" => "Handlee",
 							"Hanuman" => "Hanuman",
 							"Happy Monkey" => "Happy Monkey",
+							"Headland One" => "Headland One",
 							"Henny Penny" => "Henny Penny",
 							"Herr Von Muellerhoff" => "Herr Von Muellerhoff",
 							"Holtwood One SC" => "Holtwood One SC",
@@ -373,13 +430,17 @@ if (!function_exists('of_options'))
 							"Istok Web" => "Istok Web",
 							"Italiana" => "Italiana",
 							"Italianno" => "Italianno",
+							"Jacques Francois" => "Jacques Francois",
+							"Jacques Francois Shadow" => "Jacques Francois Shadow",
 							"Jim Nightshade" => "Jim Nightshade",
 							"Jockey One" => "Jockey One",
 							"Jolly Lodger" => "Jolly Lodger",
 							"Josefin Sans" => "Josefin Sans",
 							"Josefin Slab" => "Josefin Slab",
+							"Joti One" => "Joti One",
 							"Judson" => "Judson",
 							"Julee" => "Julee",
+							"Julius Sans One" => "Julius Sans One",
 							"Junge" => "Junge",
 							"Jura" => "Jura",
 							"Just Another Hand" => "Just Another Hand",
@@ -387,9 +448,12 @@ if (!function_exists('of_options'))
 							"Kameron" => "Kameron",
 							"Karla" => "Karla",
 							"Kaushan Script" => "Kaushan Script",
+							"Kavoon" => "Kavoon",
+							"Keania One" => "Keania One",
 							"Kelly Slab" => "Kelly Slab",
 							"Kenia" => "Kenia",
 							"Khmer" => "Khmer",
+							"Kite One" => "Kite One",
 							"Knewave" => "Knewave",
 							"Kotta One" => "Kotta One",
 							"Koulen" => "Koulen",
@@ -405,6 +469,8 @@ if (!function_exists('of_options'))
 							"Ledger" => "Ledger",
 							"Lekton" => "Lekton",
 							"Lemon" => "Lemon",
+							"Libre Baskerville" => "Libre Baskerville",
+							"Life Savers" => "Life Savers",
 							"Lilita One" => "Lilita One",
 							"Limelight" => "Limelight",
 							"Linden Hill" => "Linden Hill",
@@ -426,38 +492,52 @@ if (!function_exists('of_options'))
 							"Magra" => "Magra",
 							"Maiden Orange" => "Maiden Orange",
 							"Mako" => "Mako",
+							"Marcellus" => "Marcellus",
+							"Marcellus SC" => "Marcellus SC",
 							"Marck Script" => "Marck Script",
+							"Margarine" => "Margarine",
 							"Marko One" => "Marko One",
 							"Marmelad" => "Marmelad",
 							"Marvel" => "Marvel",
 							"Mate" => "Mate",
 							"Mate SC" => "Mate SC",
 							"Maven Pro" => "Maven Pro",
+							"McLaren" => "McLaren",
 							"Meddon" => "Meddon",
 							"MedievalSharp" => "MedievalSharp",
 							"Medula One" => "Medula One",
 							"Megrim" => "Megrim",
+							"Meie Script" => "Meie Script",
+							"Merienda" => "Merienda",
 							"Merienda One" => "Merienda One",
 							"Merriweather" => "Merriweather",
+							"Merriweather Sans" => "Merriweather Sans",
 							"Metal" => "Metal",
+							"Metal Mania" => "Metal Mania",
 							"Metamorphous" => "Metamorphous",
 							"Metrophobic" => "Metrophobic",
 							"Michroma" => "Michroma",
+							"Milonga" => "Milonga",
 							"Miltonian" => "Miltonian",
 							"Miltonian Tattoo" => "Miltonian Tattoo",
 							"Miniver" => "Miniver",
 							"Miss Fajardose" => "Miss Fajardose",
 							"Modern Antiqua" => "Modern Antiqua",
 							"Molengo" => "Molengo",
+							"Molle" => "Molle",
+							"Monda" => "Monda",
 							"Monofett" => "Monofett",
 							"Monoton" => "Monoton",
 							"Monsieur La Doulaise" => "Monsieur La Doulaise",
 							"Montaga" => "Montaga",
 							"Montez" => "Montez",
 							"Montserrat" => "Montserrat",
+							"Montserrat Alternates" => "Montserrat Alternates",
+							"Montserrat Subrayada" => "Montserrat Subrayada",
 							"Moul" => "Moul",
 							"Moulpali" => "Moulpali",
 							"Mountains of Christmas" => "Mountains of Christmas",
+							"Mouse Memoirs" => "Mouse Memoirs",
 							"Mr Bedfort" => "Mr Bedfort",
 							"Mr Dafoe" => "Mr Dafoe",
 							"Mr De Haviland" => "Mr De Haviland",
@@ -467,6 +547,7 @@ if (!function_exists('of_options'))
 							"Mystery Quest" => "Mystery Quest",
 							"Neucha" => "Neucha",
 							"Neuton" => "Neuton",
+							"New Rocker" => "New Rocker",
 							"News Cycle" => "News Cycle",
 							"Niconne" => "Niconne",
 							"Nixie One" => "Nixie One",
@@ -476,6 +557,8 @@ if (!function_exists('of_options'))
 							"Nosifer" => "Nosifer",
 							"Nothing You Could Do" => "Nothing You Could Do",
 							"Noticia Text" => "Noticia Text",
+							"Noto Sans" => "Noto Sans",
+							"Noto Serif" => "Noto Serif",
 							"Nova Cut" => "Nova Cut",
 							"Nova Flat" => "Nova Flat",
 							"Nova Mono" => "Nova Mono",
@@ -487,12 +570,17 @@ if (!function_exists('of_options'))
 							"Numans" => "Numans",
 							"Nunito" => "Nunito",
 							"Odor Mean Chey" => "Odor Mean Chey",
+							"Offside" => "Offside",
 							"Old Standard TT" => "Old Standard TT",
 							"Oldenburg" => "Oldenburg",
 							"Oleo Script" => "Oleo Script",
+							"Oleo Script Swash Caps" => "Oleo Script Swash Caps",
 							"Open Sans" => "Open Sans",
 							"Open Sans Condensed" => "Open Sans Condensed",
+							"Oranienbaum" => "Oranienbaum",
 							"Orbitron" => "Orbitron",
+							"Oregano" => "Oregano",
+							"Orienta" => "Orienta",
 							"Original Surfer" => "Original Surfer",
 							"Oswald" => "Oswald",
 							"Over the Rainbow" => "Over the Rainbow",
@@ -500,6 +588,7 @@ if (!function_exists('of_options'))
 							"Overlock SC" => "Overlock SC",
 							"Ovo" => "Ovo",
 							"Oxygen" => "Oxygen",
+							"Oxygen Mono" => "Oxygen Mono",
 							"PT Mono" => "PT Mono",
 							"PT Sans" => "PT Sans",
 							"PT Sans Caption" => "PT Sans Caption",
@@ -507,21 +596,27 @@ if (!function_exists('of_options'))
 							"PT Serif" => "PT Serif",
 							"PT Serif Caption" => "PT Serif Caption",
 							"Pacifico" => "Pacifico",
+							"Paprika" => "Paprika",
 							"Parisienne" => "Parisienne",
 							"Passero One" => "Passero One",
 							"Passion One" => "Passion One",
 							"Patrick Hand" => "Patrick Hand",
+							"Patrick Hand SC" => "Patrick Hand SC",
 							"Patua One" => "Patua One",
 							"Paytone One" => "Paytone One",
+							"Peralta" => "Peralta",
 							"Permanent Marker" => "Permanent Marker",
+							"Petit Formal Script" => "Petit Formal Script",
 							"Petrona" => "Petrona",
 							"Philosopher" => "Philosopher",
 							"Piedra" => "Piedra",
 							"Pinyon Script" => "Pinyon Script",
+							"Pirata One" => "Pirata One",
 							"Plaster" => "Plaster",
 							"Play" => "Play",
 							"Playball" => "Playball",
 							"Playfair Display" => "Playfair Display",
+							"Playfair Display SC" => "Playfair Display SC",
 							"Podkova" => "Podkova",
 							"Poiret One" => "Poiret One",
 							"Poller One" => "Poller One",
@@ -537,15 +632,22 @@ if (!function_exists('of_options'))
 							"Prociono" => "Prociono",
 							"Prosto One" => "Prosto One",
 							"Puritan" => "Puritan",
+							"Purple Purse" => "Purple Purse",
+							"Quando" => "Quando",
 							"Quantico" => "Quantico",
 							"Quattrocento" => "Quattrocento",
 							"Quattrocento Sans" => "Quattrocento Sans",
 							"Questrial" => "Questrial",
 							"Quicksand" => "Quicksand",
+							"Quintessential" => "Quintessential",
 							"Qwigley" => "Qwigley",
+							"Racing Sans One" => "Racing Sans One",
 							"Radley" => "Radley",
 							"Raleway" => "Raleway",
+							"Raleway Dots" => "Raleway Dots",
+							"Rambla" => "Rambla",
 							"Rammetto One" => "Rammetto One",
+							"Ranchers" => "Ranchers",
 							"Rancho" => "Rancho",
 							"Rationale" => "Rationale",
 							"Redressed" => "Redressed",
@@ -554,32 +656,46 @@ if (!function_exists('of_options'))
 							"Ribeye" => "Ribeye",
 							"Ribeye Marrow" => "Ribeye Marrow",
 							"Righteous" => "Righteous",
+							"Risque" => "Risque",
+							"Roboto" => "Roboto",
+							"Roboto Condensed" => "Roboto Condensed",
+							"Roboto Slab" => "Roboto Slab",
 							"Rochester" => "Rochester",
 							"Rock Salt" => "Rock Salt",
 							"Rokkitt" => "Rokkitt",
+							"Romanesco" => "Romanesco",
 							"Ropa Sans" => "Ropa Sans",
 							"Rosario" => "Rosario",
 							"Rosarivo" => "Rosarivo",
 							"Rouge Script" => "Rouge Script",
 							"Ruda" => "Ruda",
+							"Rufina" => "Rufina",
 							"Ruge Boogie" => "Ruge Boogie",
 							"Ruluko" => "Ruluko",
+							"Rum Raisin" => "Rum Raisin",
 							"Ruslan Display" => "Ruslan Display",
 							"Russo One" => "Russo One",
 							"Ruthie" => "Ruthie",
+							"Rye" => "Rye",
+							"Sacramento" => "Sacramento",
 							"Sail" => "Sail",
 							"Salsa" => "Salsa",
+							"Sanchez" => "Sanchez",
 							"Sancreek" => "Sancreek",
 							"Sansita One" => "Sansita One",
 							"Sarina" => "Sarina",
 							"Satisfy" => "Satisfy",
+							"Scada" => "Scada",
 							"Schoolbell" => "Schoolbell",
 							"Seaweed Script" => "Seaweed Script",
 							"Sevillana" => "Sevillana",
+							"Seymour One" => "Seymour One",
 							"Shadows Into Light" => "Shadows Into Light",
 							"Shadows Into Light Two" => "Shadows Into Light Two",
 							"Shanti" => "Shanti",
 							"Share" => "Share",
+							"Share Tech" => "Share Tech",
+							"Share Tech Mono" => "Share Tech Mono",
 							"Shojumaru" => "Shojumaru",
 							"Short Stack" => "Short Stack",
 							"Siemreap" => "Siemreap",
@@ -587,25 +703,34 @@ if (!function_exists('of_options'))
 							"Signika" => "Signika",
 							"Signika Negative" => "Signika Negative",
 							"Simonetta" => "Simonetta",
+							"Sintony" => "Sintony",
 							"Sirin Stencil" => "Sirin Stencil",
 							"Six Caps" => "Six Caps",
+							"Skranji" => "Skranji",
 							"Slackey" => "Slackey",
 							"Smokum" => "Smokum",
 							"Smythe" => "Smythe",
 							"Sniglet" => "Sniglet",
 							"Snippet" => "Snippet",
+							"Snowburst One" => "Snowburst One",
+							"Sofadi One" => "Sofadi One",
 							"Sofia" => "Sofia",
 							"Sonsie One" => "Sonsie One",
 							"Sorts Mill Goudy" => "Sorts Mill Goudy",
+							"Source Code Pro" => "Source Code Pro",
+							"Source Sans Pro" => "Source Sans Pro",
 							"Special Elite" => "Special Elite",
 							"Spicy Rice" => "Spicy Rice",
 							"Spinnaker" => "Spinnaker",
 							"Spirax" => "Spirax",
 							"Squada One" => "Squada One",
+							"Stalemate" => "Stalemate",
+							"Stalinist One" => "Stalinist One",
 							"Stardos Stencil" => "Stardos Stencil",
 							"Stint Ultra Condensed" => "Stint Ultra Condensed",
 							"Stint Ultra Expanded" => "Stint Ultra Expanded",
 							"Stoke" => "Stoke",
+							"Strait" => "Strait",
 							"Sue Ellen Francisco" => "Sue Ellen Francisco",
 							"Sunshiney" => "Sunshiney",
 							"Supermercado One" => "Supermercado One",
@@ -614,12 +739,15 @@ if (!function_exists('of_options'))
 							"Syncopate" => "Syncopate",
 							"Tangerine" => "Tangerine",
 							"Taprom" => "Taprom",
+							"Tauri" => "Tauri",
 							"Telex" => "Telex",
 							"Tenor Sans" => "Tenor Sans",
+							"Text Me One" => "Text Me One",
 							"The Girl Next Door" => "The Girl Next Door",
 							"Tienne" => "Tienne",
 							"Tinos" => "Tinos",
 							"Titan One" => "Titan One",
+							"Titillium Web" => "Titillium Web",
 							"Trade Winds" => "Trade Winds",
 							"Trocchi" => "Trocchi",
 							"Trochut" => "Trochut",
@@ -630,12 +758,15 @@ if (!function_exists('of_options'))
 							"Ubuntu Mono" => "Ubuntu Mono",
 							"Ultra" => "Ultra",
 							"Uncial Antiqua" => "Uncial Antiqua",
+							"Underdog" => "Underdog",
+							"Unica One" => "Unica One",
 							"UnifrakturCook" => "UnifrakturCook",
 							"UnifrakturMaguntia" => "UnifrakturMaguntia",
 							"Unkempt" => "Unkempt",
 							"Unlock" => "Unlock",
 							"Unna" => "Unna",
 							"VT323" => "VT323",
+							"Vampiro One" => "Vampiro One",
 							"Varela" => "Varela",
 							"Varela Round" => "Varela Round",
 							"Vast Shadow" => "Vast Shadow",
@@ -649,13 +780,15 @@ if (!function_exists('of_options'))
 							"Waiting for the Sunrise" => "Waiting for the Sunrise",
 							"Wallpoet" => "Wallpoet",
 							"Walter Turncoat" => "Walter Turncoat",
+							"Warnes" => "Warnes",
 							"Wellfleet" => "Wellfleet",
+							"Wendy One" => "Wendy One",
 							"Wire One" => "Wire One",
 							"Yanone Kaffeesatz" => "Yanone Kaffeesatz",
 							"Yellowtail" => "Yellowtail",
 							"Yeseva One" => "Yeseva One",
 							"Yesteryear" => "Yesteryear",
-							"Zeyada" => "Zeyada",
+							"Zeyada" => "Zeyada"
 						);
 
 /*-----------------------------------------------------------------------------------*/
@@ -715,7 +848,13 @@ $of_options[] = array( "name" => "Tracking Code",
 $of_options[] = array( "name" => "Allow comments on pages",
 					"desc" => "Allow comments on regular pages.",
 					"id" => "comments_pages",
-					"std" => 1,
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable featured images on pages",
+					"desc" => "Disable featured images on regular pages.",
+					"id" => "featured_images_pages",
+					"std" => 0,
 					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Responsive Design",
@@ -745,74 +884,52 @@ $of_options[] = array( "name" => "Space before &lt;/body&gt;",
 $of_options[] = array( "name" => "Header Options",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Select a Header Layout",
+$of_options[] = array( "name" => "Header Info",
 					"desc" => "",
-					"id" => "header_layout",
-					"std" => "v1",
-					"type" => "images",
-					"options" => array(
-						"v1" => get_bloginfo('template_directory')."/images/patterns/header1.jpg",
-						"v2" => get_bloginfo('template_directory')."/images/patterns/header2.jpg",
-						"v3" => get_bloginfo('template_directory')."/images/patterns/header3.jpg",
-						"v4" => get_bloginfo('template_directory')."/images/patterns/header4.jpg",
-						"v5" => get_bloginfo('template_directory')."/images/patterns/header5.jpg"
-					));
+					"id" => "header_info",
+					"std" => "<h3 style='margin: 0;'>Header Content Options</h3>",
+					"icon" => true,
+					"type" => "info");
 
-$of_options[] = array( "name" => "Header Top Margin",
-					"desc" => "(in pixels)",
-					"id" => "margin_header_top",
-					"std" => "0px",
-					"type" => "text");
+$of_options[] = array( "name" => "Select a Header Layout",
+                    "desc" => "",
+                    "id" => "header_layout",
+                    "std" => "v1",
+                    "type" => "images",
+                    "options" => array(
+                        "v1" => get_bloginfo('template_directory')."/images/patterns/header1.jpg",
+                        "v2" => get_bloginfo('template_directory')."/images/patterns/header2.jpg",
+                        "v3" => get_bloginfo('template_directory')."/images/patterns/header3.jpg",
+                        "v4" => get_bloginfo('template_directory')."/images/patterns/header4.jpg",
+                        "v5" => get_bloginfo('template_directory')."/images/patterns/header5.jpg"
+                    ));
 
-$of_options[] = array( "name" => "Header Bottom Margin",
-					"desc" => "(in pixels)",
-					"id" => "margin_header_bottom",
-					"std" => "0px",
-					"type" => "text");
+$of_options[] = array( "name" => "Header Top Left Content",
+					"desc" => "",
+					"id" => "header_left_content",
+					"std" => "Contact Info",
+					"type" => "select",
+					"options" => array('contactinfo' => 'Contact Info', 'socialinks' => 'Social Links', 'nav' => 'Navigation', 'empty' => 'Leave Empty'));  
 
-$of_options[] = array( "name" => "Logo Left Margin",
-					"desc" => "(in pixels)",
-					"id" => "margin_logo_left",
-					"std" => "0px",
-					"type" => "text");
+$of_options[] = array( "name" => "Header Top Right Content",
+					"desc" => "",
+					"id" => "header_right_content",
+					"std" => "Navigation",
+					"type" => "select",
+					"options" => array('contactinfo' => 'Contact Info', 'socialinks' => 'Social Links', 'nav' => 'Navigation', 'empty' => 'Leave Empty'));  
 
-$of_options[] = array( "name" => "Logo Bottom Margin",
-					"desc" => "(in pixels)",
-					"id" => "margin_logo_bottom",
-					"std" => "0px",
-					"type" => "text");
+$of_options[] = array( "name" => "Header Tagline Area Content For Header #4",
+					"desc" => "",
+					"id" => "header_v4_content",
+					"std" => "Tagline + Search",
+					"type" => "select",
+					"options" => array('tagline' => 'Tagline', 'search' => 'Search', 'taglinesearch' => 'Tagline + Search', 'banner' => 'Banner')); 
 
-$of_options[] = array( "name" => "Main Nav Height",
-					"desc" => "(Only use number without 'px', default is 83)",
-					"id" => "nav_height",
-					"std" => "83",
-					"type" => "text");
-
-$of_options[] = array( "name" => "Logo",
-					"desc" => "Please choose an image file for your logo.",
-					"id" => "logo",
-					"std" => get_bloginfo('template_directory')."/images/logo.gif",
-					"mod" => "min",
-					"type" => "media");
-
-$of_options[] = array( "name" => "Logo (Retina Version @2x)",
-					"desc" => "Please choose an image file for the retina version of the logo. It should be 2x the size of main logo.",
-					"id" => "logo_retina",
-					"std" => "",
-					"mod" => "min",
-					"type" => "media");
-
-$of_options[] = array( "name" => "Standard Logo Width for Retina Logo",
-					"desc" => "If retina logo is uploaded, please enter the standard logo (1x) version width, do not enter the retina logo width.",
-					"id" => "retina_logo_width",
-					"std" => "97",
-					"type" => "text");
-
-$of_options[] = array( "name" => "Standard Logo Height for Retina Logo",
-					"desc" => "If retina logo is uploaded, please enter the standard logo (1x) version height, do not enter the retina logo height.",
-					"id" => "retina_logo_height",
-					"std" => "22",
-					"type" => "text");
+$of_options[] = array( "name" => "Banner Code For Header #4",
+                    "desc" => "Add HTML banner code for Header # 4",
+                    "id" => "header_banner_code",
+                    "std" => '',
+                    "type" => "textarea");
 
 $of_options[] = array( "name" => "Header Phone Number",
 					"desc" => "",
@@ -832,6 +949,26 @@ $of_options[] = array( "name" => "Header Tagline",
 					"std" => "Insert Any Headline Or Link You Want Here",
 					"type" => "text");
 
+$of_options[] = array( "name" => "Background Image For Header Area",
+					"desc" => "Please choose an image or insert an image url to use for the header backgroud.",
+					"id" => "header_bg_image",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "100% Background Image",
+					"desc" => "Have header background image always at 100% in width and height and scale according to the browser size.",
+					"id" => "header_bg_full",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Background Repeat",
+					"desc" => "",
+					"id" => "header_bg_repeat",
+					"std" => "",
+					"type" => "select",
+					"options" => array('repeat' => 'repeat', 'repeat-x' => 'repeat-x', 'repeat-y' => 'repeat-y', 'no-repeat' => 'no-repeat'));  
+
 $of_options[] = array( "name" => "Display social icons on header of the page:",
 					"desc" => "Select the checkbox to show social media icons on the header of the page.",
 					"id" => "icons_header",
@@ -839,10 +976,169 @@ $of_options[] = array( "name" => "Display social icons on header of the page:",
 					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Open social icons on header in a new window",
-					"desc" => "",
+					"desc" => "Select the checkbox to allow social icons to open in a new window",
 					"id" => "icons_header_new",
 					"std" => 0,
 					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Header Top Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_header_top",
+					"std" => "0px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Header Bottom Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_header_bottom",
+					"std" => "0px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Header Info",
+					"desc" => "",
+					"id" => "header_info",
+					"std" => "<h3 style='margin: 0;'>Logo Options</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Logo",
+					"desc" => "Please choose an image file for your logo.",
+					"id" => "logo",
+					"std" => get_bloginfo('template_directory')."/images/logo.png",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "Logo (Retina Version @2x)",
+					"desc" => "Please choose an image file for the retina version of the logo. It should be 2x the size of main logo.",
+					"id" => "logo_retina",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "Standard Logo Width for Retina Logo",
+					"desc" => "If retina logo is uploaded, please enter the standard logo (1x) version width, do not enter the retina logo width.",
+					"id" => "retina_logo_width",
+					"std" => "",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Standard Logo Height for Retina Logo",
+					"desc" => "If retina logo is uploaded, please enter the standard logo (1x) version height, do not enter the retina logo height.",
+					"id" => "retina_logo_height",
+					"std" => "",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Logo Alignment",
+					"desc" => "Note: center only works on 5th header layout",
+					"id" => "logo_alignment",
+					"std" => "Left",
+					"type" => "select",
+					"options" => array('left' => 'Left', 'center' => 'Center', 'right' => 'Right',));
+
+$of_options[] = array( "name" => "Logo Left Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_logo_left",
+					"std" => "0px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Logo Right Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_logo_right",
+					"std" => "0px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Logo Top Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_logo_top",
+					"std" => "31px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Logo Bottom Margin",
+					"desc" => "(in pixels)",
+					"id" => "margin_logo_bottom",
+					"std" => "0px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Header Info",
+					"desc" => "",
+					"id" => "header_info",
+					"std" => "<h3 style='margin: 0;'>Menu Options</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Sticky Header",
+					"desc" => "Check to enable, uncheck to disable",
+					"id" => "header_sticky",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Main Nav Height",
+					"desc" => "(Only use number without 'px', default is 83)",
+					"id" => "nav_height",
+					"std" => "83",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Dropdown Menu Width",
+					"desc" => "(in pixels)",
+					"id" => "dropdown_menu_width",
+					"std" => "170px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Header Info",
+					"desc" => "",
+					"id" => "header_info",
+					"std" => "<h3 style='margin: 0;'>Page Title Bar Options</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Page Title Bar",
+					"desc" => "Show page title bar",
+					"id" => "page_title_bar",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Page Title Bar Height",
+					"desc" => "(in pixels)",
+					"id" => "page_title_height",
+					"std" => "87px",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Page Title Bar Background",
+					"desc" => "",
+					"id" => "page_title_bg",
+					"std" => get_bloginfo('template_directory')."/images/page_title_bg.png",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "Page Title Bar Background (Retina Version @2x)",
+					"desc" => "",
+					"id" => "page_title_bg_retina",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "100% Background Image",
+					"desc" => "Have page title bar background image always at 100% in width and height and scale according to the browser size.",
+					"id" => "page_title_bg_full",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Page Title Bar Background Color",
+					"desc" => "",
+					"id" => "page_title_bg_color",
+					"std" => "#F6F6F6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Page Title Bar Borders",
+					"desc" => "",
+					"id" => "page_title_border_color",
+					"std" => "#d2d3d4",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Header Info",
+					"desc" => "",
+					"id" => "header_info",
+					"std" => "<h3 style='margin: 0;'>Breadcrumb Options</h3>",
+					"icon" => true,
+					"type" => "info");
 
 $of_options[] = array( "name" => "Breadcrumbs or Search Box?",
 					"desc" => "Show breadcrumbs or search box on page title bar?",
@@ -851,13 +1147,11 @@ $of_options[] = array( "name" => "Breadcrumbs or Search Box?",
 					"options" => array('breadcrumbs' => 'Breadcrumbs', 'search' => 'Search Box'),
 					"type" => "select");
 
-
-$of_options[] = array( "name" => "Breadcrumb Menu",
-					"desc" => "Show breadcrumbs in general",
+$of_options[] = array( "name" => "Breadcrumbs/Search Bar:",
+					"desc" => "Show breadcrumbs or search bar in general",
 					"id" => "breadcrumb",
 					"std" => 1,
 					"type" => "checkbox");
-
 
 $of_options[] = array( "name" => "Breadcrumb on Mobile Devices",
 					"desc" => "Show breadcrumbs on mobile devices",
@@ -865,53 +1159,21 @@ $of_options[] = array( "name" => "Breadcrumb on Mobile Devices",
 					"std" => 0,
 					"type" => "checkbox");
 
-
 $of_options[] = array( "name" => "Breadcrumb Menu Prefix",
 					"desc" => "The text before the breadcrumb menu",
 					"id" => "breacrumb_prefix",
 					"std" => "",
 					"type" => "text");
 
-$of_options[] = array( "name" => "Page Title Bar",
-					"desc" => "Show page title bar",
-					"id" => "page_title_bar",
-					"std" => 1,
-					"type" => "checkbox");
-
-$of_options[] = array( "name" => "Page Title Bar Background",
-					"desc" => "",
-					"id" => "page_title_bg",
-					"std" => get_bloginfo('template_directory')."/images/page_title_bg.png",
-					"mod" => "min",
-					"type" => "media");
-
-$of_options[] = array( "name" => "Page Title Bar Background (Retina Version @2x)",
-					"desc" => "",
-					"id" => "page_title_bg_retina",
-					"std" => "",
-					"mod" => "min",
-					"type" => "media");
-
-$of_options[] = array( "name" => "Page Title Bar Background Color",
-					"desc" => "",
-					"id" => "page_title_bg_color",
-					"std" => "#F6F6F6",
-					"type" => "color");
-
 $of_options[] = array( "name" => "Footer Options",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Copyright Bar",
-					"desc" => "Show copyright bar",
-					"id" => "footer_copyright",
-					"std" => 1,
-					"type" => "checkbox");
-
-$of_options[] = array( "name" => "Copyright Text",
-                    "desc" => "",
-                    "id" => "footer_text",
-                    "std" => 'Copyright 2012 Avada | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Theme Fusion</a>',
-                    "type" => "textarea");
+$of_options[] = array( "name" => "Footer Widgets Area",
+					"desc" => "",
+					"id" => "footer_widgets_area_title",
+					"std" => "<h3 style='margin: 0;'>Footer Widgets Area Options</h3>",
+					"icon" => true,
+					"type" => "info");
 
 $of_options[] = array( "name" => "Footer Widgets",
 					"desc" => "Show footer widgets",
@@ -925,6 +1187,45 @@ $of_options[] = array( "name" => "Number of Footer Columns",
 					"std" => "4",
 					"options" => array('1' => '1', '2' => '2', '3' => '3', '4' => '4'),
 					"type" => "select");
+ 
+ $of_options[] = array( "name" => "Background Image For Footer Area",
+					"desc" => "Please choose an image or insert an image url to use for the footer widget area backgroud.",
+					"id" => "footerw_bg_image",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "100% Background Image",
+					"desc" => "Have footer background image always at 100% in width and height and scale according to the browser size.",
+					"id" => "footerw_bg_full",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Background Repeat",
+					"desc" => "",
+					"id" => "footerw_bg_repeat",
+					"std" => "",
+					"type" => "select",
+					"options" => array('repeat' => 'repeat', 'repeat-x' => 'repeat-x', 'repeat-y' => 'repeat-y', 'no-repeat' => 'no-repeat'));
+
+$of_options[] = array( "name" => "Copyright Area / Social Icons Options",
+					"desc" => "",
+					"id" => "copyright_area_title",
+					"std" => "<h3 style='margin: 0;'>Copyright Area / Social Icons Options</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Copyright Bar",
+					"desc" => "Show copyright bar",
+					"id" => "footer_copyright",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Copyright Text",
+                    "desc" => "",
+                    "id" => "footer_text",
+                    "std" => 'Copyright 2012 Avada | All Rights Reserved | Powered by <a href="http://wordpress.org">WordPress</a>  |  <a href="http://theme-fusion.com">Theme Fusion</a>',
+                    "type" => "textarea");
 
 $of_options[] = array( "name" => "Display social icons on footer of the page:",
 					"desc" => "Select the checkbox to show social media icons on the footer of the page.",
@@ -933,7 +1234,7 @@ $of_options[] = array( "name" => "Display social icons on footer of the page:",
 					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Open social icons on footer in a new window",
-					"desc" => "",
+					"desc" => "Select the checkbox to allow social icons to open in a new window",
 					"id" => "icons_footer_new",
 					"std" => 0,
 					"type" => "checkbox");
@@ -958,11 +1259,12 @@ $of_options[] = array( "name" => "Boxed Mode Only",
 					"icon" => true,
 					"type" => "info");
 
-$of_options[] = array( "name" => "Background Image",
+$of_options[] = array( "name" => "Background Image For Outer Areas In Boxed Mode",
 					"desc" => "Please choose an image or insert an image url to use for the backgroud.",
 					"id" => "bg_image",
 					"std" => "",
-					"type" => "upload");
+					"mod" => "",
+					"type" => "media");
 
 $of_options[] = array( "name" => "100% Background Image",
 					"desc" => "Have background image always at 100% in width and height and scale according to the browser size.",
@@ -1006,6 +1308,33 @@ $of_options[] = array( "name" => "Select a Background Pattern",
 						"pattern9" => get_bloginfo('template_directory')."/images/patterns/pattern9.png",
 						"pattern10" => get_bloginfo('template_directory')."/images/patterns/pattern10.png",
 					));
+
+$of_options[] = array( "name" => "Both Modes",
+					"desc" => "",
+					"id" => "both_modes_only",
+					"std" => "<h3 style='margin: 0;'>Background Options Below Work For Boxed & Wide Mode</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Background Image For Main Content Area",
+					"desc" => "Please choose an image or insert an image url to use for the main content area backgroud.",
+					"id" => "content_bg_image",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "100% Background Image",
+					"desc" => "Have background image always at 100% in width and height and scale according to the browser size.",
+					"id" => "content_bg_full",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Background Repeat",
+					"desc" => "",
+					"id" => "content_bg_repeat",
+					"std" => "",
+					"type" => "select",
+					"options" => array('repeat' => 'repeat', 'repeat-x' => 'repeat-x', 'repeat-y' => 'repeat-y', 'no-repeat' => 'no-repeat'));  
 
 $of_options[] = array( "name" => "Typography Options",
 					"type" => "heading");
@@ -1153,7 +1482,6 @@ $of_options[] = array( "name" => "Top Nav Font Size (px)",
 					"type" => "select",
 					"options" => $font_sizes);
 
-
 $of_options[] = array( "name" => "Secondary Nav & Top Contact Info Font Size (px)",
 					"desc" => "Default is 12",
 					"id" => "snav_font_size",
@@ -1237,21 +1565,98 @@ $of_options[] = array( "name" => "Heading Font Size H6 (px)",
 					"std" => "11",
 					"type" => "select",
 					"options" => $font_sizes);
+
+$of_options[] = array( "name" =>  "Header Tagline Font Size",
+					"desc" => "Default is 16",
+					"id" => "tagline_font_size",
+					"std" => "16",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" =>  "Page Title Font Size",
+					"desc" => "Default is 18",
+					"id" => "page_title_font_size",
+					"std" => "18",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Custom Nav / Headings Font",
+					"desc" => "",
+					"id" => "custom_heading_font",
+					"std" => "<h3 style='margin: 0;''>Font Line Heights</h3>",
+					"icon" => true,
+					"type" => "info");
  
+$of_options[] = array( "name" => "Body Font Line Height (px)",
+					"desc" => "Default is 20",
+					"id" => "body_font_lh",
+					"std" => "20",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H1 (px)",
+					"desc" => "Default is 48",
+					"id" => "h1_font_lh",
+					"std" => "48",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H2 (px)",
+					"desc" => "Default is 27",
+					"id" => "h2_font_lh",
+					"std" => "27",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H3 (px)",
+					"desc" => "Default is 24",
+					"id" => "h3_font_lh",
+					"std" => "24",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H4 (px)",
+					"desc" => "Default is 20",
+					"id" => "h4_font_lh",
+					"std" => "20",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H5 (px)",
+					"desc" => "Default is 18",
+					"id" => "h5_font_lh",
+					"std" => "18",
+					"type" => "select",
+					"options" => $font_sizes);
+
+$of_options[] = array( "name" => "Heading Font Line Height H6 (px)",
+					"desc" => "Default is 17",
+					"id" => "h6_font_lh",
+					"std" => "17",
+					"type" => "select",
+					"options" => $font_sizes);
+
 $of_options[] = array( "name" => "Styling Options",
 					"type" => "heading");
 
-$of_options[] = array( "name" => "Predefined Color Schemes",
+$of_options[] = array( "name" => "Choose Theme Skin",
+					"desc" => "",
+					"id" => "scheme_type",
+					"std" => "Light",
+					"type" => "select",
+					"options" => array('light' => 'Light', 'dark' => 'Dark'));
+
+$of_options[] = array( "name" => "Predefined Color Scheme",
 					"desc" => "",
 					"id" => "color_scheme",
 					"std" => "Green",
 					"type" => "select",
-					"options" => array('red' => 'Red', 'lighred' => 'Light Red', 'blue' => 'Blue', 'lightblue' => 'Light Blue', 'green' => 'Green', 'darkgreen' => 'Dark Green', 'yellow' => 'Yellow', 'pink' => 'Pink', 'brown' => 'Brown', 'lightgrey' => 'Light Grey'));
+					"options" => array('red' => 'Red', 'lighred' => 'Light Red', 'blue' => 'Blue', 'lightblue' => 'Light Blue', 'green' => 'Green', 'darkgreen' => 'Dark Green', 'orange' => 'Orange', 'pink' => 'Pink', 'brown' => 'Brown', 'lightgrey' => 'Light Grey'));
 
 $of_options[] = array( "name" => "Custom Color Scheme",
 					"desc" => "",
-					"id" => "custom_color_scheme_intro",
-					"std" => "<h3 style='margin: 0;'>Create Custom Color Scheme</h3>",
+					"id" => "custom_color_scheme_bg",
+					"std" => "<h3 style='margin: 0;'>Background Colors</h3>",
 					"icon" => true,
 					"type" => "info");
 
@@ -1261,11 +1666,60 @@ $of_options[] = array( "name" =>  "Primary Color",
 					"std" => "#a0ce4e",
 					"type" => "color");
 
-$of_options[] = array( "name" =>  "Pricing Box Color",
+$of_options[] = array( "name" =>  "Header Background Color",
 					"desc" => "",
-					"id" => "pricing_box_color",
-					"std" => "#92C563",
+					"id" => "header_bg_color",
+					"std" => "#ffffff",
 					"type" => "color");
+
+$of_options[] = array( "name" => "Header Border Color",
+					"desc" => "",
+					"id" => "header_border_color",
+					"std" => "#e1e1e1",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Background Color",
+					"desc" => "",
+					"id" => "header_top_bg_color",
+					"std" => "#a0ce4e",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Content Background Color",
+					"desc" => "",
+					"id" => "content_bg_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Footer Background Color",
+					"desc" => "",
+					"id" => "footer_bg_color",
+					"std" => "#363839",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Footer Border Color",
+					"desc" => "",
+					"id" => "footer_border_color",
+					"std" => "#e9eaee",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Copyright Border Color",
+					"desc" => "",
+					"id" => "copyright_border_color",
+					"std" => "#4b4c4d",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Copyright Background Color",
+					"desc" => "",
+					"id" => "copyright_bg_color",
+					"std" => "#282a2b",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Custom Color Scheme",
+					"desc" => "",
+					"id" => "custom_color_scheme_element",
+					"std" => "<h3 style='margin: 0;'>Element Colors</h3>",
+					"icon" => true,
+					"type" => "info");
 
 $of_options[] = array( "name" =>  "Rollover Image Gradient Top Color",
 					"desc" => "",
@@ -1291,18 +1745,143 @@ $of_options[] = array( "name" =>  "Button Gradient Bottom Color",
 					"std" => "#AAD75B",
 					"type" => "color");
 
+$of_options[] = array( "name" =>  "Form Background Color",
+					"desc" => "",
+					"id" => "form_bg_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Form Text Color",
+					"desc" => "",
+					"id" => "form_text_color",
+					"std" => "#aaa9a9",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Form Border Color",
+					"desc" => "",
+					"id" => "form_border_color",
+					"std" => "#d2d2d2",
+
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Blog Grid & Timeline Background Color",
+					"desc" => "Controls blog grid & timeline post box background color.",
+					"id" => "timeline_bg_color",
+					"std" => "transparent",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Blog Grid & Timeline Element Colors",
+					"desc" => "Controls blog grid & timeline post box border, divider lines, date box and border, timeline dots, timeline icon, timeline arrow.",
+					"id" => "timeline_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Woo Quantity Box Background Color",
+					"desc" => "",
+					"id" => "qty_bg_color",
+					"std" => "#dadada",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Woo Quantity Box Hover Background Color",
+					"desc" => "",
+					"id" => "qty_bg_hover_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Social Share Box Icons Color Scheme",
+					"desc" => "",
+					"id" => "socialbox_icons_color",
+					"std" => "Dark",
+					"type" => "select",
+					"options" => array('light' => 'Light', 'dark' => 'Dark'));
+
+$of_options[] = array( "name" => "Header Social Icons Color Scheme",
+					"desc" => "",
+					"id" => "header_icons_color",
+					"std" => "Light",
+					"type" => "select",
+					"options" => array('light' => 'Light', 'dark' => 'Dark'));
+
+$of_options[] = array( "name" => "Footer Social Icons Color Scheme",
+					"desc" => "",
+					"id" => "footer_icons_color",
+					"std" => "Dark",
+					"type" => "select",
+					"options" => array('light' => 'Light', 'dark' => 'Dark'));
+
+$of_options[] = array( "name" => "Disable Button Text Shadow",
+					"desc" => "Check to disable button text shadow",
+					"id" => "button_text_shadow",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Footer Text Shadow",
+					"desc" => "Check to disable footer text shadow",
+					"id" => "footer_text_shadow",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Custom Color Scheme",
+					"desc" => "",
+					"id" => "custom_color_scheme_font",
+					"std" => "<h3 style='margin: 0;'>Font Colors</h3>",
+					"icon" => true,
+					"type" => "info");
+
 $of_options[] = array( "name" =>  "Button Text Color",
 					"desc" => "",
 					"id" => "button_gradient_text_color",
 					"std" => "#54770f",
 					"type" => "color");
 
-$of_options[] = array( "name" =>  "Headings Font Color",
+$of_options[] = array( "name" =>  "Header Tagline Font Color",
 					"desc" => "",
-					"id" => "headings_color",
+					"id" => "tagline_font_color",
+					"std" => "#747474",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Page Title Font Color",
+					"desc" => "",
+					"id" => "page_title_color",
 					"std" => "#333333",
 					"type" => "color");
-					
+
+$of_options[] = array( "name" =>  "Heading 1 (H1) Font Color",
+					"desc" => "",
+					"id" => "h1_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Heading 2 (H2) Font Color",
+					"desc" => "",
+					"id" => "h2_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Heading 3 (H3) Font Color",
+					"desc" => "",
+					"id" => "h3_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Heading 4 (H4) Font Color",
+					"desc" => "",
+					"id" => "h4_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Heading 5 (H5) Font Color",
+					"desc" => "",
+					"id" => "h5_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Heading 6 (H6) Font Color",
+					"desc" => "",
+					"id" => "h6_color",
+					"std" => "#333333",
+					"type" => "color");
+
 $of_options[] = array( "name" =>  "Body Text Color",
 					"desc" => "",
 					"id" => "body_text_color",
@@ -1339,12 +1918,6 @@ $of_options[] = array( "name" =>  "Footer Link Color",
 					"std" => "#BFBFBF",
 					"type" => "color");
 
-$of_options[] = array( "name" =>  "Secondary Nav & Top Contact Info Color",
-					"desc" => "",
-					"id" => "snav_color",
-					"std" => "#747474",
-					"type" => "color");
-
 $of_options[] = array( "name" => "Menu Colors",
 					"desc" => "",
 					"id" => "menu_colors_intro",
@@ -1356,6 +1929,12 @@ $of_options[] = array( "name" =>  "Menu Font Color - First Level",
 					"desc" => "",
 					"id" => "menu_first_color",
 					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Menu Font Hover Color - First Level",
+					"desc" => "Controls the main menu hover color, menu hover border and dropdown border color",
+					"id" => "menu_hover_first_color",
+					"std" => "#a0ce4e",
 					"type" => "color");
 
 $of_options[] = array( "name" =>  "Menu Background Color - Sublevels",
@@ -1370,6 +1949,238 @@ $of_options[] = array( "name" =>  "Menu Font Color - Sublevels",
 					"std" => "#333333",
 					"type" => "color");
 
+$of_options[] = array( "name" =>  "Menu Hover Background Color - Sublevels",
+					"desc" => "",
+					"id" => "menu_bg_hover_color",
+					"std" => "#f5f4f4",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Menu Separator - Sublevels",
+					"desc" => "",
+					"id" => "menu_sub_sep_color",
+					"std" => "#dcdadb",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Secondary Menu - First Level & Top Contact Info Color",
+					"desc" => "",
+					"id" => "snav_color",
+					"std" => "#747474",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Divider Color - First Level",
+					"desc" => "",
+					"id" => "header_top_first_border_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Background Color - Sublevels",
+					"desc" => "",
+					"id" => "header_top_sub_bg_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Font Color - Sublevels",
+					"desc" => "",
+					"id" => "header_top_menu_sub_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Hover Background Color - Sublevels",
+					"desc" => "",
+					"id" => "header_top_menu_bg_hover_color",
+					"std" => "#fafafa",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Hover Font Color - Sublevels",
+					"desc" => "",
+					"id" => "header_top_menu_sub_hover_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Header Top Menu Border  - Sublevels",
+					"desc" => "",
+					"id" => "header_top_menu_sub_sep_color",
+					"std" => "#e0dfdf",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Woo Cart Menu Background Color",
+					"desc" => "",
+					"id" => "woo_cart_bg_color",
+					"std" => "#fafafa",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Shortcodes Styling Options",
+					"type" => "heading");
+
+$of_options[] = array( "name" =>  "Accordion Inactive Box Color",
+					"desc" => "Controls color of the inactive boxes behind the '+' icons.",
+					"id" => "accordian_inactive_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Animated Filled Color",
+					"desc" => "",
+					"id" => "counter_filled_color",
+					"std" => "#a0ce4e",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Animated Unfilled Color",
+					"desc" => "",
+					"id" => "counter_unfilled_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Arrow Color",
+					"desc" => "Controls color of '>'.",
+					"id" => "arrow_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Blog Alternate Date & Date-on-side Recent News Date Box Color",
+					"desc" => "Controls color of the box behind the icon.",
+					"id" => "dates_box_color",
+					"std" => "#eef0f2",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Carousel Default Nav Box Color",
+					"desc" => "",
+					"id" => "carousel_nav_color",
+					"std" => "#999999",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Carousel Hover Nav Box Color",
+					"desc" => "",
+					"id" => "carousel_hover_color",
+					"std" => "#808080",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Content Box Background Color",
+					"desc" => "Only change color for the 'icon-boxed' style. Leave transparent for other styles.",
+					"id" => "content_box_bg_color",
+					"std" => "transparent",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Checklist Icon Color",
+					"desc" => "",
+					"id" => "checklist_icons_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Double Border Title Separator Color",
+					"desc" => "Controls color of double lines next to text titles.",
+					"id" => "title_border_color",
+					"std" => "#e0dede",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Icon Circle Color",
+					"desc" => "",
+					"id" => "icon_circle_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Icon Circle Border Color",
+					"desc" => "",
+					"id" => "icon_border_color",
+					"std" => "#333333",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Icon Color",
+					"desc" => "",
+					"id" => "icon_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Imageframe Border Color",
+					"desc" => "",
+					"id" => "imgframe_border_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Imageframe Style Color",
+					"desc" => "Only works for glow and dropshadow style.",
+					"id" => "imgframe_style_color",
+					"std" => "#000000",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Pricing Box Color",
+					"desc" => "Controls the color portions of pricing boxes.",
+					"id" => "pricing_box_color",
+					"std" => "#a0ce4e",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Pricing Box Bg Color",
+					"desc" => "Controls the color of main background and title background.",
+					"id" => "pricing_bg_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Pricing Box Border Color",
+					"desc" => "Controls outer border and pricing row and footer row backgrounds.",
+					"id" => "pricing_border_color",
+					"std" => "#f8f8f8",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Pricing Box Divider Color",
+					"desc" => "Controls dividers inbetween pricing rows.",
+					"id" => "pricing_divider_color",
+					"std" => "#ededed",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Separators Color",
+					"desc" => "This option controls all separators,  divider lines and borders for meta, previous & next,  filters, category page, boxes around number pagination,  sidebar widgets, accordion divider lines.",
+					"id" => "sep_color",
+					"std" => "#e0dede",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Social Share Box Background Color",
+					"desc" => "",
+					"id" => "social_bg_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Tabs Background Color + Hover Color",
+					"desc" => "Controls active tab, content background color and tab hover color.",
+					"id" => "tabs_bg_color",
+					"std" => "#ffffff",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Tabs Inactive Color",
+					"desc" => "Controls color of inactive tabs plus the outer tab border.",
+					"id" => "tabs_inactive_color",
+					"std" => "#ebeaea",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Tagline Box Background Color",
+					"desc" => "",
+					"id" => "tagline_bg",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Tagline Box Border Color",
+					"desc" => "",
+					"id" => "tagline_border_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Testimonial Background Color",
+					"desc" => "",
+					"id" => "testimonial_bg_color",
+					"std" => "#f6f6f6",
+					"type" => "color");
+
+$of_options[] = array( "name" =>  "Testimonial Text Color",
+					"desc" => "",
+					"id" => "testimonial_text_color",
+					"std" => "#747474",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Social Links Color",
+					"desc" => "Controls social icons in the social links shortcode used in page content",
+					"id" => "social_links_color",
+					"std" => "Dark",
+					"type" => "select",
+					"options" => array('light' => 'Light', 'dark' => 'Dark'));
+
 $of_options[] = array( "name" => "Blog Options",
 					"type" => "heading");
 
@@ -1381,6 +2192,34 @@ $of_options[] = array( "name" => "Blog Layout",
 					"options" => array(
 						'large' => 'Large',
 						'medium' => 'Medium',
+						'large_alternate' => 'Large Alternate',
+						'medium_alternate' => 'Medium Alternate',
+						'grid' => 'Grid',
+						'timeline' => 'Timeline'
+					));
+
+$of_options[] = array( "name" => "Blog Archive/Category Layout",
+					"desc" => "",
+					"id" => "blog_archive_layout",
+					"std" => "Large",
+					"type" => "select",
+					"options" => array(
+						'large' => 'Large',
+						'medium' => 'Medium',
+						'large_alternate' => 'Large Alternate',
+						'medium_alternate' => 'Medium Alternate',
+						'grid' => 'Grid',
+						'timeline' => 'Timeline'
+					));
+
+$of_options[] = array( "name" => "Pagination Type",
+					"desc" => "",
+					"id" => "blog_pagination_type",
+					"std" => "pagination",
+					"type" => "select",
+					"options" => array(
+						'pagination' => 'Pagination',
+						'infinite' => 'Infinite Scroll',
 					));
 
 $of_options[] = array( "name" => "Blog Page Title Bar Title",
@@ -1398,12 +2237,18 @@ $of_options[] = array( "name" => "Full Width",
 $of_options[] = array( "name" => "Sidebar Position",
 					"desc" => "Blog listings page sidebar position",
 					"id" => "blog_sidebar_position",
-					"std" => "right",
+					"std" => "Right",
 					"type" => "select",
 					"options" => array(
 						'right' => 'Right',
 						'left' => 'Left',
 					));
+
+$of_options[] = array( "name" => "Disable Previous/Next Pagination",
+					"desc" => "Check to disable previous/next pagination",
+					"id" => "blog_pn_nav",
+					"std" => 0,
+					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Featured Image On Blog Archive Page",
 					"desc" => "Show featured images on blog archive page",
@@ -1459,6 +2304,36 @@ $of_options[] = array( "name" => "Post Meta",
 					"std" => 1,
 					"type" => "checkbox");
 
+$of_options[] = array( "name" => "Disable Post Meta Author",
+					"desc" => "Check to hide author name from post meta.",
+					"id" => "post_meta_author",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Post Meta Date",
+					"desc" => "Check to hide date from post meta.",
+					"id" => "post_meta_date",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Post Meta Categories",
+					"desc" => "Check to hide categories from post meta.",
+					"id" => "post_meta_cats",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Post Meta Comments",
+					"desc" => "Check to hide comments from post meta.",
+					"id" => "post_meta_comments",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Post Meta Read More Link",
+					"desc" => "Check to hide read more link from post meta.",
+					"id" => "post_meta_read",
+					"std" => 0,
+					"type" => "checkbox");
+
 $of_options[] = array( "name" => "Excerpt or Full Blog Content",
 					"desc" => "Show excerpt or full blog content on archive / blog pages",
 					"id" => "content_length",
@@ -1466,39 +2341,66 @@ $of_options[] = array( "name" => "Excerpt or Full Blog Content",
 					"type" => "select",
 					"options" => array('excerpt' => 'Excerpt', 'full' => 'Full Content'));
 
-$of_options[] = array( "name" => "Strip HTML from Excerpt",
-					"desc" => "Check this if you want to strip HTML from the excerpt content only.",
-					"id" => "strip_html_excerpt",
-					"std" => 1,
-					"type" => "checkbox");
-
 $of_options[] = array( "name" => "Excerpt Length",
 					"desc" => "Input the number of words you want to cut from the content to be the excerpt of search and archive page.",
 					"id" => "excerpt_length_blog",
 					"std" => "285",
 					"type" => "text");
 
-$of_options[] = array( "name" => "Search Results Content",
-					"desc" => "Select the type of content to display in search results",
-					"id" => "search_content",
-					"std" => "Posts and Pages",
-					"type" => "select",
-					"options" => array('posts_pages' => 'Posts and Pages', 'posts' => 'Only Posts', 'pages' => 'Only Pages'));
-
-$of_options[] = array( "name" => "Hide Search Results Excerpt",
-					"desc" => "Check this if you want to hide excerpt for search results.",
-					"id" => "search_excerpt",
-					"std" => 0,
+$of_options[] = array( "name" => "Strip HTML from Excerpt",
+					"desc" => "Check this if you want to strip HTML from the excerpt content only.",
+					"id" => "strip_html_excerpt",
+					"std" => 1,
 					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Portfolio Options",
 					"type" => "heading");
+
+$of_options[] = array( "name" => "Portfolio Archive/Category Layout",
+					"desc" => "Only for the archive/category pages. You can choose any layout for your portfolio pages by selecting the page template in the page attributes box.",
+					"id" => "portfolio_archive_layout",
+					"std" => "Portfolio One Column",
+					"type" => "select",
+					"options" => array(
+						'poc' => 'Portfolio One Column',
+						'ptc' => 'Portfolio Two Column',
+						'pthc' => 'Portfolio Three Column',
+						'pfc' => 'Portfolio Four Column',
+						'poct' => 'Portfolio One Column Text',
+						'ptct' => 'Portfolio Two Column Text',
+						'pthct' => 'Portfolio Three Column Text',
+						'pfct' => 'Portfolio Four Column Text',
+						'pg' => 'Portfolio Grid',
+					));
 
 $of_options[] = array( "name" => "Number of Portfolio Items",
 					"desc" => "",
 					"id" => "portfolio_items",
 					"std" => "10",
 					"type" => "text"); 
+
+$of_options[] = array( "name" => "Excerpt or Full Portfolio Content",
+					"desc" => "Show excerpt or full portfolio content on archive / portfolio pages. Note: The \"Full Content\" option will override the page excerpt settings",
+					"id" => "portfolio_content_length",
+					"std" => "Excerpt",
+					"type" => "select",
+					"options" => array('excerpt' => 'Excerpt', 'full' => 'Full Content'));
+
+$of_options[] = array( "name" => "Disable Featured Image on Portfolio Single Post Page",
+					"desc" => "Check to disable featured images on portfolio single post pages",
+					"id" => "portfolio_featured_images",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Grid Pagination Type",
+					"desc" => "",
+					"id" => "grid_pagination_type",
+					"std" => "pagination",
+					"type" => "select",
+					"options" => array(
+						'pagination' => 'Pagination',
+						'infinite' => 'Infinite Scroll',
+					));
 
 $of_options[] = array( "name" => "Excerpt Length",
 					"desc" => "Input the number of words you want to cut from the content to be the excerpt of the 1 column portfolio page.",
@@ -1512,41 +2414,11 @@ $of_options[] = array( "name" => "Portfolio Slug",
 					"std" => "portfolio-items",
 					"type" => "text"); 
 
-$of_options[] = array( "name" => "Project Description Title",
-					"desc" => "",
-					"id" => "project_desc_title",
-					"std" => "Project Description",
-					"type" => "text"); 
-
-$of_options[] = array( "name" => "Project Details Title",
-					"desc" => "",
-					"id" => "project_details_title",
-					"std" => "Project Details",
-					"type" => "text"); 
-
-$of_options[] = array( "name" => "Skills Title",
-					"desc" => "",
-					"id" => "skills_title",
-					"std" => "Skills Needed",
-					"type" => "text"); 
-
-$of_options[] = array( "name" => "Categories Title",
-					"desc" => "",
-					"id" => "categories_title",
-					"std" => "Categories",
-					"type" => "text");
-
-$of_options[] = array( "name" => "Project URL Title",
-					"desc" => "",
-					"id" => "project_url_title",
-					"std" => "Project URL",
-					"type" => "text"); 
-
-$of_options[] = array( "name" => "Copyright Title",
-					"desc" => "",
-					"id" => "copyright_title",
-					"std" => "Copyright",
-					"type" => "text"); 
+$of_options[] = array( "name" => "Disable Previous/Next Pagination",
+					"desc" => "Check to disable previous/next pagination",
+					"id" => "portfolio_pn_nav",
+					"std" => 0,
+					"type" => "checkbox");
 
 $of_options[] = array( "name" => "Social Sharing Box",
 					"type" => "heading");
@@ -1584,6 +2456,12 @@ $of_options[] = array( "name" => "Google Plus",
 $of_options[] = array( "name" => "Tumblr",
 					"desc" => "Show the tumblr sharing option in blog posts.",
 					"id" => "sharing_tumblr",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Pinterest",
+					"desc" => "Show the pinterest sharing option in blog posts.",
+					"id" => "sharing_pinterest",
 					"std" => 1,
 					"type" => "checkbox");
 
@@ -1711,25 +2589,46 @@ $of_options[] = array( "name" => "Reddit",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Custom Icon Name",
-					"desc" => "",
+					"desc" => "This is the icon name that shows in the hover tooltip",
 					"id" => "custom_icon_name",
 					"std" => "",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Custom Icon Image",
-					"desc" => "",
+					"desc" => "Please choose an image file for your custom icon",
 					"id" => "custom_icon_image",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "Custom Icon Image Retina",
+					"desc" => "Please choose an image file for the retina version of the icon. It should be 2x the size of main icon.",
+					"id" => "custom_icon_image_retina",
+					"std" => "",
+					"mod" => "",
+					"type" => "media");
+
+$of_options[] = array( "name" => "Standard Icon Width for Retina Icon",
+					"desc" => "If retina icon is added, please enter the standard icon (1x) version width, do not enter the retina icon width.",
+					"id" => "retina_icon_width",
+					"std" => "",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Standard Icon Height for Retina Icon",
+					"desc" => "If retina icon is added, please enter the standard icon (1x) version height, do not enter the retina icon height.",
+					"id" => "retina_icon_height",
 					"std" => "",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Custom Icon Link",
-					"desc" => "",
+					"desc" => "Insert a link for your custom icon",
 					"id" => "custom_icon_link",
 					"std" => "",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Slideshows",
 					"type" => "heading");
+
 
 $of_options[] = array( "name" => "Legacy Posts Slideshow",
 					"desc" => "Check to enable posts slideshow in legacy mode.",
@@ -1754,6 +2653,12 @@ $of_options[] = array( "name" => "Autoplay",
 					"id" => "slideshow_autoplay",
 					"std" => 1,
 					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Slideshow speed",
+					"desc" => "Speed of slideshows such as [slider] shortcode and sliders within the posts,  1000 = 1 second",
+					"id" => "slideshow_speed",
+					"std" => "7000",
+					"type" => "text");
 
 $of_options[] = array( "name" => "Number of FlexSlider Slides",
 					"desc" => "Number of flexslider slides per group",
@@ -1958,6 +2863,13 @@ $of_options[] = array( "name" => "Show Post Images in Lightbox",
 $of_options[] = array( "name" => "Contact Options",
 					"type" => "heading");
 
+$of_options[] = array( "name" => "Google Map Type",
+					"desc" => "Select the type of map to show on google map",
+					"id" => "gmap_type",
+					"std" => "roadmap",
+					"options" => array('roadmap' => 'roadmap', 'satellite' => 'satellite', 'hybrid' => 'hybrid', 'terrain' => 'terrain'),
+					"type" => "select");
+
 $of_options[] = array( "name" => "Google Map Width",
 					"desc" => "(in pixels or percentage, e.g.:100% or 100px)",
 					"id" => "gmap_width",
@@ -1971,7 +2883,7 @@ $of_options[] = array( "name" => "Google Map Height",
 					"type" => "text");
 
 $of_options[] = array( "name" => "Google Map Address",
-					"desc" => "Example: 775 New York Ave, Brooklyn, Kings, New York 11203",
+					"desc" => "Example: 775 New York Ave, Brooklyn, Kings, New York 11203. For multiple markers, simply separate the addresses with the |  symbol.",
 					"id" => "gmap_address",
 					"std" => "",
 					"type" => "text");
@@ -1988,9 +2900,33 @@ $of_options[] = array( "name" => "Map Zoom Level",
 					"std" => "8",
 					"type" => "text");
 
-$of_options[] = array( "name" => "Hide Map Scrollwheel",
-					"desc" => "Check to hide scrollwheel on google maps",
+$of_options[] = array( "name" => "Hide Address Pin",
+					"desc" => "Check to hide address pin.",
+					"id" => "map_pin",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Show Map Popup On Click",
+					"desc" => "Check to keep popup with address info hidden when the google map loads. It will only show when pin on the map is clicked.",
+					"id" => "map_popup",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Map Scrollwheel",
+					"desc" => "Check to disable scrollwheel on google maps",
 					"id" => "map_scrollwheel",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Map Scale",
+					"desc" => "Check to disable scale on google maps",
+					"id" => "map_scale",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Map Zoom & Pan Control Icons",
+					"desc" => "Check to disable zoom control icon and pan control icon on google maps",
+					"id" => "map_zoomcontrol",
 					"std" => 0,
 					"type" => "checkbox");
 
@@ -2005,6 +2941,49 @@ $of_options[] = array( "name" => "Recaptcha Private Key",
 					"id" => "recaptcha_private",
 					"std" => "",
 					"type" => "text");
+
+$of_options[] = array( "name" => "Sidebar Options",
+					"type" => "heading");
+
+$of_options[] = array( "name" =>  "Sidebar Background Color",
+					"desc" => "",
+					"id" => "sidebar_bg_color",
+					"std" => "transparent",
+					"type" => "color");
+
+$of_options[] = array( "name" => "Content Area Width",
+					"desc" => "Please enter a value (based on percentage) without % sign",
+					"id" => "content_width",
+					"std" => "71.1702128",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Sidebar Width",
+					"desc" => "Please enter a value (based on percentage) without % sign",
+					"id" => "sidebar_width",
+					"std" => "23.4042553",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Sidebar Padding",
+					"desc" => "Please enter a value (based on percentage) without % sign",
+					"id" => "sidebar_padding",
+					"std" => "0",
+					"type" => "text");
+
+$of_options[] = array( "name" => "Sidebar Info",
+					"desc" => "",
+					"id" => "sidebar_info",
+					"std" => "<h3 style='margin-top:0;'>Important Notes & Instructions:</h3><b>1.  100% </b>- Your values added up cannot go over 100% or your sidebar will not show.<br /></br />
+<b>2. PADDING </b>-  Is always multiplied by 2 because it adds left and right padding. So a padding value of 5, actually equals 10.  And you should only use padding if you are using a background color that is different than your main background color.<br /></br />
+
+<b>3.  UNSEEN SPACE</b> - You need to factor in the space between the Content Width &amp; Sidebar Width. This space does not have a field.<br /></br />
+
+<b>EXAMPLE 1:</b> Content Width = 65 + Sidebar Width = 30  + Padding = 0
+* this example adds up to 95% which leaves you 5% in between the content and sidebar sections. This is good to use if your sidebar background is the same color as your main background<br /></br />
+
+<b>EXAMPLE 2:</b> Content Width = 60 + Sidebar Width = 30  + Padding = 2.5
+* this example adds up to 95% which leaves you 5% in between the content and sidebar sections. This is good to use if your sidebar background is a different color than your main background",
+					"icon" => true,
+					"type" => "info");
 
 // Theme Specific Options
 $of_options[] = array( "name" => "Extra Options",
@@ -2022,6 +3001,36 @@ $of_options[] = array( "name" => "Image Rollover",
 					"std" => 1,
 					"type" => "checkbox");
 
+$of_options[] = array( "name" => "Disable Link Icon  From Image Rollover",
+					"desc" => "Check to disable link icon from image rollovers. Note: This option will override the post settings.",
+					"id" => "link_image_rollover",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Image Icon From Image Rollover",
+					"desc" => "Check to disable image icon from image rollovers. Note: This option will override the post settings.",
+					"id" => "zoom_image_rollover",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Title From Image Rollover",
+					"desc" => "Check to disable title  from image rollovers.",
+					"id" => "title_image_rollover",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Categories From Image Rollover",
+					"desc" => "Check to disable categories from image rollovers.",
+					"id" => "cats_image_rollover",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Image Rollover Opacity",
+					"desc" => "From 0.1 to 1",
+					"id" => "image_rollover_opacity",
+					"std" => "1",
+					"type" => "text");
+
 $of_options[] = array( "name" => "Sidenav Behavior",
 					"desc" => "Sidenav slidedown / slideup animation on click or hover",
 					"id" => "sidenav_behavior",
@@ -2029,16 +3038,167 @@ $of_options[] = array( "name" => "Sidenav Behavior",
 					"options" => array('hover' => 'Hover', 'click' => 'Click'),
 					"type" => "select");
 
-$of_options[] = array( "name" => "Enable posts type order plugin",
-					"desc" => "Disabled by default. Note: It can break the order of next post/previous post links.",
-					"id" => "post_type_order",
+$of_options[] = array( "name" => "Search Results Content",
+					"desc" => "Select the type of content to display in search results",
+					"id" => "search_content",
+					"std" => "Posts and Pages",
+					"type" => "select",
+					"options" => array('posts_pages' => 'Posts and Pages', 'posts' => 'Only Posts', 'pages' => 'Only Pages'));
+
+$of_options[] = array( "name" => "Hide Search Results Excerpt",
+					"desc" => "Check this if you want to hide excerpt for search results.",
+					"id" => "search_excerpt",
 					"std" => 0,
 					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Hide Featured Images from Search Results",
+					"desc" => "Check this if you want to hide featured images for search results.",
+					"id" => "search_featured_images",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Plugins",
+					"desc" => "",
+					"id" => "plugins_only",
+					"std" => "<h3 style='margin: 0;'>Enable or Disable Support For Plugins Installed Manually</h3>",
+					"icon" => true,
+					"type" => "info");
 
 $of_options[] = array( "name" => "UberMenu Plugin Support",
 					"desc" => "If you are using UberMenu, check this option to add ubermenu support without editing any code.",
 					"id" => "ubermenu",
 					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Plugins",
+					"desc" => "",
+					"id" => "plugins_only",
+					"std" => "<h3 style='margin: 0;'>Enable or Disable Plugins Integrated Within The Theme</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Enable posts type order plugin",
+					"desc" => "Check to enable post type order plugin. Disabled by default. Note: It can break the order of next post/previous post links.",
+					"id" => "post_type_order",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable LayerSlider",
+					"desc" => "Check to disable LayerSlider",
+					"id" => "status_layerslider",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable RevSlider",
+					"desc" => "This option is no longer available in Avada 3.1.1 onwards. You can disable revolution slider from WordPress plugins page.",
+					"id" => "status_revslider",
+					"std" => 0,
+					"type" => '');
+
+$of_options[] = array( "name" => "Disable FlexSlider",
+					"desc" => "Check to disable Flexslider",
+					"id" => "status_flexslider",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "JS",
+					"desc" => "",
+					"id" => "js_only",
+					"std" => "<h3 style='margin: 0;'>Enable or Disable Support For Javascript Plugins Installed Manually</h3>",
+					"icon" => true,
+					"type" => "info");
+
+$of_options[] = array( "name" => "Disable Lightbox",
+					"desc" => "Check to disable Lightbox",
+					"id" => "status_lightbox",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Google Map Scripts",
+					"desc" => "Check to disable google map",
+					"id" => "status_gmap",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Youtube API Scripts",
+					"desc" => "Check to disable Youtube API scripts",
+					"id" => "status_yt",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Vimeo API Scripts",
+					"desc" => "Check to disable Vimeo API scripts",
+					"id" => "status_vimeo",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable jQuery Cycle",
+					"desc" => "Check to disable jQuery Cycle, used for testimonials mainly.",
+					"id" => "status_jqcycle",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Elastic Slider Scripts",
+					"desc" => "Check to disable elastic slider scripts.",
+					"id" => "status_eslider",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Waypoint Script",
+					"desc" => "Check to disable waypoint script which detects when progress bars in view and animates them.",
+					"id" => "status_wpoint",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Disable Gauge Script",
+					"desc" => "Check to disable gauge script which is used for counter circle shortcode.",
+					"id" => "status_gauge",
+					"std" => 0,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Woocommerce",
+					"type" => "heading");
+
+$of_options[] = array( "name" => "Number of Products per Page",
+					"desc" => "",
+					"id" => "woo_items",
+					"std" => "12",
+					"type" => "text"); 
+
+$of_options[] = array( "name" => "Account Area Message 1",
+					"desc" => "Insert your text and it will appear in the first message box on the acount page",
+					"id" => "woo_acc_msg_1",
+					"std" => "Need Assistance? Call customer service at 888-555-5555.",
+					"type" => "textarea");
+
+$of_options[] = array( "name" => "Account Area Message 2",
+					"desc" => "Insert your text and it will appear in the second message box on the acount page",
+					"id" => "woo_acc_msg_2",
+					"std" => "E-mail them at info@yourshop.com",
+					"type" => "textarea");
+
+$of_options[] = array( "name" => "Show Woocommerce My Account Link in Top Nav?",
+					"desc" => "Check to show, uncheck to disable. Please note these will not show with Ubermenu",
+					"id" => "woocommerce_acc_link_top_nav",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Show Woocommerce Cart Link in Top Nav?",
+					"desc" => "Check to show, uncheck to disable. Please note these will not show with Ubermenu",
+					"id" => "woocommerce_cart_link_top_nav",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Show Woocommerce My Account Link in Main Nav?",
+					"desc" => "Check to show, uncheck to disable. Please note these will not show with Ubermenu",
+					"id" => "woocommerce_acc_link_main_nav",
+					"std" => 1,
+					"type" => "checkbox");
+
+$of_options[] = array( "name" => "Show Woocommerce Cart Link in Main Nav?",
+					"desc" => "Check to show, uncheck to disable. Please note these will not show with Ubermenu",
+					"id" => "woocommerce_cart_link_main_nav",
+					"std" => 1,
 					"type" => "checkbox");
 
 // Backup Options
@@ -2076,6 +3236,7 @@ $of_options[] = array( "name" => "Transfer Theme Options Data",
 					"desc" => 'You can transfer the saved options data between different installs by copying the text inside the text box. To import data from another install, replace the data in the text box with the one from another install and click "Import Options".
 						',
 					);
+
 
 // Backup Options
 /*$of_options[] = array( "name" => "Upgrade Options",

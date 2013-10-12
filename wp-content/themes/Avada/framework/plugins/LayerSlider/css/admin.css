@@ -674,6 +674,12 @@
 /*                    SUBLAYERS                   */
 /**************************************************/
 
+.notfirst {
+	width: auto !important;
+	padding-right: 0px !important;
+	color: #999 !important;
+}
+
 .ls-sublayers td {
 	height: 38px;
 	padding: 0px !important;
@@ -709,6 +715,32 @@
 	margin: 12px 7px 0px 0px;
 	float: left;
 	text-align: center;
+}
+
+.ls-icon-eye {
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin: 11px 7px 0px 0px;
+	background: transparent url(../img/sprite.png) 0px -893px no-repeat;
+}
+
+.ls-icon-eye.active {
+	background: transparent url(../img/sprite.png) 0px -919px no-repeat;
+}
+
+.ls-icon-lock {
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: left;
+	margin: 11px 7px 0px 0px;
+	background: transparent url(../img/sprite.png) 0px -865px no-repeat;
+}
+
+.ls-icon-lock.active {
+	background: transparent url(../img/sprite.png) 0px -837px no-repeat;
 }
 
 .ls-sublayer-title {
@@ -1613,3 +1645,45 @@
 	text-align: center;
 }
 
+/**************************************************/
+/*                    COLOR PICKER                */
+/**************************************************/
+
+.wp-picker-container {
+	position: relative;
+}
+
+.wp-picker-input-wrap {
+	width: 255px;
+	bottom: 58px;
+	z-index: 10;
+	text-align: center;
+}
+
+.wp-picker-holder {
+	bottom: 50px;
+	z-index: 5;
+	padding-bottom: 30px;
+	background: white;
+	box-shadow: 0px 2px 15px -2px black;
+	border-radius: 5px;
+}
+
+.wp-picker-input-wrap,
+.wp-picker-holder {
+	position: absolute;
+	display: block;
+	right: 0px;
+}
+
+.wp-picker-container .iris-picker {
+	margin-top: 0px;
+}
+
+.wp-picker-container .iris-picker {
+	border: 0px !important;
+}
+
+.wp-picker-container .iris-border {
+	background: none;
+}

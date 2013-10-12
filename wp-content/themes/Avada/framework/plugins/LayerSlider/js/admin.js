@@ -31,6 +31,10 @@ if (!Array.prototype.indexOf) {
     }
 }
 
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 (function( $ ) {
 
 	$.fn.customCheckbox = function() {
@@ -65,6 +69,44 @@ if (!Array.prototype.indexOf) {
 })( jQuery );
 
 
+var lsScreenOptionsActions = {
+
+	init : function() {
+
+		jQuery(document).on('click', '#ls-screen-options-form input', function() {
+
+			// Change on screen
+			if(typeof lsScreenOptionsActions[ jQuery(this).attr('name')] != "undefined") {
+				lsScreenOptionsActions[ jQuery(this).attr('name')](this);
+			}
+
+			// Gather options
+			var options = {};
+			jQuery(this).closest('form').find('input').each(function() {
+
+				if( jQuery(this).is(':checkbox')) {
+					options[jQuery(this).attr('name')] = jQuery(this).prop('checked') ? true : false;
+				} else {
+					options[jQuery(this).attr('name')] = jQuery(this).val();
+				}
+			});
+
+			// Save settings
+			jQuery.post(ajaxurl, jQuery.param({ action : 'ls_save_screen_options', options : options }));
+		});
+	},
+
+	showTooltips : function(el) {
+
+		if( jQuery(el).prop('checked') === true ) {
+			lsTooltip.init();
+		} else {
+			lsTooltip.destroy();
+		}
+	}
+};
+
+
 var lsTooltip = {
 
 	init : function() {
@@ -77,6 +119,12 @@ var lsTooltip = {
 		jQuery(document).on('mouseout', '[data-help]', function() {
 			lsTooltip.close();
 		});
+	},
+
+	destroy : function() {
+
+		jQuery(document).off('mouseover', '[data-help]');
+		jQuery(document).off('mouseout', '[data-help]');
 	},
 
 	open : function(el) {
@@ -171,6 +219,19 @@ var LayerSlider = {
 
 		// Generate preview
 		LayerSlider.generatePreview(index);
+
+		if(typeof jQuery.fn.wpColorPicker != "undefined") {
+
+			clone.find('.ls-colorpicker').wpColorPicker({
+				width : 150,
+				change : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				},
+				clear : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				}
+			});
+		}
 	},
 
 	removeLayer : function(el) {
@@ -247,6 +308,27 @@ var LayerSlider = {
 
 		// Add sortables
 		LayerSlider.addSortables();
+
+
+		// Color picker
+		if(typeof jQuery.fn.wpColorPicker != "undefined") {
+
+			// Re-init color picker
+			clone.find('.ls-colorpicker').each(function() {
+				jQuery(this).appendTo( jQuery(this).closest('td') );
+				jQuery(this).closest('td').find('.wp-picker-container').remove();
+			});
+
+			jQuery(clone).find('.ls-colorpicker').wpColorPicker({
+				width : 150,
+				change : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				},
+				clear : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				}
+			});
+		}
 	},
 
 	addSublayer : function(el) {
@@ -266,6 +348,19 @@ var LayerSlider = {
 
 		// Open it
 		clone.click();
+
+		if(typeof jQuery.fn.wpColorPicker != "undefined") {
+
+			clone.find('.ls-colorpicker').wpColorPicker({
+				width : 150,
+				change : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				},
+				clear : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				}
+			});
+		}
 	},
 
 	selectSubLayer : function(el) {
@@ -348,6 +443,31 @@ var LayerSlider = {
 		}
 	},
 
+	eyeSublayer : function(el) {
+
+		if(jQuery(el).hasClass('active')) {
+
+			jQuery(el).removeClass('active');
+		} else {
+			jQuery(el).addClass('active');
+		}
+
+		// Update preview
+		LayerSlider.generatePreview( jQuery('.ls-box.active').index() );
+	},
+
+	lockSublayer : function(el) {
+
+		if(jQuery(el).hasClass('active')) {
+			jQuery(el).removeClass('active');
+		} else {
+			jQuery(el).addClass('active');
+		}
+
+		// Update preview
+		LayerSlider.generatePreview( jQuery('.ls-box.active').index() );
+	},
+
 	duplicateSublayer : function(el) {
 
 		// Clone fix
@@ -368,6 +488,26 @@ var LayerSlider = {
 
 		// Update preview
 		LayerSlider.generatePreview( jQuery(el).closest('.ls-layer-box').index() );
+
+		// Color picker
+		if(typeof jQuery.fn.wpColorPicker != "undefined") {
+
+			// Re-init color picker
+			clone.find('.ls-colorpicker').each(function() {
+				jQuery(this).appendTo( jQuery(this).closest('td') );
+				jQuery(this).closest('td').find('.wp-picker-container').remove();
+			});
+
+			jQuery(clone).find('.ls-colorpicker').wpColorPicker({
+				width : 150,
+				change : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				},
+				clear : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				}
+			});
+		}
 	},
 
 	skipSublayer : function(el) {
@@ -578,6 +718,12 @@ var LayerSlider = {
 			// Skip?
 			var skip = jQuery(this).find('input[name="skip"]').prop('checked');
 
+			// Visibility
+			var visibility = jQuery(this).find('.ls-icon-eye').hasClass('active');
+
+			// Lock
+			var lock = jQuery(this).find('.ls-icon-lock').hasClass('active');
+
 			// WordWrap
 			var wordWrap = jQuery(this).find('input[name="wordwrap"]').prop('checked');
 
@@ -586,7 +732,7 @@ var LayerSlider = {
 			var classes = jQuery(this).find('input[name="class"]').val();
 
 			// Append element
-			if(skip) {
+			if(skip || visibility) {
 				jQuery('<div>').appendTo(draggable);
 				return true;
 
@@ -610,6 +756,10 @@ var LayerSlider = {
 				}
 			}
 
+			if(lock) {
+				item.addClass('disabled');
+			}
+
 			// Abs pos
 			item.css('position', 'absolute');
 
@@ -622,7 +772,11 @@ var LayerSlider = {
 			var styles = {};
 			jQuery(this).find('.ls-sublayer-style input.auto').each(function() {
 				if(jQuery(this).val() != '') {
-					styles[jQuery(this).attr('name')] = jQuery(this).val();
+					if(isNumber(jQuery(this).val())) {
+						styles[jQuery(this).attr('name')] = ''+jQuery(this).val()+'px';
+					} else {
+						styles[jQuery(this).attr('name')] = jQuery(this).val();
+					}
 				}
 			});
 
@@ -672,11 +826,11 @@ var LayerSlider = {
 
 			// Z-index
 			item.css({ zIndex : 10 + item.index() });
-
-
-			// Add draggable
-			LayerSlider.addDraggable();
 		});
+
+
+		// Add draggable
+		LayerSlider.addDraggable();
 	},
 
 	openMediaLibrary : function() {
@@ -850,7 +1004,8 @@ var LayerSlider = {
 				LayerSlider.reindexSublayers( LayerSlider.dragContainer );
             },
             containment : 'parent',
-			tolerance : 'pointer'
+			tolerance : 'pointer',
+			cancel : '.ls-sublayer-pages'
         });
 	},
 
@@ -891,6 +1046,9 @@ var LayerSlider = {
 
 				// Reindex layers
 				LayerSlider.reindexLayers();
+
+				// Sortable
+				LayerSlider.addSortables();
             },
             containment : 'parent',
 			tolerance : 'pointer',
@@ -899,6 +1057,8 @@ var LayerSlider = {
 	},
 
 	addDraggable : function() {
+
+		// Add dragable
 		jQuery('.draggable').children().draggable({
         	drag : function() {
 
@@ -909,13 +1069,15 @@ var LayerSlider = {
         		LayerSlider.dragging();
         	}
         });
+
+        jQuery('.draggable .disabled').draggable('disable');
 	},
 
 	dragging : function() {
 
 		// Get positions
-		var top = jQuery('.ui-draggable-dragging').position().top;
-		var left = jQuery('.ui-draggable-dragging').position().left;
+		var top = parseInt(jQuery('.ui-draggable-dragging').position().top);
+		var left = parseInt(jQuery('.ui-draggable-dragging').position().left);
 
 		// Get index
 		var wrapper = jQuery('.ui-draggable-dragging').closest('.ls-layer-box');
@@ -1077,7 +1239,11 @@ var LayerSlider = {
 				var styles = {};
 				jQuery(this).find('.ls-sublayer-style input.auto').each(function() {
 					if(jQuery(this).val() != '') {
-						styles[jQuery(this).attr('name')] = jQuery(this).val();
+						if(isNumber(jQuery(this).val())) {
+							styles[jQuery(this).attr('name')] = ''+jQuery(this).val()+'px';
+						} else {
+							styles[jQuery(this).attr('name')] = jQuery(this).val();
+						}
 					}
 				});
 
@@ -1191,8 +1357,8 @@ var LayerSlider = {
 		jQuery('#ls-transition-window :checkbox').customCheckbox();
 
 		// Append transitions
-		LayerSlider.appendTransition('Built-in 3D transitions', '3d_transitions', layerSliderTransitions['t3d']);
 		LayerSlider.appendTransition('Built-in 2D transitions', '2d_transitions', layerSliderTransitions['t2d']);
+		LayerSlider.appendTransition('Built-in 3D transitions', '3d_transitions', layerSliderTransitions['t3d']);
 
 		if(typeof layerSliderCustomTransitions != "undefined") {
 
@@ -1367,11 +1533,11 @@ var LayerSlider = {
 		var t_h = popup.outerHeight();
 
 		// Position tooltip
-		popup.css({ top : e_t - t_h - 10, left : e_l - (t_w - e_w) / 2  });
+		popup.css({ top : e_t - t_h - 60, left : e_l - (t_w - e_w) / 2  });
 
 		// Fix top
 		if(popup.offset().top < 20) {
-			popup.css('top', e_t + 25);
+			popup.css('top', e_t + 75);
 		}
 
 		// Fix left
@@ -1642,6 +1808,14 @@ jQuery(document).ready(function() {
 			});
 		});
 
+		// Permission form
+		jQuery('#ls-permission-form').submit(function(e) {
+			e.preventDefault();
+			if(confirm('WARNING: This option controls who can access to this plugin, you can easily lock out yourself by accident. Please, make sure that you have entered a valid capability without whitespaces or other invalid characters. Do you want to proceed?')) {
+				this.submit();
+			}
+		});
+
 	// Skin editor
 	} else if(
 		document.location.href.indexOf('layerslider_skin_editor') != -1 ||
@@ -1681,10 +1855,26 @@ jQuery(document).ready(function() {
 	} else if(document.location.href.indexOf('layerslider_transition_builder') != -1) {
 
 		// Tooltips
-		lsTooltip.init();
+		if(lsScreenOptions['showTooltips'] == 'true') {
+			lsTooltip.init();
+		}
+
+		// Screen options
+		jQuery('#ls-screen-options').children().first().appendTo('#screen-meta');
+		jQuery('#ls-screen-options').children().last().appendTo('#screen-meta-links');
+
+		// Screen option actions
+		lsScreenOptionsActions.init();
 
 	// Editor view
 	} else {
+
+		// Screen options
+		jQuery('#ls-screen-options').children().first().appendTo('#screen-meta');
+		jQuery('#ls-screen-options').children().last().appendTo('#screen-meta-links');
+
+		// Screen option actions
+		lsScreenOptionsActions.init();
 
 		// Main tab bar page select
 		jQuery('#ls-main-nav-bar a:not(.unselectable)').click(function(e) {
@@ -1729,7 +1919,9 @@ jQuery(document).ready(function() {
 
 		});
 
-		lsTooltip.init();
+		if(lsScreenOptions['showTooltips'] == 'true') {
+			lsTooltip.init();
+		}
 
 		// Generate preview
 		jQuery(window).load(function() {
@@ -1742,7 +1934,7 @@ jQuery(document).ready(function() {
 		LayerSlider.insertUpload();
 
 		// Settings: width, height
-		jQuery('.ls-settings').find('input[name="width"], input[name="height", input[name="sublayercontainer"]').keyup(function() {
+		jQuery('.ls-settings').find('input[name="width"], input[name="height"], input[name="sublayercontainer"]').keyup(function() {
 			LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
 		});
 
@@ -1933,9 +2125,12 @@ jQuery(document).ready(function() {
 
 		// Color picker
 		if(typeof jQuery.fn.wpColorPicker != "undefined") {
-			jQuery('.ls-colorpicker').wpColorPicker({
+			jQuery('#ls-slider-form .ls-colorpicker').wpColorPicker({
 				width : 150,
 				change : function() {
+					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
+				},
+				clear : function() {
 					LayerSlider.willGeneratePreview( jQuery('.ls-box.active').index() );
 				}
 			});
@@ -1949,6 +2144,18 @@ jQuery(document).ready(function() {
 		// Show color picker on blur
 		jQuery('.color').blur(function() {
 			jQuery(this).next().slideUp();
+		});
+
+		// Eye icon for layers
+		jQuery('#ls-layers').on('click', '.ls-icon-eye', function(e) {
+			e.stopPropagation();
+			LayerSlider.eyeSublayer(this);
+		});
+
+		// Lock icon for layers
+		jQuery('#ls-layers').on('click', '.ls-icon-lock', function(e) {
+			e.stopPropagation();
+			LayerSlider.lockSublayer(this);
 		});
 	}
 

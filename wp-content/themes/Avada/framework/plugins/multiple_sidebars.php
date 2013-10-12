@@ -31,6 +31,7 @@ class sidebar_generator {
 	function sidebar_generator(){
 		add_action('init',array('sidebar_generator','init'));
 		add_action('admin_menu',array('sidebar_generator','admin_menu'));
+		add_action('admin_enqueue_scripts', array('sidebar_generator','admin_enqueue_scripts'));
 		add_action('admin_print_scripts', array('sidebar_generator','admin_print_scripts'));
 		add_action('wp_ajax_add_sidebar', array('sidebar_generator','add_sidebar') );
 		add_action('wp_ajax_remove_sidebar', array('sidebar_generator','remove_sidebar') );
@@ -67,8 +68,11 @@ class sidebar_generator {
 		}
 	}
 	
+	function admin_enqueue_scripts() {
+		wp_enqueue_script( array( 'sack' ));
+	}
+
 	function admin_print_scripts(){
-		wp_print_scripts( array( 'sack' ));
 		?>
 			<script>
 				function add_sidebar( sidebar_name )

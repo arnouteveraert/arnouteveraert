@@ -10,16 +10,26 @@
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
+	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
+		if($data['default_sidebar_pos'] == 'Left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+		} elseif($data['default_sidebar_pos'] == 'Right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+		}
 	}
 	?>
 	<div id="content" style="<?php echo $content_css; ?>">
 		<?php wp_reset_query(); ?>
 		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 		<?php query_posts($query_string.'&paged='.$paged); ?>
+		<?php if(!$data['blog_pn_nav']): ?>
 		<div class="single-navigation clearfix">
 			<?php previous_post_link('%link', __('Previous', 'Avada')); ?>
 			<?php next_post_link('%link', __('Next', 'Avada')); ?>
 		</div>
+		<?php endif; ?>
 		<?php if(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 			<?php
@@ -116,7 +126,7 @@
 			<?php endif; ?>
 			<?php endif; ?>
 			<?php if($data['blog_post_title']): ?>
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 			<?php endif; ?>
 			<div class="post-content">
 				<?php the_content(); ?>
@@ -125,14 +135,14 @@
 			<?php if($data['post_meta']): ?>
 			<div class="meta-info">
 				<div class="alignleft">
-					<?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?><span class="sep">|</span><?php the_time($data['date_format']); ?><span class="sep">|</span><?php the_category(', '); ?><span class="sep">|</span><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?>
+					<?php if(!$data['post_meta_author']): ?><span class="vcard author"><?php echo __('By', 'Avada'); ?> <?php the_author_posts_link(); ?></span><span class="sep">|</span><?php endif; ?><?php if(!$data['post_meta_date']): ?><?php the_time($data['date_format']); ?><span class="sep">|</span><?php endif; ?><?php if(!$data['post_meta_cats']): ?><?php the_category(', '); ?><span class="sep">|</span><?php endif; ?><?php if(!$data['post_meta_comments']): ?><?php comments_popup_link(__('0 Comments', 'Avada'), __('1 Comment', 'Avada'), '% '.__('Comments', 'Avada')); ?><?php endif; ?>
 				</div>
 			</div>
 			<?php endif; ?>
 			<?php if($data['social_sharing_box']): ?>
 			<div class="share-box">
 				<h4><?php echo __('Share This Story, Choose Your Platform!', 'Avada'); ?></h4>
-				<ul class="social-networks">
+				<ul class="social-networks social-networks-<?php echo strtolower($data['socialbox_icons_color']); ?>">
 					<?php if($data['sharing_facebook']): ?>
 					<li class="facebook">
 						<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>">
@@ -195,12 +205,26 @@
 					<?php endif; ?>
 					<?php if($data['sharing_google']): ?>
 					<li class="google">
-						<a href="http://google.com/bookmarks/mark?op=edit&amp;bkmk=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>">
+						<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
 							Google +1
 						</a>
 						<div class="popup">
 							<div class="holder">
 								<p>Google +1</p>
+							</div>
+						</div>
+					</li>
+					<?php endif; ?>
+					<?php if($data['sharing_pinterest']): ?>
+					<li class="pinterest">
+						<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full'); ?>
+						<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&amp;description=<?php echo urlencode($post->post_title); ?>&amp;media=<?php echo urlencode($full_image[0]); ?>">
+							Pinterest
+						</a>
+						<div class="popup">
+							<div class="holder">
+								<p>Pinterest</p>
 							</div>
 						</div>
 					</li>
@@ -222,7 +246,7 @@
 			<?php endif; ?>
 			<?php if($data['author_info']): ?>
 			<div class="about-author">
-				<div class="title"><h2><?php echo __('About the Author:', 'Avada'); ?> <?php the_author_posts_link(); ?></h2></div>
+				<div class="title"><h2><?php echo __('About the Author:', 'Avada'); ?> <?php the_author_posts_link(); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 				<div class="about-author-container">
 					<div class="avatar">
 						<?php echo get_avatar(get_the_author_meta('email'), '72'); ?>
@@ -236,9 +260,9 @@
 
 			<?php if($data['related_posts']): ?>
 			<?php $related = get_related_posts($post->ID); ?>
-			<?php if($related->have_posts()): ?>
-			<div class="related-posts">
-				<div class="title"><h2><?php echo __('Related Posts', 'Avada'); ?></h2></div>
+			<?php if($related->have_posts() && get_post_meta($post->ID, 'pyre_related_posts', true) != 'no'): ?>
+			<div class="related-posts single-related-posts">
+				<div class="title"><h2><?php echo __('Related Posts', 'Avada'); ?></h2><div class="title-sep-container"><div class="title-sep"></div></div></div>
 				<div id="carousel" class="es-carousel-wrapper">
 					<div class="es-carousel">
 						<ul>
@@ -251,16 +275,37 @@
 										<?php else: ?>
 										<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('related-img'); ?></a>
 										<?php endif; ?>
+										<?php
+										if(get_post_meta($post->ID, 'pyre_image_rollover_icons', true) == 'link') {
+											$link_icon_css = 'display:inline-block;';
+											$zoom_icon_css = 'display:none;';
+										} elseif(get_post_meta($post->ID, 'pyre_image_rollover_icons', true) == 'zoom') {
+											$link_icon_css = 'display:none;';
+											$zoom_icon_css = 'display:inline-block;';
+										} elseif(get_post_meta($post->ID, 'pyre_image_rollover_icons', true) == 'no') {
+											$link_icon_css = 'display:none;';
+											$zoom_icon_css = 'display:none;';
+										} else {
+											$link_icon_css = 'display:inline-block;';
+											$zoom_icon_css = 'display:inline-block;';
+										}
+
+										$icon_url_check = get_post_meta(get_the_ID(), 'pyre_link_icon_url', true); if(!empty($icon_url_check)) {
+											$icon_permalink = get_post_meta($post->ID, 'pyre_link_icon_url', true);
+										} else {
+											$icon_permalink = get_permalink($post->ID);
+										}
+										?>
 										<div class="image-extras">
 											<div class="image-extras-content">
 							<?php $full_image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full'); ?>
-							<a class="icon link-icon" href="<?php the_permalink(); ?>">Permalink</a>
+							<a style="<?php echo $link_icon_css; ?>" class="icon link-icon" href="<?php echo $icon_permalink; ?>">Permalink</a>
 							<?php
 							if(get_post_meta($post->ID, 'pyre_video_url', true)) {
 								$full_image[0] = get_post_meta($post->ID, 'pyre_video_url', true);
 							}
 							?>
-							<a class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery]">Gallery</a>
+							<a style="<?php echo $zoom_icon_css; ?>" class="icon gallery-icon" href="<?php echo $full_image[0]; ?>" rel="prettyPhoto[gallery]">Gallery</a>
 												<h3><?php the_title(); ?></h3>
 											</div>
 										</div>
@@ -269,6 +314,7 @@
 							<?php endif; endwhile; ?>
 						</ul>
 					</div>
+					<div class="es-nav"><span class="es-nav-prev">Previous</span><span class="es-nav-next">Next</span></div>
 				</div>
 			</div>
 			<?php endif; ?>

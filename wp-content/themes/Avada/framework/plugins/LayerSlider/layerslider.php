@@ -1,15 +1,10 @@
 <?php
 
-/**
- * @package LayerSlider WP
- * @version 4.1.1
- */
 /*
-
 Plugin Name: LayerSlider WP
 Plugin URI: http://codecanyon.net/user/kreatura/
-Description: The Wordress Parallax Slider
-Version: 4.1.1
+Description: LayerSlider is the most advanced responsive WordPress slider plugin with the famous Parallax Effect and over 200 2D & 3D transitions.
+Version: 4.6.0
 Author: Kreatura Media
 Author URI: http://kreaturamedia.com/
 */
@@ -19,7 +14,7 @@ Author URI: http://kreaturamedia.com/
 /*                        Actions                       */
 /********************************************************/
 
-	$GLOBALS['lsPluginVersion'] = '4.1.1';
+	$GLOBALS['lsPluginVersion'] = '4.6.0';
 	$GLOBALS['lsPluginPath'] = get_template_directory_uri() . '/framework/plugins/LayerSlider/';
 	$GLOBALS['lsAutoUpdateBox'] = false;
 	$GLOBALS['lsRepoAPI'] = 'http://repo.kreatura.hu/';
@@ -40,6 +35,9 @@ Author URI: http://kreaturamedia.com/
 		add_filter('plugins_api', 'layerslider_plugin_api_call', 10, 3);
 	}
 
+	// Hook to trigger plugin override functions
+	add_action('after_setup_theme', 'layerslider_loaded');
+
 	// Link content resources
 	add_action('wp_enqueue_scripts', 'layerslider_enqueue_content_res');
 
@@ -47,6 +45,7 @@ Author URI: http://kreaturamedia.com/
 	add_action('admin_enqueue_scripts', 'layerslider_enqueue_admin_res');
 
 	// AJAXs
+	add_action('wp_ajax_ls_save_screen_options', 'ls_save_screen_options');
 	add_action('wp_ajax_layerslider_verify_purchase_code', 'layerslider_verify_purchase_code');
 
 	// Add shortcode
@@ -117,7 +116,7 @@ function layerslider_activation_scripts() {
 		$old_site = $wpdb->blogid;
 
 		// Get all sites
-		$sites = $wpdb->get_col($wpdb->prepare("SELECT blog_id FROM $wpdb->blogs"));
+		$sites = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
 
 		// Iterate over the sites
 		foreach($sites as $site) {
@@ -171,15 +170,15 @@ function layerslider_create_db_table() {
 	$table_name = $wpdb->prefix . "layerslider";
 
 	// Building the query
-	$sql = "CREATE TABLE `$table_name` (
-			  `id` int(10) NOT NULL AUTO_INCREMENT,
-			  `name` varchar(100) NOT NULL,
-			  `data` mediumtext NOT NULL,
-			  `date_c` int(10) NOT NULL,
-			  `date_m` int(11) NOT NULL,
-			  `flag_hidden` tinyint(1) NOT NULL DEFAULT '0',
-			  `flag_deleted` tinyint(1) NOT NULL DEFAULT '0',
-			  PRIMARY KEY (`id`)
+	$sql = "CREATE TABLE $table_name (
+			  id int(10) NOT NULL AUTO_INCREMENT,
+			  name varchar(100) NOT NULL,
+			  data mediumtext NOT NULL,
+			  date_c int(10) NOT NULL,
+			  date_m int(11) NOT NULL,
+			  flag_hidden tinyint(1) NOT NULL DEFAULT 0,
+			  flag_deleted tinyint(1) NOT NULL DEFAULT 0,
+			  PRIMARY KEY  (id)
 			);";
 
 	// Executing the query
@@ -308,6 +307,11 @@ function layerslider_plugin_api_call($def, $action, $args) {
 	return $res;
 }
 
+function layerslider_loaded() {
+	if(has_action('layerslider_ready')) {
+		do_action('layerslider_ready');
+	}
+}
 
 /********************************************************/
 /*               Enqueue Content Scripts                */
@@ -428,6 +432,13 @@ function layerslider_help($contextual_help, $screen_id, $screen) {
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/home_overview.html')
 				));
 
+				// Need help?
+				$screen->add_help_tab(array(
+				   'id' => 'ls_faq',
+				   'title' => 'Need help?',
+				   'content' => file_get_contents(dirname(__FILE__).'/docs/faq.html')
+				));				
+
 				// Managing sliders
 				$screen->add_help_tab(array(
 				   'id' => 'home_screen',
@@ -435,10 +446,10 @@ function layerslider_help($contextual_help, $screen_id, $screen) {
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/managing_sliders.html')
 				));
 
-				// Insert LayerSlider to your page
+				// Inserting LayerSlider to a page
 				$screen->add_help_tab(array(
 				   'id' => 'inserting_slider',
-				   'title' => 'Insert LayerSlider to your page',
+				   'title' => 'Inserting LayerSlider to a page',
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/inserting_slider.html')
 				));
 
@@ -518,18 +529,26 @@ function layerslider_help($contextual_help, $screen_id, $screen) {
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/edit_overview.html')
 				));
 
+				// Need help?
+				$screen->add_help_tab(array(
+				   'id' => 'ls_faq',
+				   'title' => 'Need help?',
+				   'content' => file_get_contents(dirname(__FILE__).'/docs/faq.html')
+				));	
+
 				// Getting started video
+				/*
 				$screen->add_help_tab(array(
 				   'id' => 'gettingstarted',
 				   'title' => 'Getting started',
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/gettingstarted.html')
-				));
+				));*/
 
 
-				// Insert LayerSlider to your page
+				// Inserting LayerSlider to a page
 				$screen->add_help_tab(array(
 				   'id' => 'inserting_slider',
-				   'title' => 'Insert LayerSlider to your page',
+				   'title' => 'Inserting LayerSlider to a page',
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/inserting_slider.html')
 				));
 
@@ -568,6 +587,13 @@ function layerslider_help($contextual_help, $screen_id, $screen) {
 				   'content' => file_get_contents(dirname(__FILE__).'/docs/embedding_videos.html')
 				));
 
+				// Translation & Language support
+				$screen->add_help_tab(array(
+				   'id' => 'language_support',
+				   'title' => 'Translation & Language support',
+				   'content' => file_get_contents(dirname(__FILE__).'/docs/language_support.html')
+				));
+
 				// Other features
 				$screen->add_help_tab(array(
 				   'id' => 'other_features',
@@ -600,6 +626,19 @@ function layerslider_help($contextual_help, $screen_id, $screen) {
 		}
 	}
 }
+
+/********************************************************/
+/*              LayerSlider Screen Options              */
+/********************************************************/
+function ls_save_screen_options() {
+
+	if(!isset($_POST['options']) || empty($_POST['options'])) {
+		$_POST['options'] = array();
+	}
+
+	update_option('lsScreenOptions', $_POST['options']);
+}
+
 
 /********************************************************/
 /*                 Loads settings menu                  */
@@ -726,6 +765,11 @@ function layerslider_register_settings() {
 			$slider['layers'][ $_POST['layerkey'] ] = $_POST['layerslider-slides']['layers'][$_POST['layerkey']];
 		}
 
+		// WPML
+		if(function_exists('icl_register_string')) {
+			layerslider_register_wpml_strings($id, $slider);
+		}
+
 		// DB data
 		$name = $wpdb->escape($slider['properties']['title']);
 		$data = $wpdb->escape(json_encode($slider));
@@ -777,6 +821,11 @@ function layerslider_register_settings() {
 		} else {
 			$data['properties'] = $_POST['layerslider-slides']['properties'];
 			$data['layers'][ $_POST['layerkey'] ] = $_POST['layerslider-slides']['layers'][$_POST['layerkey']];
+		}
+
+		// WPML
+		if(function_exists('icl_register_string')) {
+			layerslider_register_wpml_strings($id, $data);
 		}
 
 		// DB data
@@ -928,6 +977,19 @@ function layerslider_register_settings() {
 
 			if(strstr($val['cols'], ',')) { $tmp = explode(',', $val['cols']); $tmp[0] = (int) trim($tmp[0]); $tmp[1] = (int) trim($tmp[1]); $transitions['t2d'][$key]['cols'] = $tmp; }
 				else { $transitions['t2d'][$key]['cols'] = (int) $val['cols']; }
+
+			if(empty($val['transition']['rotateX']))
+				unset($transitions['t2d'][$key]['transition']['rotateX']);
+
+			if(empty($val['transition']['rotateY']))
+				unset($transitions['t2d'][$key]['transition']['rotateY']);
+
+			if(empty($val['transition']['rotate']))
+				unset($transitions['t2d'][$key]['transition']['rotate']);
+
+			if(empty($val['transition']['scale']) || $val['transition']['scale'] == '1.0' || $val['transition']['scale'] == '1')
+				unset($transitions['t2d'][$key]['transition']['scale']);
+
 		}
 
 		// Custom transitions file
@@ -984,7 +1046,30 @@ function layerslider_builder_convert_numbers(&$item, $key) {
 }
 
 /********************************************************/
-/*       public PHP function to show LayerSlider        */
+/*          WPML Layer's String Translation             */
+/********************************************************/
+function layerslider_register_wpml_strings($slider_id, $data) {
+
+
+	global $wpdb;
+	$table_name = $wpdb->prefix . "layerslider";
+
+	$slider = $wpdb->get_row("SELECT * FROM $table_name WHERE id = ".(int)$slider_id." ORDER BY date_c DESC LIMIT 1" , ARRAY_A);
+	$slider = json_decode($slider['data'], true);
+
+	foreach($data['layers'] as $layerkey => $layer) {
+		foreach($layer['sublayers'] as $sublayerkey => $sublayer) {
+			if($sublayer['type'] != 'img') {
+				icl_register_string('LayerSlider WP', '<'.$sublayer['type'].':'.substr(sha1($sublayer['html']), 0, 10).'> layer on slide #'.($layerkey+1).' in slider #'.$slider_id.'', $sublayer['html']);
+			}
+		}
+	}
+
+}
+
+
+/********************************************************/
+/*          Public functions: insert LayerSlider        */
 /********************************************************/
 function layerslider($id = 0, $page = '') {
 
@@ -1024,6 +1109,63 @@ function layerslider($id = 0, $page = '') {
 	} else {
 		echo layerslider_init(array('id' => $id));
 	}
+}
+
+/********************************************************/
+/*       Public functions: get LayerSlider sliders      */
+/********************************************************/
+
+function lsSliderById($id = 0) {
+
+	// No ID
+	if($id == 0) {
+		return false;
+	}
+
+	// Get DB stuff
+	global $wpdb;
+	$table_name = $wpdb->prefix . "layerslider";
+
+	// Get data
+	$link = $slider = $wpdb->get_row("SELECT * FROM $table_name WHERE id = ".(int)$id." ORDER BY date_c DESC LIMIT 1" , ARRAY_A);
+
+	// No results
+	if($link == null) {
+		return false;
+	}
+
+	// Convert data 
+	$slider['data'] = json_decode($slider['data'], true);
+
+	// Return the slider
+	return $slider;
+}
+
+function lsSliders($limit = 50, $desc = true, $withData = false) {
+
+	// Get DB stuff
+	global $wpdb;
+	$table_name = $wpdb->prefix . "layerslider";
+
+	// Order
+	$order = ($desc === true) ? 'DESC' : 'ASC';
+
+	// Data
+	if($withData === true) {
+		$data = ' data,';
+	}
+
+	// Get sliders
+	$link = $sliders = $wpdb->get_results( "SELECT id, name,$data date_c, date_m FROM $table_name
+									WHERE flag_hidden = '0' AND flag_deleted = '0'
+									ORDER BY id $order LIMIT ".(int)$limit."", ARRAY_A );
+
+	// No results
+	if($link == null) {
+		return array();
+	}
+
+	return $sliders;
 }
 
 /********************************************************/
@@ -1266,11 +1408,13 @@ function layerslider_import_sample_slider() {
 			}
 
 			// Iterate over the sublayers
-			foreach($layer['sublayers'] as $sublayerkey => $sublayer) {
+			if(isset($layer['sublayers']) && !empty($layer['sublayers'])) {
+				foreach($layer['sublayers'] as $sublayerkey => $sublayer) {
 
-				// Only IMG sublayers
-				if($sublayer['type'] == 'img') {
-					$sample_slider[$sliderkey]['layers'][$layerkey]['sublayers'][$sublayerkey]['image'] = $GLOBALS['lsPluginPath'].'sampleslider/'.basename($sublayer['image']);
+					// Only IMG sublayers
+					if($sublayer['type'] == 'img') {
+						$sample_slider[$sliderkey]['layers'][$layerkey]['sublayers'][$sublayerkey]['image'] = $GLOBALS['lsPluginPath'].'sampleslider/'.basename($sublayer['image']);
+					}
 				}
 			}
 		}

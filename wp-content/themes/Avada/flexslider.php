@@ -1,5 +1,10 @@
 <?php
 global $data;
+
+if(function_exists('icl_object_id')) {
+  $slider_page_id = icl_object_id($slider_page_id, 'slide', true);
+}
+
 if($data[get_post_meta($slider_page_id, 'pyre_flexslider', true)]):
 ?>
 <div class="tfs-slider flexslider main-flex" style="max-width:<?php echo $data['flexslider_width']; ?>;">

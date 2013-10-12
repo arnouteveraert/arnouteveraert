@@ -380,7 +380,7 @@ class WooSlider_Settings extends WooSlider_Settings_API {
 			'id'		=> 'screen-content',
 			'title'		=> __( 'Screen Content', 'wooslider' ),
 			'content'	=>
-				'<p>' . __( 'You can customize the display of this screen’s contents in a number of ways:', 'wooslider' ) . '</p>' . 
+				'<p>' . __( 'You can customize the display of this screen\'s contents in a number of ways:', 'wooslider' ) . '</p>' . 
 				'<ol>' . 
 				'<li>' . __( 'You can hide/display columns based on your needs and decide how many slides to list per screen using the Screen Options tab.', 'wooslider' ) . '</li>' . 
 				'<li>' . __( 'You can filter the list of slides by status using the text links in the upper left to show All, Published, Draft, or Trashed slides. The default view is to show all slides.', 'wooslider' ) . '</li>' .
@@ -450,10 +450,10 @@ class WooSlider_Settings extends WooSlider_Settings_API {
 			'id'		=> 'adding-slide-groups',
 			'title'		=> __( 'Adding Slide Groups', 'wooslider' ),
 			'content'	=>
-				'<p>' . __( 'When adding a new slide group on this screen, you’ll fill in the following fields:', 'wooslider' ) . '</p>' . 
+				'<p>' . __( 'When adding a new slide group on this screen, you\'ll fill in the following fields:', 'wooslider' ) . '</p>' . 
 				'<ol>' . 
 				'<li><strong>' . __( 'Name', 'wooslider' ) . '</strong> - ' . __( 'The name is how it appears on your site.', 'wooslider' ) . '</li>' . 
-				'<li><strong>' . __( 'Slug', 'wooslider' ) . '</strong> - ' . __( 'The “slug” is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.', 'wooslider' ) . '</li>' .
+				'<li><strong>' . __( 'Slug', 'wooslider' ) . '</strong> - ' . __( 'The \"slug\" is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.', 'wooslider' ) . '</li>' .
 				'<li><strong>' . __( 'Description', 'wooslider' ) . '</strong> - ' . __( 'The description is not prominent by default; however, some themes may display it (WooSlider doesn\'t display this anywhere by default).', 'wooslider' ) . '</li>' . 
 				'</ol>'
 			) );

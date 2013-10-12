@@ -25,7 +25,6 @@ function of_option_setup()
 {
 	global $of_options, $options_machine;
 	$options_machine = new Options_Machine($of_options);
-		
 	if (!get_option(OPTIONS))
 	{
 		update_option(OPTIONS,$options_machine->Defaults);

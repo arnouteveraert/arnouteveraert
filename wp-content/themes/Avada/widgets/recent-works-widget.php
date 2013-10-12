@@ -22,7 +22,7 @@ class Recent_Works_Widget extends WP_Widget {
 		extract($args);
 		$title = apply_filters('widget_title', $instance['title']);
 		$number = $instance['number'];
-		
+
 		echo $before_widget;
 
 		if($title) {

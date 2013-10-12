@@ -9,7 +9,7 @@ Version: 1.5.7
 */
 
 define('CPTPATH',   plugin_dir_path(__FILE__));
-define('CPTURL',    get_stylesheet_directory_uri() . '/framework/plugins/post-types-order');
+define('CPTURL',    get_template_directory_uri() . '/framework/plugins/post-types-order');
 /*
 define('CPTPATH',   WP_PLUGIN_DIR  .'/post-types-order');
 define('CPTURL',    WP_PLUGIN_URL .'/post-types-order'); 
@@ -511,7 +511,7 @@ class CPTO
 			        'depth' => 0, 'show_date' => '',
 			        'date_format' => get_option('date_format'),
 			        'child_of' => 0, 'exclude' => '',
-			        'title_li' => __('Pages'), 'echo' => 1,
+			        'title_li' => __('Pages', 'pto'), 'echo' => 1,
 			        'authors' => '', 'sort_column' => 'menu_order',
 			        'link_before' => '', 'link_after' => '', 'walker' => ''
 		        );

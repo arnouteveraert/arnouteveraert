@@ -2,7 +2,6 @@
 // Template Name: Contact
 get_header(); global $data; ?>
 <?php
-global $data;
 if($data['recaptcha_public'] && $data['recaptcha_private']) {
 	require_once('framework/recaptchalib.php');
 }
@@ -71,6 +70,14 @@ if(isset($_POST['submit'])) {
 	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'right') {
 		$content_css = 'float:left;';
 		$sidebar_css = 'float:right;';
+	} elseif(get_post_meta($post->ID, 'pyre_sidebar_position', true) == 'default') {
+		if($data['default_sidebar_pos'] == 'Left') {
+			$content_css = 'float:right;';
+			$sidebar_css = 'float:left;';
+		} elseif($data['default_sidebar_pos'] == 'Right') {
+			$content_css = 'float:left;';
+			$sidebar_css = 'float:right;';
+		}
 	}
 	?>
 	<div id="content" style="<?php echo $content_css; ?>">

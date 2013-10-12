@@ -118,7 +118,8 @@ class WooSlider_Sliders {
 						'size' => 'large', 
 						'thumbnails' => '',
 						'orderby' => 'menu_order', 
-						'order' => 'ASC'
+						'order' => 'ASC',
+						'lightbox' => 'no'
 						);
 
 		$args = wp_parse_args( $args, $defaults );
@@ -128,7 +129,12 @@ class WooSlider_Sliders {
 
 		if ( ! is_wp_error( $attachments ) && ( count( $attachments ) > 0 ) ) {
 			foreach ( $attachments as $k => $v ) {
-				$data = array( 'content' => wp_get_attachment_image( $v->ID, esc_attr( $args['size'] ) ) );
+				if($args['lightbox'] == 'yes') {
+					$image = '<a href="'.wp_get_attachment_url($v->ID).'" rel="prettyPhoto[woogallery'.$post->ID.']">'.wp_get_attachment_image( $v->ID, esc_attr( $args['size'] ) ).'</a>';
+				} else {
+					$image = wp_get_attachment_image( $v->ID, esc_attr( $args['size'] ) );
+				}
+				$data = array( 'content' => $image );
 				if ( 'true' == $args['thumbnails'] || 1 == $args['thumbnails'] ) {
 					$thumb_url = wp_get_attachment_thumb_url( $v->ID );
 					if ( ! is_bool( $thumb_url ) ) {
@@ -196,8 +202,8 @@ class WooSlider_Sliders {
 
 				// Allow plugins/themes to filter here.
 				$excerpt = '';
-				if ( ( $args['display_excerpt'] == 'true' || $args['display_excerpt'] == 1 ) && has_excerpt( get_the_ID() ) ) { $excerpt = wpautop( get_the_excerpt() ); }
-
+				if ( ( $args['display_excerpt'] == 'true' || $args['display_excerpt'] == 1 ) ) { $excerpt = wpautop( tf_content($args['excerpt'], "true") ); }
+				
 				$title = get_the_title( get_the_ID() );
 				if ( $args['link_title'] == 'true' || $args['link_title'] == 1 ) {
 					$title = '<a href="' . get_permalink( $post ) . '">' . $title . '</a>';

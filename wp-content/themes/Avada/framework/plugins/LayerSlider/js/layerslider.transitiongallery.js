@@ -46,6 +46,8 @@
 
 				next = cur == tg.g.slide.length - 1 ? 0 : cur + 1;
 
+				var carousel = tg.o.transition.name.toLowerCase().indexOf('carousel') == -1 ? false : true;
+
 				// Calculating cols and rows
 
 				var cols = 1;
@@ -132,6 +134,9 @@
 
 				}else{
 					tg.g.totalDuration = ((cols * rows) - 1) * tg.o.transition.tile.delay + tg.o.transition.transition.duration;
+
+					tg.g.curTiles = $('<div>').addClass('ls-curtiles').appendTo( tg.$el );
+					tg.g.nextTiles = $('<div>').addClass('ls-nexttiles').appendTo( tg.$el );
 				}
 
 				// Creating cuboids for 3d or tiles for 2d transition (cols * rows)
@@ -263,6 +268,42 @@
 
 						// Selecting direction
 
+						var pn = 'next';
+						
+						if( tg.o.transition.name.toLowerCase().indexOf('mirror') != -1 && tiles%2 == 0 ){
+							pn = 'prev';
+						}
+
+						if( pn == 'prev' ){
+
+							switch( direction ){
+								case 'top':
+									direction = 'bottom';
+								break;
+								case 'bottom':
+									direction = 'top';
+								break;
+								case 'left':
+									direction = 'right';
+								break;
+								case 'right':
+									direction = 'left';
+								break;
+								case 'topleft':
+									direction = 'bottomright';
+								break;
+								case 'topright':
+									direction = 'bottomleft';
+								break;
+								case 'bottomleft':
+									direction = 'topright';
+								break;
+								case 'bottomright':
+									direction = 'topleft';
+								break;
+							}
+						}
+
 						switch( direction ){
 							case 'top':
 								T1 = T2 = -tile.height();
@@ -306,11 +347,21 @@
 							break;
 						}
 
+						tg.g.scale2D = tg.o.transition.transition.scale ? tg.o.transition.transition.scale : 1;
+
+						if( carousel == true && tg.g.scale2D != 1 ){
+							
+							T1 = T1 / 2;
+							T2 = T2 / 2;
+							L1 = L1 / 2;
+							L2 = L2 / 2;
+						}
+
 						// Selecting the type of the transition
 
 						var ie78 = lsBrowser().msie && lsBrowser().version < 9 ? true : false;
 
-						if( !ie78 || ( ie78 && tg.o.transition.name.toLowerCase().indexOf('crossfade') != -1 ) ){
+//						if( !ie78 || ( ie78 && tg.o.transition.name.toLowerCase().indexOf('crossfade') != -1 ) ){
 							switch( tg.o.transition.transition.type ){
 								case 'fade':
 									T1 = T2 = L1 = L2 = 0;
@@ -318,15 +369,44 @@
 									O2 = 1;
 								break;
 								case 'mixed':
-									O1 = 0;
-									O2 = 1;
+								O1 = 0;
+								O2 = 1;
+								if( tg.g.scale2D == 1 ){
 									T2 = L2 = 0;
+								}
 								break;
 							}
+//						}
+
+						if((( tg.o.transition.transition.rotate || tg.o.transition.transition.rotateX || tg.o.transition.transition.rotateY ) || tg.g.scale2D != 1 ) && !ie78 && tg.o.transition.transition.type != 'slide' ){
+							tile.css({
+								overflow : 'visible'
+							});
+						}else{
+							tile.css({
+								overflow : 'hidden'
+							});									
+						}
+						
+						if( carousel == true){
+							tg.g.curTiles.css({
+								overflow: 'visible'
+							});
+						}else{
+							tg.g.curTiles.css({
+								overflow: 'hidden'
+							});									
 						}
 
-						curTile = $('<div>').addClass('ls-curtile').appendTo( tile );
-						nextTile = $('<div>').addClass('ls-nexttile').appendTo( tile ).css({
+						if( tg.o.transition.transition.type == 'slide' || carousel == true ){
+							var tileInCur = tile.appendTo( tg.g.curTiles );
+							curTile = $('<div>').addClass('ls-curtile').appendTo( tileInCur );
+							var tileInNext = tile.clone().appendTo( tg.g.nextTiles );
+						}else{
+							var tileInNext = tile.appendTo( tg.g.nextTiles );
+						}
+
+						nextTile = $('<div>').addClass('ls-nexttile').appendTo( tileInNext ).css({
 							top : -T1,
 							left : -L1,
 							dispay : 'block',
@@ -342,17 +422,54 @@
 						});
 
 						if( tg.g.cssTransitions && $.transit != undefined && tg.o.transition.transition.easing.indexOf('swing') == -1 && tg.o.transition.transition.easing.indexOf('Elastic') == -1 && tg.o.transition.transition.easing.indexOf('Bounce') == -1 ){
+							var r = tg.o.transition.transition.rotate ? tg.o.transition.transition.rotate : 0;
+							var rX = tg.o.transition.transition.rotateX ? tg.o.transition.transition.rotateX : 0;
+							var rY = tg.o.transition.transition.rotateY ? tg.o.transition.transition.rotateY : 0;
+							
+							if( pn == 'prev' ){
+								r = -r;
+								rX = -rX;
+								rY = -rY;
+							}
+
+							if( rX != 0 || rY != 0 || r != 0 || tg.g.scale2D != 1 ){
+								nextTile.css({
+									'transform': 'rotate('+r+'deg) rotateX('+rX+'deg) rotateY('+rY+'deg) scale('+tg.g.scale2D+','+tg.g.scale2D+')',
+									'-o-transform': 'rotate('+r+'deg) rotateX('+rX+'deg) rotateY('+rY+'deg) scale('+tg.g.scale2D+','+tg.g.scale2D+')',
+									'-ms-transform': 'rotate('+r+'deg) rotateX('+rX+'deg) rotateY('+rY+'deg) scale('+tg.g.scale2D+','+tg.g.scale2D+')',
+									'-moz-transform': 'rotate('+r+'deg) rotateX('+rX+'deg) rotateY('+rY+'deg) scale('+tg.g.scale2D+','+tg.g.scale2D+')',
+									'-webkit-transform': 'rotate('+r+'deg) rotateX('+rX+'deg) rotateY('+rY+'deg) scale('+tg.g.scale2D+','+tg.g.scale2D+')'
+								});										
+							}
+							
 							nextTile.transition({
 								delay : curTileDelay,
 								top : 0,
 								left : 0,
-								opacity : O2
+								opacity : O2,
+								rotate : 0,
+								rotateX : 0,
+								rotateY : 0,
+								scale : 1
 							}, tg.o.transition.transition.duration, tg.o.transition.transition.easing );
-							curTile.transition({
-								delay : curTileDelay,
-								top : T2,
-								left : L2
-							}, tg.o.transition.transition.duration, tg.o.transition.transition.easing );								
+
+							if( ( tg.o.transition.transition.type == 'slide' || carousel == true ) && tg.o.transition.name.toLowerCase().indexOf('mirror') == -1 ){
+																		
+								var r2 = 0;
+
+								if( r != 0 ){
+									r2 = -r;
+								}
+
+								curTile.transition({
+									delay : curTileDelay,
+									top : T2,
+									left : L2,
+									rotate : r2,
+									scale : tg.g.scale2D,
+									opacity: O1
+								}, tg.o.transition.transition.duration, tg.o.transition.transition.easing );
+							}
 						}else{
 							nextTile.delay( curTileDelay ).animate({
 								top : 0,
@@ -368,10 +485,18 @@
 
 					// Appending the background images of current and next layers into the tiles on both of 2d & 3d transitions
 
-					curTile.append($('<img>').attr('src', tg.o.path+tg.g.slide[cur] ).css({
-						marginLeft : - parseInt(tile.position().left),
-						marginTop :  - parseInt(tile.position().top)
-					}));
+					if( tg.o.type == '3d' || ( tg.o.type == '2d' && ( tg.o.transition.transition.type == 'slide' || carousel == true ) ) ){
+						curTile.append($('<img>').attr('src', tg.o.path+tg.g.slide[cur] ).css({
+							marginLeft : - parseInt(tile.position().left),
+							marginTop :  - parseInt(tile.position().top)
+						}));						
+					}else{
+						tg.g.curTiles.append($('<img>').attr('src', tg.o.path+tg.g.slide[cur] ).css({
+							marginLeft : - parseInt(tile.position().left),
+							marginTop :  - parseInt(tile.position().top)
+						}));
+						
+					}
 
 					nextTile.append($('<img>').attr('src', tg.o.path+tg.g.slide[next] ).css({
 						marginLeft :  - parseInt(tile.position().left),

@@ -25,7 +25,7 @@
 				endif;
 				?>
 				</article>
-
+				
 				<article class="col last">
 				<?php
 				if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Footer Widget 4')): 
@@ -44,10 +44,15 @@
 		if($data['icons_footer_new']) {
 			$target = '_blank';
 		} else {
-			$target = '';
+			$target = '_self';
+		}
+		if(!$data['footer_icons_color']) {
+			$footer_icons_color = 'Dark';
+		} else {
+			$footer_icons_color = $data['footer_icons_color'];
 		}
 		?>
-		<ul class="social-networks">
+		<ul class="social-networks social-networks-<?php echo strtolower($footer_icons_color); ?>">
 			<?php if($data['facebook_link']): ?>
 			<li class="facebook"><a target="<?php echo $target; ?>" href="<?php echo $data['facebook_link']; ?>">Facebook</a>
 				<div class="popup">

@@ -16,11 +16,11 @@
 		<?php while(have_posts()): the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
 			<?php
-			if('page' != $post->post_type && $data['featured_images']):
+			if('page' != $post->post_type && !$data['search_featured_images']):
 			if($data['legacy_posts_slideshow']) {
-				include('legacy-slideshow.php');
+				get_template_part('legacy-slideshow');
 			} else {
-				include('new-slideshow.php');
+				get_template_part('new-slideshow');
 			}
 			endif;
 			?>
@@ -45,6 +45,21 @@
 		<?php endwhile; ?>
 		<?php themefusion_pagination($pages = '', $range = 2); ?>
 		<?php else: ?>
+		<div class="error_page">
+			<div class="one_third">
+				<h1><?php echo __('Oops!', 'Avada'); ?><br></h1>
+			<h2><?php echo __('Couldn\'t find what you\'re looking for!', 'Avada'); ?></h2>
+			</div>
+			<div class="one_third useful_links">
+				<h3><?php echo __('Here are some useful links:', 'Avada'); ?></h3>
+				<?php wp_nav_menu(array('theme_location' => '404_pages', 'depth' => 1, 'container' => false, 'menu_id' => '', 'menu_class' => 'arrow')); ?>
+			</div>
+			<div class="one_third last">
+				<h3><?php echo __('Try again!', 'Avada'); ?></a></h3>
+				<p><?php echo __('If you want to rephrase your query, here is your chance:', 'Avada'); ?></p>
+				<?php get_search_form(); ?>
+			</div>
+		</div>
 		<?php endif; ?>
 	</div>
 	<div id="sidebar" style="<?php echo $sidebar_css; ?>">
